@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { NavigationMenuDemo } from "./component/layout/HeaderHome";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,8 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl" className="h-screen w-full">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+<<<<<<< Updated upstream
         <div>
-          
+          <NavigationMenuDemo/>
+=======
+        <div className="bg-sky-950">
+        
+>>>>>>> Stashed changes
         </div>
         {children}
       </body>
