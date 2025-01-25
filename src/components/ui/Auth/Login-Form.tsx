@@ -68,7 +68,7 @@ export function LoginForm({
               </div>
 
               <Button asChild>
-                <Link href="/login">ورود</Link>
+                <Link href="/products">ورود</Link>
               </Button>
 
               <Button variant="outline" className="w-full">
