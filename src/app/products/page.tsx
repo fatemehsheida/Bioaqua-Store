@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import ProductList from "@/app/component/product/ProductList";
 import CategoryList from "@/app/component/product/CategoryList";
+=======
+import ProductList from "@/components/ui/product/productList";
+import CategoryList from "@/components/ui/product/CategoryList";
+>>>>>>> auth-Form
 import updateQueryParams from "@/utils/Query";
 import {
   ProductsResponse,
@@ -7,11 +12,16 @@ import {
   ProductsPageProps,
 } from "@/types/type";
 import Link from "next/link";
+<<<<<<< HEAD
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home",
 };
+=======
+
+
+>>>>>>> auth-Form
 
 export default async function ProductsPage({
   searchParams,
@@ -20,9 +30,13 @@ export default async function ProductsPage({
   const categoriesEndpoint = "http://localhost:8000/categories";
 
   const [categoriesRes] = await Promise.all([fetch(categoriesEndpoint)]);
+<<<<<<< HEAD
 
   const categoriesData: CategoriesResponse = await categoriesRes.json();
 
+=======
+  const categoriesData: CategoriesResponse = await categoriesRes.json();
+>>>>>>> auth-Form
   const categories = categoriesData.results;
 
   const queryParams = {
