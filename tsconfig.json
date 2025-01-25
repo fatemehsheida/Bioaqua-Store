@@ -22,6 +22,7 @@
       "@/*": ["./src/*"]
     }
   },
+
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -29,6 +30,7 @@
     ".next/types/**/*.ts",
     "src/components/ui/product/page.tsx"
   ],
+
 
   "exclude": ["node_modules"]
 }
