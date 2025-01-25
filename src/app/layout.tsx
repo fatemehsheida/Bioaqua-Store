@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { NavigationMenuDemo } from "../components/ui/layout/HeaderHome";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NavigationMenuDemo } from "./component/layout/HeaderHome";
+import { IoMdSearch } from "react-icons/io";
+import { FaRegUser } from "react-icons/fa6";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,15 +27,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="rtl" className="h-screen w-full">
+    <html lang="fn" dir="rtl" className="h-screen w-full items-center">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-<<<<<<< Updated upstream
-        <div>
-          <NavigationMenuDemo/>
-=======
-        <div className="bg-sky-950">
-        
->>>>>>> Stashed changes
+        <div className="mx-auto bg-[#C5E0B7] w-full h-20 items-center flex flex-row justify-between px-14 pt-2 pb-1.5">
+          <div className="flex flex-row opacity-80 items-center justify-start hover:size-7">
+            <button className="mx-2">
+              <IoMdSearch className="size-6 hover:size-8" />
+            </button>
+            <button className="mx-2">
+              <FaRegUser className="size-5 hover:size-7" />
+            </button>
+            <button className="mx-3">
+              <AiOutlineShoppingCart className="size-6 hover:size-8" />
+            </button>
+          </div>
+          <div className="flex items-center gap-10">
+            <div>
+              <NavigationMenuDemo />
+            </div>
+            <img src="bioaqoua.avif" alt="Bioaqoua" className="w-36" />
+          </div>
         </div>
         {children}
       </body>
