@@ -19,48 +19,47 @@ const components: { title: string; href: string; description: string }[] = [
     title: "همه محصولات آرایشی",
     href: "/",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "مجموعه‌های کامل آرایشی برای یک ظاهر هماهنگ و زیبا",
   },
   {
     title: "کرم های آرایشی",
     href: "/",
     description:
-      "For sighted users to preview content available behind a link.",
+      "کرم‌های مرطوب‌کننده و پایه‌های آرایشی برای پوستی صاف و درخشان",
   },
   {
     title: "آرایش چشم",
     href: "/",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "مجموعه‌ای از محصولات آرایش چشم، شامل سایه، خط چشم و ریمل برای نگاهی جذاب",
   },
   {
     title: "آرایش گونه",
     href: "/",
-    description: "Visually or semantically separates content.",
+    description: "محصولات آرایش گونه مانند رژگونه و هایلایتر برای ظاهری شاداب و درخشان",
   },
   {
     title: "آرایش لب",
     href: "/",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "انواع رژلب، لیپ‌گلاس و خط لب برای لب‌هایی زیبا و جذاب",
   },
   {
     title: "محصولات مو",
     href: "/",
-    description:
-      " مجموعه‌ای از محصولات آرایش چشم، شامل سایه، خط چشم و ریمل برای نگاهی جذاب.",
+    description:"مراقبت و استایل مو با محصولاتی مانند ژل، واکس و اسپری مو",
   },
   {
     title: "عطر و ادکلن",
     href: "/",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "کشف رایحه‌های منحصر به فرد برای هر سلیقه و مناسب هر موقعیت",
   },
   {
     title: "ست های آرایشی",
     href: "/",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "مجموعه‌های کامل آرایشی برای یک ظاهر هماهنگ و زیبا",
   },
 ];
 
@@ -107,15 +106,15 @@ export function NavigationMenuDemo() {
                   </Link>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/#" title="Masks">
+              <ListItem href="/#" title="ماسک‌ها">
               </ListItem>
-              <ListItem href="/#" title="Shop By Concern">
+              <ListItem href="/#" title="خرید بر اساس نیاز پوست">
               </ListItem>
-              <ListItem href="/#" title="Shop By Ingredients">
+              <ListItem href="/#" title="خرید بر اساس مواد تشکیل‌دهنده">
               </ListItem>
-              <ListItem href="/#" title=" All Skincare">
+              <ListItem href="/#" title="همه‌ی محصولات مراقبت پوست">
               </ListItem>
-              <ListItem href="/#" title="Shop By Skin">
+              <ListItem href="/#" title="خرید بر اساس نوع پوست">
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -130,6 +129,9 @@ export function NavigationMenuDemo() {
                   title={component.title}
                   href={component.href}
                 >
+                  <h5 className="text-xs">
+                    {component.description}
+                  </h5>
 
                 </ListItem>
               ))}
