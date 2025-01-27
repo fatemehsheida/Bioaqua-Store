@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { NavigationMenuDemo } from "../components/layout/HeaderHome";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NavigationMenuDemo } from "@/components/";
 import { IoMdSearch } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -32,24 +31,34 @@ export default function RootLayout({
     <html lang="fn" dir="rtl" className="h-screen w-full items-center">
       <body className={`${geistSans.variable} ${geistMono.variable} bg-gradient-to-bl from-[#6BB0A9] via-[#C2C3AE] to-[#FCE3D5] transition-all duration-5 bg-fixed flex flex-col justufy-center items-center `}>
         <div className="font-medium w-[80%] h-20 items-center flex flex-row justify-between px-14 pt-2 pb-1.5 mx-16 ">
+
           <div className="flex flex-row opacity-80 items-center justify-start">
             <button className="mx-2">
               <IoMdSearch className="size-6 hover:size-7" />
             </button>
             <button className="mx-2">
-              <AiOutlineShoppingCart className="size-4"/>
+              <FaRegUser className="size-5 hover:size-6" />
+            </button>
+            <button className="mx-3">
+              <AiOutlineShoppingCart className="size-6 hover:size-7" />
             </button>
           </div>
-          <NavigationMenuDemo />
-          <img src="bioaqoua.avif" alt="Bioaqoua" className="w-36" />
 
+          <div className="flex items-center gap-10">
+            <div>
+              <NavigationMenuDemo />
+            </div>
+            <img src="bioaqoua.avif" alt="Bioaqoua" className="w-40" />
+          </div>
         </div>
         {children}
         <div className="flex flee-col mx-auto w-[65%] justify-between py-10 gap-10">
           <div className="flex flee-col justify-between w-full items-start pr-32 text-start">
 
             <div>
+
               <div className="mb-5 text-lg ">
+
                 <h1>
                   ABOUT
                 </h1>
@@ -64,6 +73,7 @@ export default function RootLayout({
 
             <div>
               <div className="mb-5 text-lg ">
+
                 <h1>
                   CUSTOMER SERVICE
                 </h1>
@@ -82,6 +92,7 @@ export default function RootLayout({
 
             <div>
               <div className="mb-5 text-lg"><h1>
+
                 Main</h1></div>
               <button className="text-start text-base">
                 <h3>home</h3>
