@@ -1,7 +1,8 @@
-import ProductList from "@/app/component/product/ProductList";
+
+import { Metadata } from "next";
+import ProductList from "@/components/product/productList";
 import { ProductsResponse } from "@/types/type";
 import updateQueryParams from "@/utils/Query";
-import { Metadata } from "next";
 import Link from "next/link";
 
 interface CategoryPageProps {
