@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { NavigationMenuDemo } from "../components/layout/HeaderHome";
 import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "./globals.css";
-import { IoMdSearch } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa6";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import Header from "@/components/layout/Header";
+import { CardFooter } from "@/components/ui/card";
+import Footer from "@/components/layout/footer";
+
 
 
 const geistSans = Geist({
@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 const vazir = Vazirmatn({
   variable: "--font-vazir-mono",
   subsets: ["arabic"],
-  weight:"300"
+  weight: "300"
 });
 
 
@@ -37,88 +37,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fn" dir="rtl" className="h-screen w-full items-center">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${vazir.variable} bg-gradient-to-bl from-[#6BB0A9] via-[#C2C3AE] to-[#FCE3D5] transition-all duration-5 bg-fixed flex flex-col justufy-center items-center `}>
-        <div className="vazir md:w-[80%] h-20 items-center flex 
-        flex-row justify-between px-14 pt-2 pb-1.5 mx-16 ">
-
-          <div className="flex flex-row opacity-80 items-center justify-start">
-            <button className="mx-2">
-              <IoMdSearch className="size-6 hover:size-7" />
-            </button>
-            <button className="mx-2">
-              <FaRegUser className="size-5 hover:size-6" />
-            </button>
-            <button className="mx-3">
-              <AiOutlineShoppingCart className="size-6 hover:size-7" />
-            </button>
-          </div>
-
-          <div className="flex items-center gap-10">
-            <div className="text-sm">
-              <NavigationMenuDemo/>
-            </div>
-            <img src="bioaqoua.avif" alt="Bioaqoua" className="w-40" />
-          </div>
-        </div>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${vazir.variable}
+         bg-gradient-to-bl from-[#6BB0A9] via-[#C2C3AE] to-[#FCE3D5]
+          transition-all duration-5 bg-fixed flex flex-col justufy-center items-center `}>
+        <Header />
         {children}
         <div className="flex flee-col text-sm md:mx-auto md:w-[65%] justify-between 
-        py-10 gap-10 text-gray-700 font-light">
-          <div className="md:flex flee-col justify-between w-full 
-          items-start pr-8 md:pr-32 text-start gap-8 space-y-12">
-
-            <div>
-
-              <div className="mb-5 text-lg ">
-
-                <h1 className="font-bold">
-                درباره
-                </h1>
-              </div>
-              <button className="text-start text-base">
-                <h3>درباره ما</h3>
-                <h3>تماس با ما </h3>
-                <h3>عمده‌فروشی</h3>
-              </button>
-            </div>
-
-
-            <div>
-              <div className="mb-5 text-lg ">
-
-                <h1 className="font-bold">
-                خدمات مشتریان
-                </h1>
-              </div>
-              <button className="text-start text-base">
-                <h3>سوالات متداول</h3>
-                <h3>جستجو </h3>
-                <h3>گواهی‌ها (FDA, ISO)</h3>
-                <h3>سیاست حفظ حریم خصوصی</h3>
-                <h3>ارسال و تحویل</h3>
-                <h3>سیاست بازپرداخت و مرجوعی</h3>
-              </button>
-            </div>
-
-
-
-            <div>
-              <div className="mb-5 text-lg">
-                <h1 className="font-bold">اصلی </h1>
-                </div>
-              <button className="text-start text-base">
-                <h3>خانه </h3>
-                <h3>جدید </h3>
-                <h3>پرفروش‌ترین‌ها </h3>
-                <h3>مراقبت پوست</h3>
-                <h3>آرایش </h3>
-                <h3>همه محصولات</h3>
-                <h3>درباره </h3>
-              </button>
-            </div>
-          </div>
-
+        py-10 md:gap-10 text-gray-700 font-light">
+          <Footer />
           <div>
-            <img src="bioaqoua.avif" alt="Bioaqoua" className="w-40 md:mr-24" />
+            <img src="bioaqoua.avif" alt="Bioaqoua" className="md:w-40 md:mr-24 w-52" />
           </div>
         </div>
       </body>
