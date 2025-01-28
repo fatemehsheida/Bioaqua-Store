@@ -1,12 +1,14 @@
+import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col justify-center items-center content-center ">
-      <div className="bg-[#FBF1E9] w-full py-10">
+    <div className="w-full flex flex-col justify-center items-center content-center text-[#2E2A39]">
+      <div className=" w-full py-10">
         <img src="BioAqua.jpg" alt="BioAqua" className="w-full h-[550px]" />
-        <div className="px-28">
-          <div className="bg-sky-200 py-9">
+        <div className="px-28 bg-[#EFF5F4]/50 py-10" >
+
+          <div className="New-&-Restock bg-sky-200 py-9">
             <h1>New & Restock</h1>
             <div>
               <img src="" alt="" />
@@ -18,7 +20,7 @@ export default function Home() {
           </div>
 
 
-          <div className="bg-rose-200 py-9">
+          <div className="Best-Sellers bg-rose-200 py-9">
             <h1>Best Sellers</h1>
             <div>
               <img src="" alt="" />
@@ -29,7 +31,7 @@ export default function Home() {
             <button>View All</button>
           </div>
 
-          <div className="py-9 flex flex-row justify-center" >
+          <div className="multimedia-collagen py-9 flex flex-row justify-center" >
             <div className="flex flex-col">
               <h1 className="font-semibold text-3xl pb-8 ">کلاژ چندرسانه‌ای</h1>
               <div className="flex flex-row gap-9">
@@ -81,7 +83,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-yellow-200 py-9">
+          <div className="Popular bg-yellow-200 py-9">
             <h1>Shop What's Popular Now</h1>
             <div>
               <img src="" alt="" />
@@ -93,7 +95,7 @@ export default function Home() {
             <button>View All</button>
           </div>
 
-          <div className="bg-gray-300 py-9">
+          <div className="Sheet-Masks bg-gray-300 py-9">
             <h1>Sheet Masks</h1>
             <div>
               <img src="" alt="" />
@@ -103,18 +105,27 @@ export default function Home() {
             </div>
             <button>View All</button>
           </div>
-
-          <div className="bg-violet-400 py-9">
-            <h1>
-              Video Reviews on Youtube
-            </h1>
-            <span>
-              Bioaqua specialized in plant-based skincare, andmakeup. Bioaqua's expertise is well-known inacneandblackheadstreatments,exfoliators,masks,hydration, and more.
-            </span>
-            <button>Watch Now</button>
-          </div>
+        </div>
 
 
+
+
+        <div className="Youtube py-9 flex flex-col justify-center items-center gap-8">
+          <h1 className="text-4xl font-medium">
+           ویدیوها در یوتیوب
+          </h1>
+          <span className="font-light text-xl text-wrap w-[770px] text-center">
+            بیوآکوا در حوزه محصولات مراقبت از پوست گیاهی و آرایشی تخصص دارد. این برند به‌خودراه‌حل‌های تخصصی در درمان آکنه و جوش‌های سرسیاه، لایه‌برداری، ماسک‌ها، آبرسانی و موارد دیگر معروف است.
+          </span>
+          <button className="bg-[#2E2A39] text-[#C3C3AE] py-2 px-4 rounded-xl">
+            <Link href="https://www.youtube.com/results?search_query=bioaqua">
+              تماشا
+            </Link>
+
+          </button>
+        </div>
+
+        <div className="collctions px-28 bg-[#EFF5F4]/50 py-10" >
           <div className="py-9 flex flex-col" >
             <h1 className="font-semibold text-3xl px-8">کالکشن ها</h1>
 
@@ -157,8 +168,8 @@ export default function Home() {
 
 
           </div>
-
         </div>
+
       </div>
 
     </div>
