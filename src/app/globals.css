@@ -63,17 +63,18 @@
   }
 }
 
+/* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 26px;
-  top: 26px;
+  left: 36px;
+  top: 10px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: 0 #373a47;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -99,23 +100,23 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
-  top: 50px;
-  margin-top: 10rem;
+  left: 50px;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: linear-gradient(
     to top right,
-    #CFCFB7,
-    #B4BFA5,
-    #50A597
+    #C9D5BF,
+    #D4CAAE,
+    #C1C2A8,
+    #A2BAA3,
+    #82B19E,
+    #72AE9C
   );
-  position: fixed;
-  top: 200px;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-  width: 90%;
+  width: 30rem;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -136,6 +137,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-  background: none !important;
-  top: 200px;
+  background:  nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb;
 }
