@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
-import { CardFooter } from "@/components/ui/card";
 import Footer from "@/components/layout/footer";
 
 
