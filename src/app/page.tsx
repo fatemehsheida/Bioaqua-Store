@@ -4,9 +4,8 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col justify-center items-center content-center ">
       <div className="bg-[#FBF1E9] w-full py-10">
+        <img src="BioAqua.jpg" alt="BioAqua" className="w-full h-[550px]" />
         <div className="px-28">
-
-          <img src="BioAqua.jpg" alt="BioAqua" className="w-full h-[550px]" />
           <div className="bg-sky-200 py-9">
             <h1>New & Restock</h1>
             <div>
@@ -30,30 +29,53 @@ export default function Home() {
             <button>View All</button>
           </div>
 
-          <div className="bg-green-400 py-9">
-            <div>
-              <h1>Multimedia collage</h1>
-              <div>
-                <img src="Multimedia collage/acen&blemishedtreatmants.webp" alt="" className="w-52" />
-                <div>
-                  <h4>Acne & Blemishes Treatments</h4>
-                  <button>icon</button>
-                </div>
-              </div>
-            </div>
+          <div className="py-9 flex flex-row justify-center" >
+            <div className="flex flex-col">
+              <h1 className="font-semibold text-3xl pb-8 ">کلاژ چندرسانه‌ای</h1>
+              <div className="flex flex-row gap-9">
 
-            <div>
-              <div>
-                <img src="Multimedia collage/cleanse & exfolitors.webp" alt="" />              <div>
-                  <h4>Acne & Blemishes Treatments</h4>
-                  <button>icon</button>
+
+
+                <div className="flex flex-col gap-7">
+                  <div>
+                    <img src="Multimedia collage/cleanse & exfolitors.webp" className="w-[340px] h-[243px] rounded-lg" />
+                    <div>
+                      <button>
+                        <div className="flex flex-row items-center
+                     justify-start gap-3 px-4 py-2 text-lg font-medium">
+                          <GoChevronRight />
+                          <h4>پاک‌کننده‌ها و اسکراب‌ها</h4>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="sheet-mask/golden-osmanthus.webp" className="w-[340px] h-[340px] rounded-lg" />
+                    <div>
+                      <button>
+                        <div className="flex flex-row items-center
+                     justify-start gap-3 px-4 py-2 text-lg font-medium">
+                          <GoChevronRight />
+                          <h4>ماسک بیوآکوا</h4>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <img src="sheet-mask/golden-osmanthus.webp" alt="" />
-                <div>
-                  <h4>Bioaqua Mask</h4>
-                  <button>icon</button>
+
+                <div className="flex flex-col gap-4">
+                  <div>
+                    <img src="Multimedia collage/acen&blemishedtreatmants.webp" alt="" className="w-[750px] h-[651px] rounded-lg" />
+                    <div>
+                      <button>
+                        <div className="flex flex-row items-center
+                     justify-start gap-3 px-4 py-2 text-lg font-medium">
+                          <GoChevronRight />
+                          <h4>درمان‌های آکنه و لک</h4>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,15 +113,6 @@ export default function Home() {
             </span>
             <button>Watch Now</button>
           </div>
-
-
-
-
-
-
-
-
-
 
 
           <div className="py-9 flex flex-col" >
