@@ -65,7 +65,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="text-right">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/#" legacyBehavior passHref>
@@ -99,8 +99,8 @@ export function NavigationMenuDemo() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <div className="mb-2 mt-4 text-lg font-medium ">
-                      img
+                    <div className="mb-2 mt-4 text-lg font-medium bg-cover w-48 h-full p-0">
+                      <img src="card.avif" className="w-full h-full" />
                     </div>
 
                   </Link>
