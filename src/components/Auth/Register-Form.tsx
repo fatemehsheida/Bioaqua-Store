@@ -16,7 +16,7 @@ export default function Component() {
 
       <Card className="flex flex-col justify-center items-center w-full">
         <CardHeader>
-          <CardTitle className="text-3xl font-bold my-5">ثبت نام</CardTitle>
+          <CardTitle className="text-3xl  my-5 text-gray-800 font-bold">ثبت نام</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4 mt-10">
           <div className="space-y-2">

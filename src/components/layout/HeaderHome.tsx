@@ -16,81 +16,81 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "All Makeup",
+    title: "همه محصولات آرایشی",
     href: "/",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "مجموعه‌های کامل آرایشی برای یک ظاهر هماهنگ و زیبا",
   },
   {
-    title: "Makeup Creams",
+    title: "کرم های آرایشی",
     href: "/",
     description:
-      "For sighted users to preview content available behind a link.",
+      "کرم‌های مرطوب‌کننده و پایه‌های آرایشی برای پوستی صاف و درخشان",
   },
   {
-    title: "Eye",
+    title: "آرایش چشم",
     href: "/",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "مجموعه‌ای از محصولات آرایش چشم، شامل سایه، خط چشم و ریمل برای نگاهی جذاب",
   },
   {
-    title: "Cheek",
+    title: "آرایش گونه",
     href: "/",
-    description: "Visually or semantically separates content.",
+    description: "محصولات آرایش گونه مانند رژگونه و هایلایتر برای ظاهری شاداب و درخشان",
   },
   {
-    title: "Lip",
-    href: "/",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Hair",
+    title: "آرایش لب",
     href: "/",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "انواع رژلب، لیپ‌گلاس و خط لب برای لب‌هایی زیبا و جذاب",
   },
   {
-    title: "Fragrance",
+    title: "محصولات مو",
     href: "/",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    description:"مراقبت و استایل مو با محصولاتی مانند ژل، واکس و اسپری مو",
   },
   {
-    title: "Sets",
+    title: "عطر و ادکلن",
     href: "/",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "کشف رایحه‌های منحصر به فرد برای هر سلیقه و مناسب هر موقعیت",
+  },
+  {
+    title: "ست های آرایشی",
+    href: "/",
+    description:
+      "مجموعه‌های کامل آرایشی برای یک ظاهر هماهنگ و زیبا",
   },
 ];
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="text-right">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/#" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Home
+              خانه
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/#" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              New
+              جدید
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/#" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              BEST SELLERS
+              پرفروش ترین ها
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>SKINCARE</NavigationMenuTrigger>
+          <NavigationMenuTrigger>مراقبت پوست</NavigationMenuTrigger>
+
           <NavigationMenuContent >
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -99,28 +99,28 @@ export function NavigationMenuDemo() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <div className="mb-2 mt-4 text-lg font-medium ">
-                      img
+                    <div className="mb-2 mt-4 text-lg font-medium bg-cover w-48 h-full p-0">
+                      <img src="card.avif" className="w-full h-full" />
                     </div>
 
                   </Link>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/#" title="Masks">
+              <ListItem href="/#" title="ماسک‌ها">
               </ListItem>
-              <ListItem href="/#" title="Shop By Concern">
+              <ListItem href="/#" title="خرید بر اساس نیاز پوست">
               </ListItem>
-              <ListItem href="/#" title="Shop By Ingredients">
+              <ListItem href="/#" title="خرید بر اساس مواد تشکیل‌دهنده">
               </ListItem>
-              <ListItem href="/#" title=" All Skincare">
+              <ListItem href="/#" title="همه‌ی محصولات مراقبت پوست">
               </ListItem>
-              <ListItem href="/#" title="Shop By Skin">
+              <ListItem href="/#" title="خرید بر اساس نوع پوست">
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>MAKEUP</NavigationMenuTrigger>
+          <NavigationMenuTrigger>آرایشی</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -129,6 +129,9 @@ export function NavigationMenuDemo() {
                   title={component.title}
                   href={component.href}
                 >
+                  <h5 className="text-xs">
+                    {component.description}
+                  </h5>
 
                 </ListItem>
               ))}
@@ -138,7 +141,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <Link href="/#" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              all shop
+              همه محصولات
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -146,7 +149,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <Link href="/#" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              about
+              درباره ما
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
