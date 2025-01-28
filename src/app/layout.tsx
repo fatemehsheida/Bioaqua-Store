@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { NavigationMenuDemo } from "../components/ui/layout/HeaderHome";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "./globals.css";
-import { IoMdSearch } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa6";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/footer";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+
+const vazir = Vazirmatn({
+  variable: "--font-vazir-mono",
+  subsets: ["arabic"],
+  weight: "300"
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,27 +36,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fn" dir="rtl" className="h-screen w-full items-center">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="mx-auto bg-[#C5E0B7] w-full h-20 items-center flex flex-row justify-between px-14 pt-2 pb-1.5">
-          <div className="flex flex-row opacity-80 items-center justify-start hover:size-7">
-            <button className="mx-2">
-              <IoMdSearch className="size-6 hover:size-8" />
-            </button>
-            <button className="mx-2">
-              <FaRegUser className="size-5 hover:size-7" />
-            </button>
-            <button className="mx-3">
-              <AiOutlineShoppingCart className="size-6 hover:size-8" />
-            </button>
-          </div>
-          <div className="flex items-center gap-10">
-            <div>
-              <NavigationMenuDemo />
-            </div>
-            <img src="bioaqoua.avif" alt="Bioaqoua" className="w-36" />
+      <body className={`${geistSans.variable} ${geistMono.variable} ${vazir.variable}
+         bg-gradient-to-bl from-[#6BB0A9] via-[#C2C3AE] to-[#FCE3D5]
+          transition-all duration-5 bg-fixed flex flex-col justufy-center items-center `}>
+        <Header />
+        {children}
+        <div className="flex flee-col text-sm md:mx-auto md:w-[65%] justify-between 
+        py-10 md:gap-10 text-gray-700 font-light">
+          <Footer />
+          <div>
+            <img src="bioaqoua.avif" alt="Bioaqoua" className="md:w-40 md:mr-24 w-52" />
           </div>
         </div>
-        {children}
       </body>
     </html>
   );

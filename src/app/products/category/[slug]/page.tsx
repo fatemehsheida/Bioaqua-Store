@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import ProductList from "@/app/component/product/ProductList";
-import { ProductsResponse } from "@/types/type";
-import updateQueryParams from "@/utils/Query";
+
 import { Metadata } from "next";
-=======
-import ProductList from "@/components/ui/product/productList";
+import ProductList from "@/components/product/productList";
 import { ProductsResponse } from "@/types/type";
 import updateQueryParams from "@/utils/Query";
->>>>>>> auth-Form
 import Link from "next/link";
 
 interface CategoryPageProps {
@@ -20,7 +15,6 @@ interface CategoryPageProps {
   };
 }
 
-<<<<<<< HEAD
 export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
@@ -29,8 +23,6 @@ export async function generateMetadata({
   };
 }
 
-=======
->>>>>>> auth-Form
 export default async function CategoryPage({
   params,
   searchParams,
