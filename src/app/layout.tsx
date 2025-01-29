@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="fn" dir="rtl" className="h-screen w-full items-center">
       <body className={`${geistSans.variable} ${geistMono.variable} ${vazir.variable}
-         bg-gradient-to-bl from-[#6BB0A9] via-[#C2C3AE] to-[#FCE3D5]
+         bg-gradient-to-bl from-[#6BB0A9] from-4% via-[#CCC6B0] to-[#F0D6C0]
           transition-all duration-5 bg-fixed flex flex-col justufy-center items-center `}>
         <Header />
         {children}

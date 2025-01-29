@@ -64,7 +64,7 @@ export function LoginForm({
               </div>
               <div className="w-24 mx-auto ">
                 <Button asChild className="w-full bg-[#94D2BD] hover:bg-[#75B2A9] transition-all duration-300">
-                  <Link href="/products">ورود</Link>
+                  <Link href="/">ورود</Link>
                 </Button>
               </div>
             </div>
