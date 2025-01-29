@@ -11,7 +11,7 @@ const BestSellers = () => {
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
                         <div className="relative">
-                            <img src="best sellers/deep hydration mositurising face cream.webp" className="w-60 h-60 rounded-xl" />
+                            <img src="best sellers/deep hydration mositurising face cream.webp" className="w-60 h-60 hover:scale-110 rounded-xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 

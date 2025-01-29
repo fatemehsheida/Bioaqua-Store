@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col justify-center items-center content-center text-[#2E2A39]">
       <div className=" w-full py-10">
-        <img src="BIOAQUA_Rice_Raw_Pulp_-Banner_1024x1024.webp" alt="BioAqua" className="w-full h-[550px]" />
+        <img src="bioaqua-banner-green_48645d6c-77a6-4c5d-92fc-d02d2d2f2bcc.webp"
+         alt="BioAqua" className="w-full h-[550px] object-cover " />
         <div className="px-28 bg-[#EEF5F4]/80 py-10" >
 
           <NewRestock/>
