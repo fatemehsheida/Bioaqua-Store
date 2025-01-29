@@ -5,30 +5,122 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col justify-center items-center content-center text-[#2E2A39]">
       <div className=" w-full py-10">
-        <img src="BioAqua.jpg" alt="BioAqua" className="w-full h-[550px]" />
+        <img src="BIOAQUA_Rice_Raw_Pulp_-Banner_1024x1024.webp" alt="BioAqua" className="w-full h-[550px]" />
         <div className="px-28 bg-[#EFF5F4]/50 py-10" >
 
-          <div className="New-&-Restock bg-sky-200 py-9">
-            <h1>New & Restock</h1>
-            <div>
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
+          <div className="New-&-Restock bg-sky-200 py-9 flex flex-col">
+            <h1 className="font-semibold text-3xl px-8 pb-8">جدید و موجودی مجدد</h1>
+
+            <div className="flex flex-row justify-center items-center gap-8">
+              <div className="w-60 h-[330px] flex flex-col justify-between">
+                <div className="hover:underline">
+                  <img src="new &/avacado-makeup-remover-wips.webp" className="w-60 h-60 rounded-xl" />
+                </div>
+                <span className="flex flex-row items-center flex-1
+                     justify-start gap-3 px-4 py-2 text-base font-normal">
+                  (00BQY70789) دستمال مرطوب کننده آرایش آووکادو
+                </span>
+                <div className="flex flex-row justify-end gap-2 items-center px-4 text-base font-light">
+
+                  <span>
+                    $3.656
+                  </span>
+                  <small className="line-through ">
+                    $7.11
+                  </small>
+                </div>
+              </div>
+
+
+
+              <div className="w-60 h-[330px] flex flex-col justify-between">
+                <div className="hover:underline">
+                  <img src="new &/eyelash.webp" className="w-60 h-60 rounded-xl" />
+                </div>
+                <span className="flex flex-row items-center  flex-1
+                     justify-start gap-3 px-4 py-2 text-base font-normal">
+                  (BQY78648) خط چشم مرطوب کننده لوسیون رشد مژه
+                </span>
+                <div className="flex flex-row justify-end gap-2 items-center px-4 text-base font-light">
+
+                  <span>
+                    $3.656
+                  </span>
+                  <small className="line-through">
+                    $7.11
+                  </small>
+                </div>
+              </div>
+
+
+
+
+
+              <div className="w-60 h-[330px] flex flex-col justify-between">
+                <div className="hover:underline">
+                  <img src="new &/-peptide-hydrating-eye-mask.webp" className="w-60 h-60 rounded-xl" />
+                </div>
+                <span className="flex flex-row items-center flex-1
+                     justify-start gap-3 px-4 py-2 text-base font-normal">
+                  (BQY90089) ماسک چشم آبرسان پپتید
+                </span>
+                <div className="flex flex-row justify-end gap-2 items-center px-4 text-base font-light">
+
+                  <span>
+                    $3.656
+                  </span>
+                  <small className="line-through">
+                    $7.11
+                  </small>
+                </div>
+              </div>
+
+
+
+
+
+              <div className="w-60 h-[330px] flex flex-col justify-between">
+                <div className="hover:underline">
+                  <img src="new &/peptidecollagen mask.webp" className="w-60 h-60 rounded-xl" />
+                </div>
+                <span className="flex flex-row items-center
+                     justify-start gap-3 px-4 py-2 text-base font-normal  flex-1">
+                  (BQY90546) ماسک کلاژن پپتاید
+                </span>
+                <div className="flex flex-row justify-end gap-2 items-center px-4 text-base font-light">
+                  <span>
+                    $3.656
+                  </span>
+
+                  <small className="line-through">
+                    $7.11
+                  </small>
+                </div>
+              </div>
+
+
+
             </div>
-            <button>View All</button>
+            <button>
+              <Link href="/">
+              
+              دیدن همه
+              </Link>
+              </button>
+
           </div>
 
 
           <div className="Best-Sellers bg-rose-200 py-9">
-            <h1>Best Sellers</h1>
+            <h1>پرفروش‌ترین‌ها</h1>
             <div>
               <img src="" alt="" />
               <img src="" alt="" />
               <img src="" alt="" />
               <img src="" alt="" />
             </div>
-            <button>View All</button>
+            <button>دیدن همه</button>
+
           </div>
 
           <div className="multimedia-collagen py-9 flex flex-row justify-center" >
@@ -84,7 +176,7 @@ export default function Home() {
           </div>
 
           <div className="Popular bg-yellow-200 py-9">
-            <h1>Shop What's Popular Now</h1>
+            <h1 className="font-semibold text-3xl px-8">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
             <div>
               <img src="" alt="" />
               <img src="" alt="" />
@@ -92,18 +184,17 @@ export default function Home() {
               <img src="" alt="" />
               <img src="" alt="" />
             </div>
-            <button>View All</button>
           </div>
 
           <div className="Sheet-Masks bg-gray-300 py-9">
-            <h1>Sheet Masks</h1>
+            <h1 className="font-semibold text-3xl px-8">ماسک‌های ورقه‌ای</h1>
             <div>
               <img src="" alt="" />
               <img src="" alt="" />
               <img src="" alt="" />
               <img src="" alt="" />
             </div>
-            <button>View All</button>
+            <button>دیدن همه</button>
           </div>
         </div>
 
@@ -112,7 +203,7 @@ export default function Home() {
 
         <div className="Youtube py-9 flex flex-col justify-center items-center gap-8">
           <h1 className="text-4xl font-medium">
-           ویدیوها در یوتیوب
+            ویدیوها در یوتیوب
           </h1>
           <span className="font-light text-xl text-wrap w-[770px] text-center">
             بیوآکوا در حوزه محصولات مراقبت از پوست گیاهی و آرایشی تخصص دارد. این برند به‌خودراه‌حل‌های تخصصی در درمان آکنه و جوش‌های سرسیاه، لایه‌برداری، ماسک‌ها، آبرسانی و موارد دیگر معروف است.
