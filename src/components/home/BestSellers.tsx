@@ -4,7 +4,8 @@ import React from 'react'
 const BestSellers = () => {
     return (
         <div className="New-&-Restock flex flex-col  gap-5 ">
-            <h1 className="font-semibold text-3xl px-8 pb-8 text-right">پرفروش‌ترین‌ها</h1>
+            <div className='flex flex-col'>
+            <h1 className="font-semibold text-3xl pb-8 text-right">پرفروش‌ترین‌ها</h1>
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex flex-row justify-center items-center gap-8 ">
 
@@ -115,7 +116,10 @@ const BestSellers = () => {
                         </Link>
                     </button>
                 </div>
+
             </div>
+            </div>
+
         </div>
     )
 }

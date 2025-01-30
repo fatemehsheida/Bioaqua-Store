@@ -4,7 +4,7 @@ import { GoChevronRight } from 'react-icons/go'
 const Collctions = () => {
   return (
     <div className="py-9 flex flex-col" >
-      <h1 className="font-semibold text-3xl px-8">کالکشن ها</h1>
+      <h1 className="font-semibold text-3xl">کالکشن ها</h1>
 
       <div className="flex flex-row gap-12 justify-center py-8">
 
