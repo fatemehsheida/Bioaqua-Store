@@ -10,14 +10,14 @@ const MultimediaCollagen = () => {
 
 
 
-                    <div className="flex flex-col gap-7">
-                        <div>
-                            <img src="Multimedia collage/cleanse & exfolitors.webp" className="w-[340px] h-[243px] rounded-lg" />
+                    <div className="flex flex-col gap-[70px]">
+                        <div className='group w-[340px] h-[243px] group-hover:overflow-hidden group-hover:rounded-lg'>
+                            <img src="Multimedia collage/cleanse & exfolitors.webp" className="group-hover:scale-105 rounded-lg" />
                             <div>
                                 <button>
                                     <div className="flex flex-row items-center 
                      justify-start gap-3 px-4 py-2 text-lg font-medium">
-                                        <div className='hover:scale-150'>
+                                        <div className='group-hover:scale-150'>
                                             <GoChevronRight />
                                         </div>
                                         <h4>پاک‌کننده‌ها و اسکراب‌ها</h4>
@@ -25,13 +25,15 @@ const MultimediaCollagen = () => {
                                 </button>
                             </div>
                         </div>
-                        <div>
-                            <img src="sheet-mask/golden-osmanthus.webp" className="w-[340px] h-[340px] rounded-lg" />
+                        <div className='group'>
+                            <div className='group w-[340px] h-[340px] group-hover:overflow-hidden group-hover:rounded-lg'>
+                            <img src="sheet-mask/golden-osmanthus.webp" className="group-hover:scale-105 rounded-lg" />
+                            </div>
                             <div>
                                 <button>
                                     <div className="flex flex-row items-center
                      justify-start gap-3 px-4 py-2 text-lg font-medium">
-                                        <div className='hover:scale-150'>
+                                        <div className='group-hover:scale-150'>
                                             <GoChevronRight />
                                         </div>
 
@@ -43,13 +45,16 @@ const MultimediaCollagen = () => {
                     </div>
 
                     <div className="flex flex-col gap-4">
-                        <div>
-                            <img src="Multimedia collage/acen&blemishedtreatmants.webp" alt="" className="w-[750px] h-[651px] rounded-lg" />
+                        <div className="group">
+                            <div className='w-[750px] h-[651px] group-hover:overflow-hidden group-hover:rounded-lg'>
+                                <img src="Multimedia collage/acen&blemishedtreatmants.webp" className="group-hover:scale-105 rounded-lg object-cover h-[651px] w-[750px] group-hover:overflow-hidden" />
+                            </div>
                             <div>
                                 <button>
                                     <div className="flex flex-row items-center
                      justify-start gap-3 px-4 py-2 text-lg font-medium">
-                                        <div className='hover:scale-150'>
+                                        <div className='group-hover:scale-150'>
+
                                             <GoChevronRight />
                                         </div>
                                         <h4>درمان‌های آکنه و لک</h4>

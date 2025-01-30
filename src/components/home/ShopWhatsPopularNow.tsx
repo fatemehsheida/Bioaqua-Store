@@ -9,14 +9,14 @@ const ShopWhatsPopularNow = () => {
                 <div className="flex flex-row justify-center items-center gap-8 ">
 
 
-                    <div className="w-44 h-[280px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-44 h-44">
-                            <img src="new &/avacado-makeup-remover-wips.webp" className="hover:scale-105 rounded-3xl" />
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44 ">
+                            <img src="new &/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
                         <div >
-                            <span className="flex flex-row items-center flex-1 hover:underline
+                            <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                                 (00BQY70789) دستمال مرطوب کننده آرایش آووکادو
                             </span>
@@ -24,7 +24,7 @@ const ShopWhatsPopularNow = () => {
                                 <span>
                                     $3.656
                                 </span>
-                                <small className="line-through ">
+                                <small className="line-through opacity-80">
                                     $7.11
                                 </small>
                             </div>
@@ -33,14 +33,14 @@ const ShopWhatsPopularNow = () => {
                     </div>
 
 
-                    <div className="w-44 h-[280px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-44 h-44">
-                            <img src="new &/avacado-makeup-remover-wips.webp" className="hover:scale-105 rounded-3xl" />
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
+                            <img src="new &/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
                         <div >
-                            <span className="flex flex-row items-center flex-1 hover:underline
+                            <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                                 (00BQY70789) دستمال مرطوب کننده آرایش آووکادو
                             </span>
@@ -48,7 +48,7 @@ const ShopWhatsPopularNow = () => {
                                 <span>
                                     $3.656
                                 </span>
-                                <small className="line-through ">
+                                <small className="line-through opacity-80">
                                     $7.11
                                 </small>
                             </div>
@@ -59,12 +59,12 @@ const ShopWhatsPopularNow = () => {
 
 
 
-                    <div className="w-44 h-[280px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-44 h-44">
-                            <img src="new &/eyelash.webp" className="hover:scale-105 rounded-3xl" />
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
+                            <img src="new &/eyelash.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
                             <span className='px-4 py-1 bg-[#2E2A39] text-[#FAFAFA] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
-                        <span className="flex flex-row items-center  flex-1 hover:underline
+                        <span className="flex flex-row items-center  flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY78648) خط چشم مرطوب کننده لوسیون رشد مژه
                         </span>
@@ -73,7 +73,7 @@ const ShopWhatsPopularNow = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -83,12 +83,12 @@ const ShopWhatsPopularNow = () => {
 
 
 
-                    <div className="w-44 h-[280px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-44 h-44">
-                            <img src="new &/-peptide-hydrating-eye-mask.webp" className="hover:scale-105 rounded-3xl" />
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
+                            <img src="new &/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
-                        <span className="flex flex-row items-center flex-1 hover:underline
+                        <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY90089) ماسک چشم آبرسان پپتید
                         </span>
@@ -97,7 +97,7 @@ const ShopWhatsPopularNow = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -107,13 +107,13 @@ const ShopWhatsPopularNow = () => {
 
 
 
-                    <div className="w-44 h-[280px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-44 h-44">
-                            <img src="new &/peptidecollagen mask.webp" className="hover:scale-105 rounded-3xl" />
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
+                            <img src="new &/peptidecollagen mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
 
                         </div>
-                        <span className="flex flex-row items-center hover:underline
+                        <span className="flex flex-row items-center group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY90546) ماسک کلاژن پپتاید
                         </span>
@@ -122,7 +122,7 @@ const ShopWhatsPopularNow = () => {
                                 $3.656
                             </span>
 
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -131,7 +131,7 @@ const ShopWhatsPopularNow = () => {
 
 
                 </div>
-                <div className="my-8 bg-[#94D2BD] hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg hover:w-32">
+                <div className="my-8 bg-[#94D2BD] group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
 
                     <button >
                         <Link href="/">
