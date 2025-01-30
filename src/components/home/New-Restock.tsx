@@ -9,14 +9,14 @@ const NewRestock = () => {
                 <div className="flex flex-row justify-center items-center gap-8 ">
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="new &/avacado-makeup-remover-wips.webp" className="w-60 h-60 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="new &/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
                         <div >
-                            <span className="flex flex-row items-center flex-1 hover:underline
+                            <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                                 (00BQY70789) دستمال مرطوب کننده آرایش آووکادو
                             </span>
@@ -24,7 +24,7 @@ const NewRestock = () => {
                                 <span>
                                     $3.656
                                 </span>
-                                <small className="line-through ">
+                                <small className="line-through opacity-80">
                                     $7.11
                                 </small>
                             </div>
@@ -34,12 +34,12 @@ const NewRestock = () => {
 
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="new &/eyelash.webp" className="w-60 h-60 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="new &/eyelash.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#2E2A39] text-[#FAFAFA] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
-                        <span className="flex flex-row items-center  flex-1 hover:underline
+                        <span className="flex flex-row items-center  flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY78648) خط چشم مرطوب کننده لوسیون رشد مژه
                         </span>
@@ -48,7 +48,7 @@ const NewRestock = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -58,12 +58,12 @@ const NewRestock = () => {
 
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="new &/-peptide-hydrating-eye-mask.webp" className="w-60 h-60 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative  group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="new &/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
-                        <span className="flex flex-row items-center flex-1 hover:underline
+                        <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY90089) ماسک چشم آبرسان پپتید
                         </span>
@@ -72,7 +72,7 @@ const NewRestock = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -82,13 +82,13 @@ const NewRestock = () => {
 
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="new &/peptidecollagen mask.webp" className="w-60 h-60 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative  group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="new &/peptidecollagen mask.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
 
                         </div>
-                        <span className="flex flex-row items-center hover:underline
+                        <span className="flex flex-row items-center group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY90546) ماسک کلاژن پپتاید
                         </span>
@@ -97,7 +97,7 @@ const NewRestock = () => {
                                 $3.656
                             </span>
 
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -106,7 +106,7 @@ const NewRestock = () => {
 
 
                 </div>
-                <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg hover:w-32">
+                <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 group-hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
 
                     <button >
                         <Link href="/">
