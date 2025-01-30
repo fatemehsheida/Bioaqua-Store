@@ -3,15 +3,15 @@ import React from 'react'
 
 const BestSellers = () => {
     return (
-        <div className="New-&-Restock  py-9 flex flex-col  gap-5 ">
+        <div className="New-&-Restock flex flex-col  gap-5 ">
             <h1 className="font-semibold text-3xl px-8 pb-8 text-right">پرفروش‌ترین‌ها</h1>
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex flex-row justify-center items-center gap-8 ">
 
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="best sellers/deep hydration mositurising face cream.webp" className="w-60 h-60 hover:scale-110 rounded-xl" />
+                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-60 h-60">
+                            <img src="best sellers/deep hydration mositurising face cream.webp" className="hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
@@ -25,7 +25,7 @@ const BestSellers = () => {
                                     $3.656
                                 </span>
                                 <small className="line-through ">
-                                    $7.11
+                                    $7.11-
                                 </small>
                             </div>
                         </div>
@@ -35,8 +35,8 @@ const BestSellers = () => {
 
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="best sellers/nenshong pink body cream.webp" className="w-60 h-60 rounded-xl" />
+                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-60 h-60">
+                            <img src="best sellers/nenshong pink body cream.webp" className="hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#2E2A39] text-[#FAFAFA] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
                         <span className="flex flex-row items-center  flex-1 hover:underline
@@ -59,8 +59,8 @@ const BestSellers = () => {
 
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="sheet-mask/golden-osmanthus.webp" className="w-60 h-60 rounded-xl" />
+                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-60 h-60">
+                            <img src="sheet-mask/golden-osmanthus.webp" className="hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
                         <span className="flex flex-row items-center flex-1 hover:underline
@@ -83,8 +83,8 @@ const BestSellers = () => {
 
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="sheet-mask/ance-rejuvenation.webp" className="w-60 h-60 rounded-xl" />
+                        <div className="relative hover:overflow-hidden hover:rounded-3xl w-60 h-60">
+                            <img src="sheet-mask/ance-rejuvenation.webp" className="hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
 
                         </div>
@@ -106,7 +106,7 @@ const BestSellers = () => {
 
 
                 </div>
-                <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg hover:w-32">
+                <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg hover:w-32">
 
                     <button >
                         <Link href="/">
