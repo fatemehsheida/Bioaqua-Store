@@ -4,7 +4,7 @@ import React from 'react'
 const ShopWhatsPopularNow = () => {
     return (
         <div className="New-&-Restock  py-9 flex flex-col  gap-5 ">
-            <h1 className="font-semibold text-3xl px-8 pb-8 text-right">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
+            <h1 className="font-semibold text-3xl pb-8 text-right">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex flex-row justify-center items-center gap-8 ">
 

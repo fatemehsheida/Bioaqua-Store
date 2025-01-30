@@ -8,7 +8,7 @@ import Youtube from "@/components/home/Youtube";
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col justify-center items-center content-center text-[#2E2A39]">
+    <div className="vazir w-full flex flex-col justify-center items-center content-center text-[#2E2A39]">
       <div className=" w-full pb-10 pt-3">
         <img src="bioaqua-banner-green_48645d6c-77a6-4c5d-92fc-d02d2d2f2bcc.webp"
           alt="BioAqua" className="w-full h-[550px] object-cover " />
