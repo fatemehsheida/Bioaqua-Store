@@ -51,7 +51,7 @@ const Header = () => {
         ) : (<div></div>)}
 
       </div>
-          <img src="bioaqoua.avif" alt="Bioaqoua" className="md:w-40 w-32 absolute top-2 md:left-40" />
+          <img src="http://localhost:8000/uploads/image-1738349698115-546474799.avif" alt="Bioaqoua" className="md:w-40 w-32 absolute top-2 md:left-40" />
     </>
   );
 };
