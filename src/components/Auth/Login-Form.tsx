@@ -1,4 +1,5 @@
-import { cn } from "@/lib/utils";
+'use client'
+import { cn } from "@/lib/cn";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,11 +11,17 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
+import { useActionState } from "react";
+import { loginAction } from "@/actions/auth/login";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
+  const [state, action, pending] = useActionState(loginAction, {
+    message: "",
+    errors: {},
+  });
   return (
     <div className={cn("flex flex-col gap-6 pt-10 pb-20", className)} {...props}>
       <Card className="flex flex-col justify-center items-center w-full">
@@ -22,7 +29,7 @@ export function LoginForm({
           <CardTitle className="text-3xl font-bold my-5">ورود</CardTitle>
         </CardHeader>
         <CardContent className="pt-10">
-          <form>
+          <form action={action}>
             <div className="flex flex-col gap-6">
               <div className="gap-2 w-full">
                 <Input
@@ -32,6 +39,7 @@ export function LoginForm({
                     transition: "background-color 5000s  0s",
                   }}
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="ایمیل"
                   required
@@ -45,6 +53,7 @@ export function LoginForm({
                 <Input
                   id="password"
                   type="password"
+                  name="password"
                   placeholder="رمزعبور"
                   required
                   className=" focus:bg-white p-5 text-left flex h-9 w-full bg-white  file:bg-white file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
@@ -63,8 +72,10 @@ export function LoginForm({
                 </div>
               </div>
               <div className="w-24 mx-auto ">
-                <Button asChild className="w-full bg-[#94D2BD] hover:bg-[#75B2A9] transition-all duration-300">
-                  <Link href="/">ورود</Link>
+                <Button type="submit" className="w-full bg-[#94D2BD] hover:bg-[#75B2A9] transition-all duration-300">
+                  <p>
+                    ورود
+                  </p>
                 </Button>
               </div>
             </div>

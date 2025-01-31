@@ -3,20 +3,21 @@ import React from 'react'
 
 const BestSellers = () => {
     return (
-        <div className="New-&-Restock  py-9 flex flex-col  gap-5 ">
-            <h1 className="font-semibold text-3xl px-8 pb-8 text-right">پرفروش‌ترین‌ها</h1>
+        <div className="New-&-Restock flex flex-col  gap-5 ">
+            <div className='flex flex-col'>
+            <h1 className="font-semibold text-3xl pb-8 text-right">پرفروش‌ترین‌ها</h1>
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex flex-row justify-center items-center gap-8 ">
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="best sellers/deep hydration mositurising face cream.webp" className="w-60 h-60 hover:scale-110 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="best sellers/deep hydration mositurising face cream.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
                         <div >
-                            <span className="flex flex-row items-center flex-1 hover:underline
+                            <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                                 (00BQY70789) دستمال مرطوب کننده آرایش آووکادو
                             </span>
@@ -24,8 +25,8 @@ const BestSellers = () => {
                                 <span>
                                     $3.656
                                 </span>
-                                <small className="line-through ">
-                                    $7.11
+                                <small className="line-through opacity-80">
+                                    $7.11-
                                 </small>
                             </div>
                         </div>
@@ -34,12 +35,12 @@ const BestSellers = () => {
 
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="best sellers/nenshong pink body cream.webp" className="w-60 h-60 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="best sellers/nenshong pink body cream.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#2E2A39] text-[#FAFAFA] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
-                        <span className="flex flex-row items-center  flex-1 hover:underline
+                        <span className="flex flex-row items-center  flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY78648) خط چشم مرطوب کننده لوسیون رشد مژه
                         </span>
@@ -48,7 +49,7 @@ const BestSellers = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -58,12 +59,12 @@ const BestSellers = () => {
 
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="sheet-mask/golden-osmanthus.webp" className="w-60 h-60 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="sheet-mask/golden-osmanthus.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
-                        <span className="flex flex-row items-center flex-1 hover:underline
+                        <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY90089) ماسک چشم آبرسان پپتید
                         </span>
@@ -72,7 +73,7 @@ const BestSellers = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -82,13 +83,13 @@ const BestSellers = () => {
 
 
 
-                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer">
-                        <div className="relative">
-                            <img src="sheet-mask/ance-rejuvenation.webp" className="w-60 h-60 rounded-xl" />
+                    <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
+                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="sheet-mask/ance-rejuvenation.webp" className="group-hover:scale-105 rounded-3xl" />
                             <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
 
                         </div>
-                        <span className="flex flex-row items-center hover:underline
+                        <span className="flex flex-row items-center group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             (BQY90546) ماسک کلاژن پپتاید
                         </span>
@@ -97,7 +98,7 @@ const BestSellers = () => {
                                 $3.656
                             </span>
 
-                            <small className="line-through">
+                            <small className="line-through opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -106,7 +107,7 @@ const BestSellers = () => {
 
 
                 </div>
-                <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg hover:w-32">
+                <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 group-hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
 
                     <button >
                         <Link href="/">
@@ -115,7 +116,10 @@ const BestSellers = () => {
                         </Link>
                     </button>
                 </div>
+
             </div>
+            </div>
+
         </div>
     )
 }

@@ -29,15 +29,15 @@ const Header = () => {
 
         <div className="flex flex-row opacity-80 items-center justify-start py-2">
           <button className="mx-2">
-            <IoMdSearch className="size-6 hover:size-7" />
+            <IoMdSearch className="size-6 hover:scale-125" />
           </button>
           <button className="mx-2">
             <Link  href="/login">
-            <FaRegUser className="size-5 hover:size-6" />
+            <FaRegUser className="size-5 hover:scale-125" />
             </Link>
           </button>
           <button className="mx-3">
-            <AiOutlineShoppingCart className="size-6 hover:size-7" />
+            <AiOutlineShoppingCart className="size-6 hover:scale-125" />
           </button>
         </div>
         {!isMobile ? (
