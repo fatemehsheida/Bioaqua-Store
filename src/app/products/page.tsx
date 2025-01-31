@@ -1,5 +1,5 @@
-import ProductList from "@/app/component/product/ProductList";
-import CategoryList from "@/app/component/product/CategoryList";
+import ProductList from "@/components/product/productList";
+import CategoryList from "@/components/product/CategoryList";
 import updateQueryParams from "@/utils/Query";
 import {
   ProductsResponse,
@@ -7,11 +7,15 @@ import {
   ProductsPageProps,
 } from "@/types/type";
 import Link from "next/link";
+
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Home",
 };
+
+
 
 export default async function ProductsPage({
   searchParams,
@@ -20,9 +24,7 @@ export default async function ProductsPage({
   const categoriesEndpoint = "http://localhost:8000/categories";
 
   const [categoriesRes] = await Promise.all([fetch(categoriesEndpoint)]);
-
   const categoriesData: CategoriesResponse = await categoriesRes.json();
-
   const categories = categoriesData.results;
 
   const queryParams = {
