@@ -7,7 +7,7 @@ const BestSellers = () => {
             <div className='flex flex-col'>
             <h1 className="font-semibold text-3xl pb-8 text-right">پرفروش‌ترین‌ها</h1>
             <div className="flex flex-col justify-center items-center ">
-                <div className="flex flex-row justify-center items-center gap-8 ">
+                <div className="flex flex-row justify-center items-center md:gap-8 gap-2 flex-wrap  ">
 
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
@@ -110,7 +110,7 @@ const BestSellers = () => {
                 <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 group-hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
 
                     <button >
-                        <Link href="/">
+                        <Link href="/products/category/bestsellers">
 
                             دیدن همه
                         </Link>

@@ -6,7 +6,7 @@ const SheetMasks = () => {
         <div className="New-&-Restock  pb-9 flex flex-col  gap-5 ">
             <h1 className="font-semibold text-3xl pb-8 text-right">ماسک های ورقه ای</h1>
             <div className="flex flex-col justify-center items-center ">
-                <div className="flex flex-row justify-center items-center gap-8 ">
+                <div className="flex flex-row justify-center items-center md:gap-8 gap-2 flex-wrap  ">
 
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">

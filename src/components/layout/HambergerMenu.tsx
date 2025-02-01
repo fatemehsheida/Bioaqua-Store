@@ -20,22 +20,20 @@ export function HambergerMenu() {
 
       <div className="w-full hover:bg-[#62A496]/50 hover:border-y transition-all duration-500 px-10 py-1 ">
 
-        <Link href="/#" legacyBehavior passHref>
-
+        <Link href="/" legacyBehavior passHref>
           خانه
-
         </Link>
       </div>
 
       <div className="w-full hover:bg-[#62A496]/50 hover:border-y transition-all duration-500 px-10 py-1  items-center">
-        <Link href="/#" legacyBehavior passHref>
+        <Link href="/products/category/new" legacyBehavior passHref>
           جدید
         </Link>
       </div>
 
 
       <div className="w-full hover:bg-[#62A496]/50 hover:border-y transition-all duration-500 px-10 py-1 ">
-        <Link href="/#" legacyBehavior passHref>
+        <Link href="/products/category/bestsellers" legacyBehavior passHref>
           پرفروش ترین ها
         </Link>
       </div>
@@ -56,7 +54,7 @@ export function HambergerMenu() {
 
 
       <div className="w-full hover:bg-[#62A496]/50 hover:border-y transition-all duration-500 px-10 py-1 ">
-        <Link href="/#" legacyBehavior passHref>
+        <Link href="/products" legacyBehavior passHref>
           همه محصولات
         </Link>
       </div>

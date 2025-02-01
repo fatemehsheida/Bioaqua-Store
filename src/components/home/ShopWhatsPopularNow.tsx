@@ -6,7 +6,7 @@ const ShopWhatsPopularNow = () => {
         <div className="New-&-Restock  py-9 flex flex-col  gap-5 ">
             <h1 className="font-semibold text-3xl pb-8 text-right">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
             <div className="flex flex-col justify-center items-center ">
-                <div className="flex flex-row justify-center items-center gap-8 ">
+                <div className="flex flex-row justify-center items-center mdgap-8  gap-2 flex-wrap ">
 
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
