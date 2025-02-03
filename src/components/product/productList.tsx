@@ -8,7 +8,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div className="product-list">
+    <div className="product-list w-full bg-[#F1F3F1]">
       {products.map((product: Product) => (
         <ProductCard key={product.id} product={product} />
       ))}
