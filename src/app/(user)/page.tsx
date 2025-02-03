@@ -11,8 +11,8 @@ export default function Home() {
     <div className="vazir w-full flex flex-col justify-center items-center content-center text-[#2E2A39]">
       <div className=" w-full pb-10 pt-3">
         <img src="bioaqua-banner-green_48645d6c-77a6-4c5d-92fc-d02d2d2f2bcc.webp"
-          alt="BioAqua" className="w-full h-[550px] object-cover " />
-        <div className="px-48 bg-[#EEF5F4]/80 py-2" >
+          alt="BioAqua" className="w-full md:h-[550px] h-[300px] object-cover " />
+        <div className="md:px-48 bg-[#EEF5F4]/80 md:py-2" >
           <NewRestock />
           <BestSellers />
           <MultimediaCollagen />
