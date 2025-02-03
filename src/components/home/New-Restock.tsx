@@ -25,18 +25,12 @@ const NewRestock = () => {
                                 <span>
                                     $3.656
                                 </span>
-                                <small className="line-through opacity-80">
-                                    $7.11
-                                </small>
                             </div>
                         </div>
                         
                     </div>
 
-                    <div className="md:w-60 md:h-[325px] w-1/2 h-84 items-start flex flex-col justify-between cursor-pointer group">
-                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl
-                         md:w-60 md:h-60 w-full h-60">
-
+                   
                     <div className="md:w-60 md:h-[325px] w-7 h-52 flex flex-col justify-between cursor-pointer group">
 
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
@@ -52,9 +46,6 @@ const NewRestock = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through opacity-80">
-                                $7.11
-                            </small> 
                         </div>
                     </div>
 
@@ -75,9 +66,6 @@ const NewRestock = () => {
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through opacity-80">
-                                $7.11
-                            </small>
                         </div>
                     </div>
 
@@ -99,9 +87,6 @@ const NewRestock = () => {
                                 $3.656
                             </span>
 
-                            <small className="line-through opacity-80">
-                                $7.11
-                            </small>
                         </div>
                     </div>
 
