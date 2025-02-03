@@ -45,7 +45,7 @@ export default async function CategoryPage({
 
   return (
     <div>
-      <h1>Products in {categorySlug}</h1>
+      {/* <h1>Products in {categorySlug}</h1> */}
 
 
       <ProductList products={data.results} />

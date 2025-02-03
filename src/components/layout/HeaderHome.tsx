@@ -68,21 +68,21 @@ export function NavigationMenuDemo() {
     <NavigationMenu className="text-right ">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/#" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               خانه
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/#" legacyBehavior passHref>
+          <Link href="/products/category/new" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               جدید
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/#" legacyBehavior passHref>
+          <Link href="/products/category/bestsellers" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               پرفروش ترین ها
             </NavigationMenuLink>
@@ -139,7 +139,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/#" legacyBehavior passHref>
+          <Link href="/products" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               همه محصولات
             </NavigationMenuLink>
@@ -147,7 +147,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/#" legacyBehavior passHref>
+          <Link href="/products/category/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               درباره ما
             </NavigationMenuLink>
