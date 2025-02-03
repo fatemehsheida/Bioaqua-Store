@@ -4,7 +4,7 @@ import React from 'react'
 const SheetMasks = () => {
     return (
         <div className="New-&-Restock  pb-9 flex flex-col  gap-5 ">
-            <h1 className="font-semibold text-3xl pb-8 text-right">ماسک های ورقه ای</h1>
+            <h1 className="font-medium text-3xl pb-8 text-right">ماسک های ورقه ای</h1>
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex flex-row justify-center items-center gap-8 ">
 
@@ -12,7 +12,6 @@ const SheetMasks = () => {
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
                             <img src="best sellers/deep hydration mositurising face cream.webp" className="group-hover:scale-105 rounded-3xl" />
-                            <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
                         <div >
@@ -61,7 +60,6 @@ const SheetMasks = () => {
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
                             <img src="sheet-mask/golden-osmanthus.webp" className="group-hover:scale-105 rounded-3xl" />
-                            <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
                         <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
@@ -85,7 +83,6 @@ const SheetMasks = () => {
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
                             <img src="sheet-mask/ance-rejuvenation.webp" className="group-hover:scale-105 rounded-3xl" />
-                            <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
 
                         </div>
                         <span className="flex flex-row items-center group-hover:underline
