@@ -23,7 +23,12 @@ export interface Product {
     logo: string;
   };
   review: unknown;
-  specifications: unknown;
+  specifications: [{name: string,
+                    title: string,
+                    value: string,
+                    _id: number,
+                    id:number
+                  }];
   expert_reviews: string;
   createdAt: string;
   updatedAt: string;
