@@ -24,7 +24,7 @@ const Header = () => {
 
         </Menu>
       ) : (<div></div>)}
-      <div className="vazir md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
+      <div className=" md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
       justify-between md:py-3 md:pl-60 pt-2 pb-1.5 mx-16">
 
         <div className="flex flex-row opacity-80 items-center justify-start py-2">
@@ -51,7 +51,7 @@ const Header = () => {
         ) : (<div></div>)}
 
       </div>
-          <img src="bioaqoua.avif" alt="Bioaqoua" className="md:w-40 w-32 absolute top-2 md:left-40" />
+          <img src="http://localhost:8000/uploads/image-1738349698115-546474799.avif" alt="Bioaqoua" className="md:w-40 w-32 absolute top-2 md:left-40" />
     </>
   );
 };

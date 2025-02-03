@@ -14,7 +14,7 @@ interface CategoryListProps {
 export default function CategoryList({ categories }: CategoryListProps) {
   return (
     <div>
-      <h3>Categories</h3>
+      {/* <h3>Categories</h3>
       <ul>
         {categories.map((category) => (
           <li key={category.id}>
@@ -26,7 +26,7 @@ export default function CategoryList({ categories }: CategoryListProps) {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }

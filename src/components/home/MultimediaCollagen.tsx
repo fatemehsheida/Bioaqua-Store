@@ -5,8 +5,10 @@ const MultimediaCollagen = () => {
     return (
         <div className="multimedia-collagen py-9 flex flex-row justify-center" >
             <div className="flex flex-col">
+
                 <h1 className="font-semibold text-3xl pb-8 ">کلاژ چندرسانه‌ای</h1>
                 <div className="flex flex-row md:gap-9">
+
 
 
 
