@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -27,8 +28,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
-  }
+    --radius: 0.5rem}
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -53,8 +53,7 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
-  }
+    --chart-5: 340 75% 55%}
 }
 @layer base {
   * {
@@ -63,4 +62,185 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 20px;
+  left: 30px;
+  top: 16px;
+  
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: 0 #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  left: 20px;
+  width: 10rem;
+  background:transparent;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: linear-gradient(
+    to top right,
+    #C9D5BF,
+    #D4CAAE,
+    #C1C2A8,
+    #A2BAA3,
+    #82B19E,
+    #72AE9C
+  );
+  padding: 2.5em  0;
+  font-size: 1.15em;
+  width: 20rem;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+  
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em 0;
+  
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background:  rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 100;
+	src: url('/fonts/woff2/KalamehWeb-Thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('/fonts/woff/KalamehWeb-Thin.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: 900;
+	src: url('/fonts/woff2/KalamehWeb-Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('/fonts/woff/KalamehWeb-Black.woff') format('woff')  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: bold;
+	src: url('/fonts/woff2/KalamehWeb-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('/fonts/woff/KalamehWeb-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: KalamehWeb;
+	font-style: normal;
+	font-weight: normal;
+	src: url('/fonts/woff2/KalamehWeb-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('/fonts/woff/KalamehWeb-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+body {
+	font-family: KalamehWeb !important;
+	direction: rtl;
+	background-color: #cdcdcd;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: KalamehWeb !important;
+}
+
+.wrapper {
+	max-width: 900px;
+	margin: 20px auto;
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 0 0 10px #aaa;
+}
+
+.box100 p, .box200 p, .box300 p, .box400 p, .box500 p, .box600 p, .box700 p, .box800 p, .box900 p{
+	font-size: 20px;
+	margin: 0;
+}
+
+.box100, .box100 h1, .box200, .box200 h1, .box300, .box300 h1, .box400, .box400 h1, .box500, .box500 h1, .box600, .box600 h1, .box700, .box700 h1, .box800, .box800 h1, .box900, .box900 h1{
+  	margin: 30px 0 0 0;
+	font-size: 25px;
+}
+
+
+.box100, .box100 h1{
+	font-weight:100;
+}
+
+.box200, .box200 h1{
+	font-weight:100;
+}
+
+.box300, .box300 h1{
+	font-weight:100;
+}
+
+.box400, .box400 h1{
+	font-weight:400;
+}
+
+.box500, .box500 h1{
+	font-weight:400;
+}
+
+.box600, .box600 h1{
+	font-weight:400;
+}
+
+.box700, .box700 h1{
+	font-weight:700;
+}
+
+.box800, .box800 h1{
+	font-weight:700;
+}
+
+.box900, .box900 h1{
+	font-weight:900;
 }
