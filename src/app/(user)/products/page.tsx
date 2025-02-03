@@ -48,8 +48,8 @@ export default async function ProductsPage({
   const data: ProductsResponse = await res.json();
 
   return (
-    <div>
-      <h1>Product List</h1>
+    <div className="w-full bg-[#F4F3EF]">
+      {/* <h1>Product List</h1> */}
       <CategoryList categories={categories} />
       <ProductList products={data.results} />
       <div className="pagination">
