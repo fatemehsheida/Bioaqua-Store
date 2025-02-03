@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/footer";
+import ReduxProvider from "@/lib/reduxProvider";
 
 
 
@@ -35,7 +36,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ReduxProvider>
+
+    
     <html lang="fn" dir="rtl" className="h-screen w-full items-center">
+      <head>
+        <meta charSet="utf-8" />
+        <link href="../style.css" rel="stylesheet"></link>
+      </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable} ${vazir.variable}
          bg-gradient-to-bl from-[#6BB0A9] from-4% via-[#CCC6B0] to-[#F0D6C0]
           transition-all duration-5 bg-fixed flex flex-col justufy-center items-center `}>
@@ -50,5 +59,6 @@ export default function RootLayout({
         </div>
       </body>
     </html>
+    </ReduxProvider>
   );
 }
