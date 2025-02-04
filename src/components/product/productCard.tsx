@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <div className=" group-hover:rounded-3x">
               <img src={product.images.list[0]} className=" rounded-xl group-hover:hidden object-cover w-44 h-44" />
               <img src={product.images.list[1]} className=" rounded-xl hidden group-hover:block object-cover w-44 h-44" />
-              
+
             </div>
 
             <div className="text-[#2E2A39] pb-4 pt-2">
@@ -35,10 +35,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
 
           </div>
-          <AddToCart product={product} quantity={1} style={" w-full bg-white ring-1 ring-[#2E2A39] hover:ring-2 px-4 py-3 rounded-lg text-[#2E2A39] text-sm font-normal"} />   
 
 
         </Link>
+        <AddToCart product={product} quantity={1} style={" w-full bg-white ring-1 ring-[#2E2A39] hover:ring-2 px-4 py-3 rounded-lg text-[#2E2A39] text-sm font-normal"} />
       </div>
     </div >
 

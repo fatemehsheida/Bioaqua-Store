@@ -1,4 +1,5 @@
 'use client'
+import Swal from 'sweetalert2'
 import { cartAction } from '@/lib/slice'
 import { Product } from '@/types/type'
 import React from 'react'
@@ -20,6 +21,13 @@ const AddToCart = ({product, quantity, style}:IAddToCartProps) => {
             // totalPrice: product.price * quantity
             totalPrice: 100 * quantity
         }))
+        Swal.fire({
+          text: 'اضافه کردن به سبد خرید موفقیت آمیز بود !',
+          timer: 2000,
+          icon: 'success',
+          confirmButtonText: 'خب'
+      
+        })
     }                                                   
   return (
     <button onClick={addToCartHandler} className={style}>اضافه کردن به سبد خرید</button>

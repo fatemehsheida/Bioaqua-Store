@@ -64,6 +64,8 @@ export default async function ProductDetailPage({
 
 
             <div>
+              {product.specifications.length > 0 &&
+             <>
             <span className="text-sm font-normal text-[#5F5C68]">{product.specifications[0].name}</span>
               <div className="flex flex-row gap-3 flex-wrap">
                   
@@ -74,6 +76,7 @@ export default async function ProductDetailPage({
                    focus:border-none">{items.title}</button>
                 </div>)}
               </div>
+               </>}
             </div>
             <div>
               

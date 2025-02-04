@@ -183,6 +183,8 @@ body {
 	direction: rtl;
 	background-color: #cdcdcd;
 	margin: 0;
+  overflow: scroll !important;
+  padding-right: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6{
