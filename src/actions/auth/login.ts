@@ -1,10 +1,11 @@
 "use server";
-import "server-only";
+import "server-only"
 import { LoginFormSchema, LoginFormState } from "@/lib/validations";
 import { createSession } from "@/lib/session";
 import { redirect } from "next/navigation";
 import { AUTH_BASE_URL } from "@/config.server";
 import { formDataToObject } from "@/lib/utils";
+import Swal from 'sweetalert2'
 
 export async function loginAction(state: LoginFormState, formData: FormData) {
   /// validate input
@@ -32,5 +33,10 @@ export async function loginAction(state: LoginFormState, formData: FormData) {
     accessToken: data.tokens.accessToken,
     refreshToken: data.tokens.refreshToken,
   });
+   Swal.fire({
+            text: 'ورود شما موفقیت آمیز بود',
+            timer: 2000,
+            icon: 'success',
+          })
   redirect("/dashboard");
 }

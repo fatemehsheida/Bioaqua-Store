@@ -6,6 +6,7 @@ import { createSession } from "@/lib/session";
 import { redirect } from "next/navigation";
 import { AUTH_BASE_URL } from "@/config.server";
 import { formDataToObject } from "@/lib/utils";
+import Swal from 'sweetalert2'
 
 export async function register(state: RegisterFormState, formData: FormData) {
   /// validate input
@@ -36,6 +37,11 @@ export async function register(state: RegisterFormState, formData: FormData) {
         accessToken: data.tokens.accessToken,
         refreshToken: data.tokens.refreshToken,
       });
+      Swal.fire({
+        text: 'ثبت نام شما موفقیت آمیز بود',
+        timer: 2000,
+        icon: 'success',
+      })
       redirect("/dashboard");
     }
   } catch (err) {
