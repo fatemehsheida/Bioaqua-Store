@@ -35,7 +35,7 @@ export async function createOrUpdateSellerAction(
     if (e instanceof ApiError) {
       return {
         message: e.message,
-        errors: e.body?.errors,
+        errors: e.body?.errors as SellerFormState["errors"],
       };
     } else {
       return {
@@ -50,7 +50,7 @@ export async function createOrUpdateSellerAction(
 export async function deleteSellerAction(id: string) {
   await ensureAuthenticated();
   try {
-    const res = await deleteSeller(id);
+    await deleteSeller(id);
   } catch (e) {
     if (e instanceof ApiError) {
       return {

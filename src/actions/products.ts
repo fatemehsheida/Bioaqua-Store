@@ -38,7 +38,7 @@ export async function createOrUpdateProductAction(
     if (e instanceof ApiError) {
       return {
         message: e.message,
-        errors: e.body?.errors,
+        errors: e.body?.errors as ProductFormState["errors"],
       };
     } else {
       return {
@@ -53,7 +53,7 @@ export async function createOrUpdateProductAction(
 export async function deleteProductAction(id: string) {
   await ensureAuthenticated();
   try {
-    const res = await deleteProduct(id);
+    await deleteProduct(id);
   } catch (e) {
     if (e instanceof ApiError) {
       return {

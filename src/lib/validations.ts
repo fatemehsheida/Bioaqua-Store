@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { password, slug } from "@/lib/customValidation";
+import { password, slug } from "./customValidation";
 export interface FormState<G> {
   message?: string;
   success?: boolean;
@@ -149,3 +149,11 @@ export const SellerSchemaZod = z.object({
 
 export type SellerType = z.infer<typeof SellerSchemaZod>;
 export type SellerFormState = FormState<SellerType>;
+
+export const BadgeFormSchema = z.object({
+  icon: z.string().url().trim(),
+  title: z.string().min(1, "Title is required").trim(),
+});
+export type BadgeType = z.infer<typeof BadgeFormSchema>;
+
+export type BadgeFormState = FormState<BadgeType>;

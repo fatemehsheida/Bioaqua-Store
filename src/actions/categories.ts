@@ -37,7 +37,7 @@ export async function createOrUpdateCategoryAction(
     if (e instanceof ApiError) {
       return {
         message: e.message,
-        errors: e.body?.errors,
+        errors: e.body?.errors as CategoryFormState["errors"],
       };
     } else {
       return {
@@ -52,7 +52,7 @@ export async function createOrUpdateCategoryAction(
 export async function deleteCategoryAction(id: string) {
   await ensureAuthenticated();
   try {
-    const res = await deleteCategory(id);
+    await deleteCategory(id);
   } catch (e) {
     if (e instanceof ApiError) {
       return {
