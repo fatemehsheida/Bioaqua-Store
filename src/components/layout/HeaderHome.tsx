@@ -100,7 +100,7 @@ export function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium bg-cover w-48 h-full p-0">
-                      <img src="card.avif" className="w-full h-full" />
+                      <img src="http://localhost:8000/uploads/image-1738660291605-406662467.avif" className="w-full h-full" />
                     </div>
 
                   </Link>

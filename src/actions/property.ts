@@ -37,7 +37,7 @@ export async function createOrUpdatePropertyAction(
     if (e instanceof ApiError) {
       return {
         message: e.message,
-        errors: e.body?.errors,
+        errors: e.body?.errors as PropertyFormState["errors"],
       };
     } else {
       return {
@@ -52,7 +52,7 @@ export async function createOrUpdatePropertyAction(
 export async function deletePropertyAction(id: string) {
   await ensureAuthenticated();
   try {
-    const res = await deleteProperties(id);
+    await deleteProperties(id);
   } catch (e) {
     if (e instanceof ApiError) {
       return {

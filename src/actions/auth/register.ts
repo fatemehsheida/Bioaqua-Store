@@ -8,7 +8,6 @@ import { AUTH_BASE_URL } from "@/config.server";
 import { formDataToObject } from "@/lib/utils";
 
 export async function register(state: RegisterFormState, formData: FormData) {
-  console.log({formData})
   /// validate input
   const validatedFields = RegisterFormSchema.safeParse(
     formDataToObject(formData)
@@ -19,7 +18,7 @@ export async function register(state: RegisterFormState, formData: FormData) {
     };
   }
   try {
-    const res = await fetch(`${AUTH_BASE_URL}/auth/register`, {
+    const res = await fetch(`${AUTH_BASE_URL}/register`, {
       method: "post",
       body: JSON.stringify(validatedFields.data),
       headers: {
@@ -40,6 +39,7 @@ export async function register(state: RegisterFormState, formData: FormData) {
       redirect("/dashboard");
     }
   } catch (err) {
+    console.log(err);
     return {
       message: "register failed",
     };
