@@ -50,7 +50,7 @@ export default async function ProductDetailPage({
           </div>
         </div> */}
         <div className="w-full flex-col" dir="rtl">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-8">
 
             <div>
               <div><p className="font-light text-xs text-gray-600">BIOAQUA® OFFICIAL STORE</p></div>
@@ -64,7 +64,9 @@ export default async function ProductDetailPage({
 
 
             <div>
-              <div className="flex flex-row gap-3">
+            <span className="text-sm font-normal text-[#5F5C68]">{product.specifications[0].name}</span>
+              <div className="flex flex-row gap-3 flex-wrap">
+                  
                 {product.specifications.map((items, index) => <div key={index}>
                   <button className="px-[0.70rem] py-[0.4rem]  bg-white rounded-lg text-sm font-normal
                  border-[#8C8A92] border shadow-md  inset-shadow-indigo-900 hover:border-[#2E2A39]
@@ -146,6 +148,7 @@ export default async function ProductDetailPage({
       </div>
   
       <p dangerouslySetInnerHTML={{ __html: product.expert_reviews }} className="text-sm font-normal text-[#5F5C68]/80 py-8"></p >
+     
     </div>
   </div >
   );
