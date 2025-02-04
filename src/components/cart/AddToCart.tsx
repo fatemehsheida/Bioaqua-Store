@@ -13,15 +13,16 @@ interface IAddToCartProps {
 const AddToCart = ({product, quantity, style}:IAddToCartProps) => {
     const dispatch = useDispatch()
     const addToCartHandler = () => {
+      console.log('add to cart utility',{product, quantity})
         dispatch(cartAction.addItemToCart({
             ...product,
             quantity,
             // totalPrice: product.price * quantity
             totalPrice: 100 * quantity
         }))
-    }
+    }                                                   
   return (
-    <button onClick={addToCartHandler} className={style}>Add To Cart</button>
+    <button onClick={addToCartHandler} className={style}>اضافه کردن به سبد خرید</button>
   )
 }
 

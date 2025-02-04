@@ -2,6 +2,7 @@ import { Product } from '@/types/type';
 import Link from 'next/link'
 import React from 'react'
 
+
 interface ProductListProps {
     products: Product[];
 }
@@ -34,9 +35,25 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
                                     </div>
                                 </div>
                             ))}
+
                         </div>
 
 
+
+                    <div className="md:w-60 md:h-[325px] w-7 h-52 flex flex-col justify-between cursor-pointer group">
+                        <div className="relative  group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
+                            <img src="new &/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl" />
+                        </div>
+                        <span className="flex flex-row items-center group-hover:underline
+                     justify-start gap-3 px-4 py-2 text-sm font-medium">
+                            (BQY90089) ماسک چشم آبرسان پپتید
+                        </span>
+                        <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
+
+                            <span>
+                                $3.656
+                            </span>
+                        </div>
 
                     </div>
                     <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 group-hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">

@@ -24,7 +24,7 @@ const Header = () => {
 
         </Menu>
       ) : (<div></div>)}
-      <div className="vazir md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
+      <div className=" md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
       justify-between md:py-3 md:pl-60 pt-2 pb-1.5 mx-16">
 
         <div className="flex flex-row opacity-80 items-center justify-start py-2">
