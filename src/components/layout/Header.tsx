@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import { IoMdSearch } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
@@ -7,13 +7,14 @@ import { NavigationMenuDemo } from "@/components/layout/HeaderHome";
 import { slide as Menu } from 'react-burger-menu'
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HambergerMenu } from './HambergerMenu';
+import  HambergerCart  from '@/components/cart/HambergerCart'
 import Link from 'next/link';
 
 const Header = () => {
 
 
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-
+  const [open, setOpen] = useState(false)
   return (
     <>
       {isMobile ? (
@@ -36,9 +37,11 @@ const Header = () => {
             <FaRegUser className="size-5 hover:scale-125" />
             </Link>
           </button>
-          <button className="mx-3">
+          <button className="mx-3" onClick={()=>setOpen(true)} >
             <AiOutlineShoppingCart className="size-6 hover:scale-125" />
+
           </button>
+            <HambergerCart open={open}/>
         </div>
         {!isMobile ? (
           <>

@@ -30,7 +30,7 @@ const AddToCart = ({product, quantity, style}:IAddToCartProps) => {
         })
     }                                                   
   return (
-    <button onClick={addToCartHandler} className={style}>اضافه کردن به سبد خرید</button>
+    <button onClick={addToCartHandler} className={style}>به سبد خرید اضافه کنید</button>
   )
 }
 
