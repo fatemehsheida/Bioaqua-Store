@@ -246,3 +246,20 @@ h1, h2, h3, h4, h5, h6{
 .box900, .box900 h1{
 	font-weight:900;
 }
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999 !important;
+}
+
+.cart-modal {
+  position: relative;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 28rem;
+  background-color: white;
+  z-index: 10000 !important;
+}

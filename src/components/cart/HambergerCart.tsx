@@ -1,74 +1,110 @@
-'use client'
-import { cartAction } from '@/lib/slice'
-import { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+'use client';
+import { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/lib/store';
+import { cartAction } from '@/lib/slice';
 
+interface CartProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-const HambergerCart  = ({open}:{open:boolean}) => {
-  
-  const { items, totalQty } = useSelector((state) => state.cart)
-  const dispatch = useDispatch()
+const Cart = ({ isOpen, onClose }: CartProps) => {
+  const dispatch = useDispatch();
+  const { items, totalQty } = useSelector((state: RootState) => state.cart);
+  const prevTotalQty = useRef(totalQty);
 
-  const handleIncrement = (id) => {
-    dispatch(cartAction.IncrementQuantity(id))
-  }
+  useEffect(() => {
+    if (totalQty > prevTotalQty.current && !isOpen) {
+      onClose();
+    }
+    prevTotalQty.current = totalQty;
+  }, [totalQty, isOpen, onClose]);
 
-  const handleDecrement = (id) => {
-    dispatch(cartAction.DecrementQuantity(id))
-  }
+  const totalAmount = items.reduce((sum, item) => sum + Number(item.totalPrice), 0);
+  console.log(totalAmount)
+  const handleIncrement = (id: string) => {
+    dispatch(cartAction.IncrementQuantity(id));
+  };
+
+  const handleDecrement = (id: string) => {
+    dispatch(cartAction.DecrementQuantity(id));
+  };
+
+  if (!isOpen) return null;
 
   return (
-<>
-      {/* Cart Sidebar */}
-      <div
-        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transition-transform duration-300 z-40 transform ${
-          open ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <div className="p-4">
-          <h2 className="text-2xl font-bold mb-4">Cart</h2>
+    <div className="fixed inset-0 z-50 bg-black cart-overlay" onClick={onClose}>
+      <div className=" right-0 h-full w-full max-w-md z-50 bg-yellow-700 cart-modal"
+       onClick={(e) => e.stopPropagation()}
+       >
+        <div className="flex h-full flex-col">
+          <div className="flex items-center justify-between border-b p-4">
+            <h2 className="text-xl font-bold">سبد خرید ({totalQty})</h2>
+            <button
+              onClick={onClose}
+              className="rounded p-2 hover:bg-gray-100"
+            >
+              ✕
+            </button>
+          </div>
 
-          {items && items.length > 0 ? (
-            <ul>
-              {items.map((item) => (
-                <li key={item.id} className="mb-4 border-b pb-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold">{item.name}</span>
-                    <span>${item.price}</span>
+          {/* Items List */}
+          <div className="flex-1 overflow-y-auto p-4">
+            {items.length === 0 ? (
+              <p className="text-center text-gray-500">سبد خرید شما خالی است</p>
+            ) : (
+              items.map((item) => (
+                <div
+                  key={item.id}
+                  className="mb-4 flex items-center justify-between border-b pb-4"
+                >
+                  <div className="flex-1">
+                    <h3 className="font-semibold">{item.titleFa}</h3>
+                    {/* <p className="text-gray-600">
+                      {item.price} تومان
+                    </p> */}
                   </div>
-
-                  <div className="flex items-center mt-2">
+                  
+                  <div className="flex items-center gap-3">
                     <button
                       onClick={() => handleDecrement(item.id)}
-                      className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                      className="h-8 w-8 rounded bg-gray-200 hover:bg-gray-300"
                     >
                       -
                     </button>
-                    <span className="px-4">{item.quantity}</span>
+                    <span className="w-6 text-center">{item.quantity}</span>
                     <button
                       onClick={() => handleIncrement(item.id)}
-                      className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                      className="h-8 w-8 rounded bg-gray-200 hover:bg-gray-300"
                     >
                       +
                     </button>
                   </div>
-                  <div className="mt-1 text-sm text-gray-600">
-                    Total: ${item.totalPrice}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>Your cart is empty.</p>
-          )}
+                </div>
+              ))
+            )}
+          </div>
 
-          <div className="mt-4 border-t pt-2">
-            <p className="font-bold">Total Items: {totalQty}</p>
+          <div className="border-t p-4">
+            <div className="mb-4 flex justify-between text-lg font-bold">
+              <span>جمع کل:</span>
+              <span>{totalAmount} تومان</span>
+            </div>
+            <button
+              className="w-full rounded-lg bg-green-600 py-3 text-white hover:bg-green-700"
+              onClick={() => {
+                console.log('Checkout', items);
+                onClose();
+              }}
+            >
+              پرداخت
+            </button>
           </div>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default HambergerCart 
+export default Cart;
