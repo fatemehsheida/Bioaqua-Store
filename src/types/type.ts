@@ -71,3 +71,21 @@ export interface ProductsPageProps {
     titleEn?: string;
   };
 }
+
+export interface Brand {
+  id: string;
+  titleFa: string;
+  titleEn: string;
+  slug: string;
+  logo: string;
+  createdAt: string; // or Date if you parse it
+  updatedAt: string; // or Date if you parse it
+}
+
+export interface BrandsResponse {
+  results: Brand[];
+  total: number;
+  totalPages: number;
+  page: number;
+  pageSize: number;
+}

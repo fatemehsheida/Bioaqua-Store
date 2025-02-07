@@ -16,7 +16,7 @@ export const cartSlice = createSlice({
             
             if (existingItme){
                 existingItme.quantity += newItem.quantity
-                existingItme.totalPrice += newItem.totalPrice
+                existingItme.totalPrice += Number(newItem.totalPrice)
                 console.log('addItemToCart reducers redux existingItem', {existingItme})
             }
             else{
@@ -41,7 +41,7 @@ export const cartSlice = createSlice({
             const item = state.items.find((item)=> item.id == id)
 
             item.quantity ++
-            item.totalPrice += item.price
+            item.totalPrice += Number(100) //TODO
             state.totalQty ++
         },
         DecrementQuantity(state,action){
@@ -53,7 +53,7 @@ export const cartSlice = createSlice({
             }
             else{
                 item.quantity --
-                item.totalPrice -= item.price
+                item.totalPrice -= Number(100) //TODO
                 state.totalQty --
             }
 
