@@ -44,12 +44,21 @@ export const cartSlice = createSlice({
             item.totalPrice += Number(100) //TODO
             state.totalQty ++
         },
+        RemoveItem(state,action){
+            const id = action.payload
+            const item = state.items.find((item)=> item.id == id)
+
+                state.items = state.items.filter((item)=>item.id != id)
+                state.totalQty -= item.quantity
+            },
         DecrementQuantity(state,action){
             const id = action.payload
             const item = state.items.find((item)=> item.id == id)
-            
+            console.log(item.quantity)
             if (item.quantity == 1){
-                state.items.filter((item)=>item.id != id)
+                console.log(id,item.id)
+                state.items = state.items.filter((item)=>item.id != id)
+                state.totalQty --
             }
             else{
                 item.quantity --

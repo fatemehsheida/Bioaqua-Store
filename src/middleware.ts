@@ -29,22 +29,17 @@ export default async function middleware(req: NextRequest) {
   
 
   // 5. Redirect to /dashboard if the user is authenticated
-<<<<<<< Updated upstream
   // if (isPublicRoute && !isProtectedRoute && isLogin) {
   //   return NextResponse.redirect(new URL("/dashboard", req.nextUrl));
   // }
 
-=======
-<<<<<<< Updated upstream
+
   if (isPublicRoute && !isProtectedRoute && isLogin) {
     return NextResponse.redirect(new URL("/dashboard", req.nextUrl));
   }
-=======
   // if (isPublicRoute && !isProtectedRoute && isLogin) {
   //   return NextResponse.redirect(new URL("/dashboard", req.nextUrl));
   // }
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
   return NextResponse.next();
 }
