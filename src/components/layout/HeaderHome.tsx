@@ -65,7 +65,11 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavigationMenuDemo() {
   return (
+<<<<<<< Updated upstream
     <NavigationMenu className="text-right ">
+=======
+    <NavigationMenu className="text-right z-30">
+>>>>>>> Stashed changes
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
@@ -147,10 +151,17 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
+<<<<<<< Updated upstream
           <Link href="/products/category/about" legacyBehavior passHref>
+=======
+<<<<<<< Updated upstream
+          <Link href="/#" legacyBehavior passHref>
+=======
+          <Link href="/dashboard" legacyBehavior passHref>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              درباره ما
-            </NavigationMenuLink>
+داشبورد            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 

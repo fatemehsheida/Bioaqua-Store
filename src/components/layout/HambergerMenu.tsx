@@ -61,9 +61,8 @@ export function HambergerMenu() {
 
 
       <div className="w-full hover:bg-[#62A496]/50 hover:border-y transition-all duration-500 px-10 py-1 ">
-        <Link href="/#" legacyBehavior passHref>
-          درباره ما
-        </Link>
+        <Link href="/dashboard" legacyBehavior passHref>
+داشبورد        </Link>
       </div>
 
     </div>
