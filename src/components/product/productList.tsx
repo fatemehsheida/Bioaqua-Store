@@ -9,7 +9,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div className="product-list w-full bg-[#F1F3F1] flex flex-row flex-wrap lg:px-40 2xl:px-72 items-center justify-center ">
+    <div className="product-list w-full bg-[#F1F3F1] flex flex-row flex-wrap lg:px-40 2xl:px-64 items-center justify-center ">
       <FilterBar />
       {products.map((product: Product) => (
         <ProductCard key={product.id} product={product} />

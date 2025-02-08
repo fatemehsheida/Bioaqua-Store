@@ -27,36 +27,6 @@ const Header = () => {
 
         </Menu>
       ) : (<div></div>)}
-<<<<<<< Updated upstream
-      <div className=" md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
-=======
-<<<<<<< Updated upstream
-      <div className="vazir md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
->>>>>>> Stashed changes
-      justify-between md:py-3 md:pl-60 pt-2 pb-1.5 mx-16">
-
-        <div className="flex flex-row opacity-80 items-center justify-start py-2">
-          <button className="mx-2">
-            <IoMdSearch className="size-6 hover:scale-125" />
-          </button>
-          <button className="mx-2">
-            <Link href="/login">
-              <FaRegUser className="size-5 hover:scale-125" />
-            </Link>
-          </button>
-          <button className="mx-3" onClick={() => setIsCartOpen(true)} >
-            <AiOutlineShoppingCart className="size-6 hover:scale-125" />
-
-          </button>
-              
-
-      
-        {!isMobile ? (
-          <>
-            <div className="flex items-center gap-10 z-10">
-              <div className="text-sm z-10">
-                <NavigationMenuDemo />
-=======
       <div className=" md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
      md:py-3  pt-2 pb-1.5 mx-16 md:justify-between justify-around pl-24">
 
@@ -84,12 +54,6 @@ const Header = () => {
                 </span>
               )}
             </button>
-
-
-
-
-
-          
         </div>
         <div className='flex gap-10'>
 
@@ -99,7 +63,6 @@ const Header = () => {
                 <div className="text-sm z-50" >
                   <NavigationMenuDemo />
                 </div>
->>>>>>> Stashed changes
               </div>
             </>
           ) : (<div></div>)}
@@ -108,21 +71,7 @@ const Header = () => {
           </Link>
           </div>
         <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
-
       </div>
-<<<<<<< HEAD
-      <img src="http://localhost:8000/uploads/image-1738349698115-546474799.avif" alt="Bioaqoua" className="md:w-40 w-32 absolute top-2 md:left-40" />
-      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} /> </div>
-=======
-<<<<<<< Updated upstream
-          <img src="http://localhost:8000/uploads/image-1738349698115-546474799.avif" alt="Bioaqoua" className="md:w-40 w-32 absolute top-2 md:left-40" />
-=======
-<<<<<<< Updated upstream
-          <img src="bioaqoua.avif" alt="Bioaqoua" className="md:w-40 w-32 absolute top-2 md:left-40" />
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
->>>>>>> feature/cart
     </>
   );
 };

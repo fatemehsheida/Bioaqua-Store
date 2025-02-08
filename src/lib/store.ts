@@ -43,13 +43,7 @@ export  const store = configureStore({
         cart : persistedReducer
     }
 })
-<<<<<<< HEAD
 
 export const persistor = persistStore(store)
 export type RootState = ReturnType<typeof store.getState>
-=======
-<<<<<<< Updated upstream
-=======
-export type RootState = ReturnType<typeof store.getState>
->>>>>>> Stashed changes
->>>>>>> Redux
+
