@@ -20,31 +20,31 @@ export interface FacetProps {
 }
 
 const FilterBar = () => {
-    const [availabilityOptions, setAvailabilityOptions] = useState<Category[]>([]);
+  const [availabilityOptions, setAvailabilityOptions] = useState<Category[]>([]);
   const [productTypeOptions, setProductTypeOptions] = useState<Brand[]>([]);
-  
   const [selectedFilters, setSelectedFilters] = useState<Record<string, string[]>>({});
   const [sortBy, setSortBy] = useState('created-descending');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const fetchData = async () => {
+    try {
+      const [responseCtgr, responseBrnd] = await Promise.all([
+        apiClient.get('/categories'),
+        apiClient.get('/brands')
+      ]);
+
+      const categoryResponse: CategoriesResponse = responseCtgr.data;
+      const brandResponse: BrandsResponse = responseBrnd.data;
+
+      setAvailabilityOptions(categoryResponse.results);
+      setProductTypeOptions(brandResponse.results);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [responseCtgr, responseBrnd] = await Promise.all([
-          apiClient.get('/categories'),
-          apiClient.get('/brands')
-        ]);
-
-        const categoryResponse: CategoriesResponse = responseCtgr.data;
-        const brandResponse: BrandsResponse = responseBrnd.data;
-
-        setAvailabilityOptions(categoryResponse.results);
-        setProductTypeOptions(brandResponse.results);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
     fetchData();
   }, []);
 
@@ -57,30 +57,31 @@ const FilterBar = () => {
     }));
   };
 
+  console.log(selectedFilters)
+
   return (
-    <div className="w-full lg:px-12 2xl:px-40 px-10">
+    <div className="w-full lg:px-28 2xl:px-40 px-10 py-4">
       {/* Desktop Filters */}
       <div className="hidden md:block">
         <div className="space-y-4 flex justify-between  ">
-            <div className='flex gap-8 items-center'>
+          <div className='flex gap-8 items-center'>
 
-          <h2 className="text-lg font-semibold">فیلتر:</h2>
-          
-          <Facet
-            title="موجودی"
-            options={availabilityOptions}
-            selectedValues={selectedFilters.availability || []}
-            onFilterChange={value => handleFilterChange('availability', value)}
+            <h2 className="text-lg font-semibold">فیلتر:</h2>
+            <Facet
+              title="دسته بندی ها"
+              options={availabilityOptions}
+              selectedValues={selectedFilters.availability || []}
+              onFilterChange={value => handleFilterChange('availability', value)}
             />
 
-          <Facet
-            title="دسته بندی ها"
-            options={productTypeOptions}
-            selectedValues={selectedFilters.productType || []}
-            onFilterChange={value => handleFilterChange('productType', value)}
+            <Facet
+              title="برند ها"
+              options={productTypeOptions}
+              selectedValues={selectedFilters.productType || []}
+              onFilterChange={value => handleFilterChange('productType', value)}
             />
 
-            </div>
+          </div>
           <div className="mt-4 flex gap-8 items-center">
             <h3 className="text-lg font-semibold">مرتب سازی:</h3>
             <SortSelect value={sortBy} onChange={setSortBy} />
@@ -90,7 +91,7 @@ const FilterBar = () => {
 
       {/* Mobile Filters */}
       <div className="md:hidden  mt-5 mr-4">
-        <button 
+        <button
           className="flex items-center space-x-2 p-2 border rounded-lg"
           onClick={() => setIsMobileMenuOpen(true)}
         >
@@ -102,43 +103,44 @@ const FilterBar = () => {
 
         {/* Mobile Menu Drawer */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 pt-4">
             <div className="absolute right-0 top-0 h-full w-80 bg-white p-4 overflow-y-auto">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold">فیلتر و مرتب سازی</h2>
-                <button 
+                <button
                   className="p-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <RxCross1 />
                 </button>
               </div>
+              <div className='py-6'>
+                <Facet
+                  title="موجودی"
+                  options={availabilityOptions}
+                  selectedValues={selectedFilters.availability || []}
+                  onFilterChange={value => handleFilterChange('availability', value)}
+                />
 
-              <Facet
-                title="موجودی"
-                options={availabilityOptions}
-                selectedValues={selectedFilters.availability || []}
-                onFilterChange={value => handleFilterChange('availability', value)}
-              />
+                <Facet
+                  title="دسته بندی ها"
+                  options={productTypeOptions}
+                  selectedValues={selectedFilters.productType || []}
+                  onFilterChange={value => handleFilterChange('productType', value)}
+                />
 
-              <Facet
-                title="دسته بندی ها"
-                options={productTypeOptions}
-                selectedValues={selectedFilters.productType || []}
-                onFilterChange={value => handleFilterChange('productType', value)}
-              />
+                <div className="mt-4">
+                  <h3 className="text-sm font-medium mb-2">مرتب سازی</h3>
+                  <SortSelect value={sortBy} onChange={setSortBy} />
+                </div>
 
-              <div className="mt-4">
-                <h3 className="text-sm font-medium mb-2">مرتب سازی</h3>
-                <SortSelect value={sortBy} onChange={setSortBy} />
+                <button
+                  className="w-full mt-4 bg-[#94d2bd] text-white py-2 rounded-lg"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  اعمال فیلترها
+                </button>
               </div>
-
-              <button
-                className="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Apply Filters
-              </button>
             </div>
           </div>
         )}

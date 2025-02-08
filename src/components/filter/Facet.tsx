@@ -11,9 +11,9 @@ const Facet = ({ title, options, selectedValues, onFilterChange }: FacetProps) =
       };
     
     return (
-        <div className="relative">
+        <div className="relative z-20">
         <button 
-          className="flex justify-between items-center cursor-pointer py-2 gap-2 w-full"
+          className="flex justify-between items-center cursor-pointer py-2 gap-2 w-full z-20"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="font-medium  hover:underline">{title}</span>

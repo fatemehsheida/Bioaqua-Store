@@ -1,4 +1,5 @@
 export interface Product {
+  quantity: unknown;
   id: string;
   images: {
     main: string;
@@ -23,12 +24,27 @@ export interface Product {
     logo: string;
   };
   review: unknown;
+<<<<<<< Updated upstream
   specifications: [{name: string,
                     title: string,
                     value: string,
                     _id: number,
                     id:number
                   }];
+=======
+<<<<<<< Updated upstream
+  specifications: unknown;
+=======
+  specifications: [
+    {
+      name: string,
+      title: string,
+      value: string,
+      _id: number,
+      id: number
+    }];
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   expert_reviews: string;
   createdAt: string;
   updatedAt: string;

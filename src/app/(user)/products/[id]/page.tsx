@@ -35,10 +35,15 @@ export default async function ProductDetailPage({
   const product: Product = await res.json();
 
   return (
+
+    <div>
+      <h1>{product.titleFa}</h1>
+      <h2>{product.titleEn}</h2>
     <div className="w-full lg:px-40 2xl:px-80 bg-[#F1F3F1]">
     <div className="px-12 pt-9 pb-7">
       <div dir="ltr" className="grid md:grid-cols-2  justify-center  gap-12">
         <ImageGallery images={product.images.list}/>
+
         {/* <div>
 
           <div>
@@ -50,7 +55,8 @@ export default async function ProductDetailPage({
           </div>
         </div> */}
         <div className="w-full flex-col" dir="rtl">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-3">
+
 
             <div>
               <div><p className="font-light text-xs text-gray-600">BIOAQUA® OFFICIAL STORE</p></div>
@@ -61,14 +67,13 @@ export default async function ProductDetailPage({
                 <p className="font-normal text-lg ">$7.99</p>
               </div>
             </div>
-
-
             <div>
               {product.specifications.length > 0 &&
              <>
             <span className="text-sm font-normal text-[#5F5C68]">{product.specifications[0].name}</span>
               <div className="flex flex-row gap-3 flex-wrap">
                   
+
                 {product.specifications.map((items, index) => <div key={index}>
                   <button className="px-[0.70rem] py-[0.4rem]  bg-white rounded-lg text-sm font-normal
                  border-[#8C8A92] border shadow-md  inset-shadow-indigo-900 hover:border-[#2E2A39]
@@ -76,6 +81,7 @@ export default async function ProductDetailPage({
                    focus:border-none">{items.title}</button>
                 </div>)}
               </div>
+
                </>}
             </div>
             <div>
@@ -146,12 +152,9 @@ export default async function ProductDetailPage({
           </div>
         </div >
 
-
-
       </div>
   
       <p dangerouslySetInnerHTML={{ __html: product.expert_reviews }} className="text-sm font-normal text-[#5F5C68]/80 py-8"></p >
-     
     </div>
   </div >
   );
