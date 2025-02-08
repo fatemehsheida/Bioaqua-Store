@@ -19,6 +19,7 @@ export async function register(state: RegisterFormState, formData: FormData) {
     };
   }
   try {
+
     const res = await fetch(`${AUTH_BASE_URL}/register`, {
       method: "post",
       body: JSON.stringify(validatedFields.data),
@@ -42,7 +43,6 @@ export async function register(state: RegisterFormState, formData: FormData) {
         timer: 2000,
         icon: 'success',
       })
-      redirect("/dashboard");
     }
   } catch (err) {
     console.log(err);
@@ -50,4 +50,5 @@ export async function register(state: RegisterFormState, formData: FormData) {
       message: "register failed",
     };
   }
+  redirect("/dashboard");
 }

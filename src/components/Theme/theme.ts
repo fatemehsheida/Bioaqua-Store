@@ -3,11 +3,20 @@ import { colors, createTheme } from "@mui/material";
 const theme = createTheme({
   direction: "rtl",
   typography: {
-    fontFamily: "Vazir",
+    fontFamily: "Kalameh, Vazir", // Changed to Kalameh font with Vazir as fallback
   },
   palette: {
     background: {
-      default: colors.grey[100],
+      default: "white", // Page background color
+    },
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#72B1A9", // Header background color
+        },
+      },
     },
   },
 });
