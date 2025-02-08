@@ -4,15 +4,14 @@ import React from 'react'
 const ShopWhatsPopularNow = () => {
     return (
         <div className="New-&-Restock  py-9 flex flex-col  gap-5 ">
-            <h1 className="font-semibold text-3xl pb-8 text-right">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
+            <h1 className="font-medium text-3xl pb-8 text-right">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
             <div className="flex flex-col justify-center items-center ">
-                <div className="flex flex-row justify-center items-center gap-8 ">
+                <div className="flex flex-row justify-center items-center mdgap-8  gap-2 flex-wrap ">
 
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44 ">
                             <img src="new &/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
-                            <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
                         <div >
@@ -36,7 +35,6 @@ const ShopWhatsPopularNow = () => {
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new &/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
-                            <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
 
                         <div >
@@ -86,7 +84,6 @@ const ShopWhatsPopularNow = () => {
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new &/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
-                            <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
                         </div>
                         <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
@@ -110,7 +107,6 @@ const ShopWhatsPopularNow = () => {
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new &/peptidecollagen mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
-                            <span className='px-4 py-1 bg-[#94D2BD] text-[#2E2A39] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>Sale</span>
 
                         </div>
                         <span className="flex flex-row items-center group-hover:underline
