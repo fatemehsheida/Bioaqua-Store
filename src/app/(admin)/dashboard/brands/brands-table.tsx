@@ -4,7 +4,7 @@ import { IBrand, PaginatedResultApi } from "@/api/server-api/types";
 import DeleteAlertDialog from "@/components/DeleteAlertDialog";
 import AITable from "@/components/tables/AITable";
 import { Edit, Delete } from "@mui/icons-material";
-import { Stack, Tooltip, IconButton } from "@mui/material";
+import { Stack, Tooltip, IconButton, Box } from "@mui/material";
 import Link from "next/link";
 import { use } from "react";
 
@@ -39,6 +39,24 @@ export function BrandsTable({
       )}
       data={brandsList}
       schema={[
+        {
+          title: "آیکون",
+          render: (row) =>
+          <Link href={row.logo} target="_blank">
+          <Box
+          component="img"
+          sx={{
+            height: 80,
+            width: 80,
+            maxHeight: { xs: 233, md: 167 },
+            maxWidth: { xs: 350, md: 250 },
+          }}
+          alt="The house from the offer."
+          src={row.logo}
+          />
+
+          </Link>
+        },
         {
           title: "نشانک",
           render: (row) => row.slug,

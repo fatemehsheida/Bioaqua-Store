@@ -137,14 +137,15 @@ export default function DashboardHeader() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography>
+          <Box
+            component="img"
+            sx={{
+              height: 40,
+              width: 100,
+            }}
+          
+             src="http://localhost:8000/uploads/image-1738349698115-546474799.avif" alt="Bioaqoua" />
+       
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

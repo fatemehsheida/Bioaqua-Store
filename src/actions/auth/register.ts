@@ -18,7 +18,15 @@ export async function register(state: RegisterFormState, formData: FormData) {
     };
   }
   try {
+<<<<<<< Updated upstream
     const res = await fetch(`${AUTH_BASE_URL}/register`, {
+=======
+<<<<<<< Updated upstream
+    const res = await fetch(`${AUTH_BASE_URL}/auth/register`, {
+=======
+    const res = await fetch(`${AUTH_BASE_URL}/auth/admin/register`, {
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
       method: "post",
       body: JSON.stringify(validatedFields.data),
       headers: {
@@ -36,7 +44,10 @@ export async function register(state: RegisterFormState, formData: FormData) {
         accessToken: data.tokens.accessToken,
         refreshToken: data.tokens.refreshToken,
       });
+<<<<<<< Updated upstream
       redirect("/dashboard");
+=======
+>>>>>>> Stashed changes
     }
   } catch (err) {
     console.log(err);
@@ -44,4 +55,5 @@ export async function register(state: RegisterFormState, formData: FormData) {
       message: "register failed",
     };
   }
+  redirect("/dashboard");
 }

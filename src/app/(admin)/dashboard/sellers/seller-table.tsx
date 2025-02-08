@@ -51,10 +51,10 @@ export function SellerTable({
             title: "نشانه",
             render: (row) => row.slug,
           },
-          {
-            title: "کاربر",
-            render: (row) => row.user.email,
-          },
+          // {
+          //   title: "کاربر",
+          //   render: (row) => row.user.email,
+          // },
         ]}
       />
     </>
