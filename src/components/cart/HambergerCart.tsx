@@ -3,7 +3,7 @@ import { RxCross1 } from "react-icons/rx";
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/lib/store';
-import { cartAction } from '@/lib/slice';
+import { cartAction, IProductCart } from '@/lib/slice';
 import QuantityBtn from "./QuantityBtn";
 import { Product } from "@/types/type";
 import { IoChevronUpSharp } from "react-icons/io5";
@@ -118,6 +118,89 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
                 </div>
               ))
+
+
+
+                {items.map((item: IProductCart) => (
+                  <div
+                    key={item.id}
+                    className="mb-4 grid grid-cols-4 grid-rows-1 gap-8 items-center  border-b pb-4 group "
+                  >
+                    <Link href={`/products/${item.code}`} className="w-[100]">
+                      <div className="col-span-1 pl-2">
+                        <img src={item.images.main} alt={item.titleFa} className=" rounded-lg" />
+                      </div>
+                    </Link>
+                    <div className="flex-col col-span-2 ">
+                      <h3 className="font-noraml group-hover:underline rounded-lg">{item.titleFa}</h3>
+                      <p className="text-gray-600 text-xs">
+                      {item.bestSeller.lastPrice} تومان
+                      </p>
+                      <div className="flex gap-5 items-end">
+                        <button className="mb-3 pb-2" onClick={() => handleRemove(item.id)}>
+
+                          <HiOutlineTrash />
+                        </button>
+                        <QuantityBtn count={item.quantity} dec={() => handleDecrement(item.id)}
+                          inc={() => handleIncrement(item.id)} setCount={undefined} />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-gray-600 col-span-1">
+
+                        {item.bestSeller.lastPrice * item.quantity}.000 تومان
+                      </p>
+                    </div>
+
+
+
+                  </div>
+                ))}
+
+                <div className="fixed bottom-0 bg-white w-[417px] ">
+                  <div className="border-t px-4">
+                    <Accordion type="single" collapsible>
+                      <div >
+                        <AccordionItem value="item-1">
+                          <AccordionTrigger className="flex gap-3">
+                            <p className="text-sm font-normal text-gray-500">توضیحات سفارش</p>
+                          </AccordionTrigger>
+                          <AccordionContent className="text-sm font-normal text-[#918e99]">
+                            <textarea id="CartDrawer-Note" rows={4}
+                              className="w-full p-2 border border-gray-300 rounded-md resize-y focus:ring-2
+                   focus:ring-blue-500" name="note" placeholder=""></textarea>
+
+                          </AccordionContent>
+                        </AccordionItem>
+                      </div>
+
+
+
+                    </Accordion>
+
+                  </div>
+
+                  <div className="border-t p-4">
+                    <div className="mb-4 flex justify-between text-lg font-noraml">
+                      <span className="text-gray-700">جمع کل</span>
+                      <span className="text-gray-500">{totalAmount}.000 تومان</span>
+                    </div>
+                    <div className="mb-2">
+                      <span className="text-gray-500 text-xs">مالیات و هزینه ارسال در زمان پرداخت محاسبه میگردد</span>
+                    </div>
+                    <button
+                      className="w-full rounded-lg bg-[#94D2BD] py-3 text-white hover:scale-[101%] transition duration-500"
+                      onClick={() => {
+                        console.log('Checkout', items);
+                        onClose();
+                      }}
+                    >
+                      پرداخت
+                    </button>
+                  </div>
+                </div>
+              </>
+
             )}
           </div>
 
