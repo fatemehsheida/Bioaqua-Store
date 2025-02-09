@@ -133,7 +133,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
 
 
-                {items.map((item: Product) => (
+                {items.map((item: IProductCart) => (
                   <div
                     key={item.id}
                     className="mb-4 grid grid-cols-4 grid-rows-1 gap-8 items-center  border-b pb-4 group "
