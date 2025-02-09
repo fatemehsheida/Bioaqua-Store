@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/lib/store';
-import { cartAction } from '@/lib/slice';
+import { cartAction, IProductCart } from '@/lib/slice';
 import QuantityBtn from "./QuantityBtn";
 import { Product } from "@/types/type";
 import { HiOutlineTrash } from "react-icons/hi2";
