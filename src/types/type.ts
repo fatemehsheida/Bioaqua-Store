@@ -24,17 +24,6 @@ export interface Product {
     logo: string;
   };
   review: unknown;
-<<<<<<< Updated upstream
-  specifications: [{name: string,
-                    title: string,
-                    value: string,
-                    _id: number,
-                    id:number
-                  }];
-=======
-<<<<<<< Updated upstream
-  specifications: unknown;
-=======
   specifications: [
     {
       name: string,
@@ -43,11 +32,39 @@ export interface Product {
       _id: number,
       id: number
     }];
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
   expert_reviews: string;
   createdAt: string;
   updatedAt: string;
+  bestSeller: {
+    lastPrice: number,
+    discount: number,
+    count: number,
+    id: string,
+    seller: {
+      user: string,
+      name: string,
+      slug: string
+    }
+  },
+
+  shippingAddress: {
+    street: string,
+    city: string,
+    postalCode: string,
+    location: number[][]
+  },
+  user: {
+    firstName: string,
+    lastName: string,
+    email: string,
+    role: number,
+    isActive: boolean,
+    id: string
+  },
+  orderStatus: string,
+  orderItems: [],
+
 }
 
 export interface ProductsResponse {
