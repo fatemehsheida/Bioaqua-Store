@@ -63,7 +63,7 @@ export default async function ProductDetailPage({
                     <h1 className="font-normal text-gray-800 text-5xl">{product.titleFa}</h1>
                   </div>
                   <div>
-                    <p className="font-normal text-lg ">$7.99</p>
+                    <p className="font-normal text-lg ">{product.bestSeller.lastPrice}.000 تومان</p>
                   </div>
                 </div>
                 <div>

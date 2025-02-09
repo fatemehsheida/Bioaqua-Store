@@ -18,8 +18,7 @@ const AddToCart = ({product, quantity, style}:IAddToCartProps) => {
         dispatch(cartAction.addItemToCart({
             ...product,
             quantity,
-            // TODO totalPrice: product.price * quantity
-            totalPrice: 100 * quantity 
+            totalPrice: product.bestSeller.lastPrice * quantity 
         }))
         Swal.fire({
           text: 'اضافه کردن به سبد خرید موفقیت آمیز بود !',
