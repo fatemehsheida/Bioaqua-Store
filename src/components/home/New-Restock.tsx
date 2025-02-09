@@ -30,7 +30,7 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
                                             </span>
                                             <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
                                                 <span>
-                                                    $3.656
+                                                   {product.bestSeller.lastPrice}.000 تومان
                                                 </span>
                                             </div>
                                         </div>

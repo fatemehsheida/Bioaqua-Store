@@ -16,12 +16,12 @@ const Facet = ({ title, options, selectedValues, onFilterChange }: FacetProps) =
           className="flex justify-between items-center cursor-pointer py-2 gap-2 w-full z-20"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="font-medium  hover:underline">{title}</span>
+          <span className="font-normal text-xs hover:underline">{title}</span>
           <CaretIcon />
         </button>
   
         {isOpen && (
-          <div className="absolute left-0 top-full mt-2 w-48 bg-white shadow-lg overflow-y-scroll max-h-[400px] m-2 py-2 border z-50">
+          <div className="absolute left-0 top-full mt-2 w-48 bg-white shadow-lg overflow-y-scroll max-h-[400px] m-2 py-2 z-50">
             <div className="flex justify-between">
             <button 
               className="text-gray-800 text-xs hover:font-bold underline my-1 px-2"
@@ -48,8 +48,8 @@ const Facet = ({ title, options, selectedValues, onFilterChange }: FacetProps) =
                   onChange={() => onFilterChange(option.slug)}
                   className="hidden"
                 />
-                <div className={`w-4 h-4 border flex items-center justify-center 
-                  ${selectedValues.includes(option.slug) ? 'border-gray-500' : 'border-gray-300'}`}>
+                <div className={`w-4 h-4 flex items-center justify-center 
+                  ${selectedValues.includes(option.slug) ? '' : ''}`}>
                   {selectedValues.includes(option.slug) && <CheckIcon />}
                 </div>
                 <span className="text-sm">{option.titleFa}</span>
