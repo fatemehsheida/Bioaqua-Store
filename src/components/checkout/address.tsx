@@ -5,7 +5,7 @@ const CheckoutAddress = () => {
         <div className='flex flex-col justify-center items-start'>
             <span className='text-lg font-normal'>آدرس صورتحساب</span>
             <div className="flex  flex-col my-3 w-full">
-                <div className="inline-flex items-center border border-slate-300 rounded-t-lg py-2 px-3">
+                <div className="inline-flex items-center border border-slate-300 rounded-t-lg py-2 px-3 has-[:checked]:border-slate-800">
                     <label className="relative flex items-center cursor-pointer" htmlFor="address">
                         <input name="address" type="radio" className="peer h-5 w-5 cursor-pointer appearance-none rounded-full
        border border-slate-300 checked:border-slate-300 transition-all" id="address" />
@@ -15,7 +15,7 @@ const CheckoutAddress = () => {
                     </label>
                     <label className="ml-2 text-slate-600 cursor-pointer text-base px-2" htmlFor="address">همان آدرس حمل و نقل</label>
                 </div>
-                <div className="inline-flex items-center border border-slate-300 rounded-b-lg py-2 px-3">
+                <div className="inline-flex items-center border border-slate-300 rounded-b-lg py-2 px-3 has-[:checked]:border-slate-800">
                     <label className="relative flex items-center cursor-pointer" htmlFor="otheraddress">
                         <input name="address" type="radio" className="peer h-5 w-5 cursor-pointer appearance-none rounded-full 
       border border-slate-300 checked:border-slate-300 transition-all" id="otheraddress" />

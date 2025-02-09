@@ -6,8 +6,10 @@ const Delivery = () => {
         <div className='w-full'>
             <span>تحویل</span>
             <div className='w-full flex justify-between gap-2'>
-                <input type="text" name="lastname" id="lastname" placeholder='نام خانوادگی' className='w-1/2 px-3 py-2 border border-slate-300 rounded-md  my-2' />
-                <input type="text" name="firstname" id="firstname" placeholder='نام(اختیاری)' className='w-1/2 px-3 py-2 border border-slate-300 rounded-md  my-2' />
+                <input type="text" name="lastname" id="lastname" placeholder='نام خانوادگی' className='w-1/2 px-3 py-2 border
+                 border-slate-300 rounded-md  my-2' />
+                <input type="text" name="firstname" id="firstname" placeholder='نام(اختیاری)' className='w-1/2 px-3 py-2 border
+                 border-slate-300 rounded-md  my-2' />
             </div>
             <div className='w-full relative'>
                 <button>

@@ -9,7 +9,7 @@ const CheckoutPayment = () => {
             </div>
 
             <div className="flex  flex-col my-3">
-                <div className="inline-flex items-center border border-slate-300 rounded-t-lg py-2 px-3">
+                <div className="inline-flex items-center border border-slate-300 rounded-t-lg py-2 px-3 has-[:checked]:border-slate-800">
                     <label className="relative flex items-center cursor-pointer" htmlFor="paypal">
                         <input name="pay" type="radio" className="peer h-5 w-5 cursor-pointer appearance-none rounded-full
        border border-slate-300 checked:border-slate-300 transition-all" id="paypal" />
@@ -25,7 +25,7 @@ const CheckoutPayment = () => {
                         </div>
                     </div>
                 </div>
-                <div className="inline-flex items-center border border-slate-300 rounded-b-lg py-2 px-3">
+                <div className="inline-flex items-center border border-slate-300 rounded-b-lg py-2 px-3 has-[:checked]:border-slate-800">
                     <label className="relative flex items-center cursor-pointer" htmlFor="otherpay">
                         <input name="pay" type="radio" className="peer h-5 w-5 cursor-pointer appearance-none rounded-full 
       border border-slate-300 checked:border-slate-300 transition-all" id="otherpay" />
