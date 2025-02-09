@@ -60,13 +60,13 @@ const FilterBar = () => {
   console.log(selectedFilters)
 
   return (
-    <div className="w-full lg:px-28 2xl:px-40 px-10 py-4">
+    <div className="w-full lg:px-28 2xl:px-40 px-10 pt-4">
       {/* Desktop Filters */}
       <div className="hidden md:block">
         <div className="space-y-4 flex justify-between  ">
           <div className='flex gap-8 items-center'>
 
-            <h2 className="text-lg font-semibold">فیلتر:</h2>
+            <h2 className="text-sm font-normal">فیلتر:</h2>
             <Facet
               title="دسته بندی ها"
               options={availabilityOptions}
@@ -83,7 +83,7 @@ const FilterBar = () => {
 
           </div>
           <div className="mt-4 flex gap-8 items-center">
-            <h3 className="text-lg font-semibold">مرتب سازی:</h3>
+            <h3 className="text-sm font-normal">مرتب سازی:</h3>
             <SortSelect value={sortBy} onChange={setSortBy} />
           </div>
         </div>

@@ -1,13 +1,13 @@
 import CaretIcon from "../svg/CaretIcon";
 
 const SortSelect = ({ value, onChange }: { value: string; onChange: (value: string) => void }) => (
-    <div className="relative">
+    <div className="relative text-right">
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="block w-28 pl-4 py-2 pr-8 border bg-transparent
-         rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-gray-500
-         selection:bg-gray-100 hover:bg-gray-100"
+        className="block w-28 pl-4 py-2 pr-8 bg-transparent 
+         rounded-md appearance-none focus:outline-none focus:ring-0
+         selection:bg-gray-100 hover:bg-gray-100 text-sm" 
       >
         <option className="" value="manual">فروش ویژه</option>
         <option value="best-selling">پرفروشترین ها</option>
