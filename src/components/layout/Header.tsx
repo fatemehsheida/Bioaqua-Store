@@ -27,6 +27,7 @@ const Header = () => {
 
         </Menu>
       ) : (<div></div>)}
+      
       <div className=" md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
      md:py-3  pt-2 pb-1.5 mx-16 md:justify-between justify-around pl-24">
 
