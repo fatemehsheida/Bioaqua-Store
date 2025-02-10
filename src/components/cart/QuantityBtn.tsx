@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import IncreaseQuantity from './IncreaseQuantity'
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
 const QuantityBtn = ({count, dec, inc, setCount}) => {

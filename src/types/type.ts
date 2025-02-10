@@ -48,22 +48,6 @@ export interface Product {
     }
   },
 
-  shippingAddress: {
-    street: string,
-    city: string,
-    postalCode: string,
-    location: number[][]
-  },
-  user: {
-    firstName: string,
-    lastName: string,
-    email: string,
-    role: number,
-    isActive: boolean,
-    id: string
-  },
-  orderStatus: string,
-  orderItems: [],
 
 }
 
@@ -121,4 +105,20 @@ export interface BrandsResponse {
   totalPages: number;
   page: number;
   pageSize: number;
+}
+
+interface OrderItem {
+  productSeller: string;
+  quantity: number;
+}
+
+export interface OrderRequest {
+  shippingAddress: {
+    street: string,
+    city: string,
+    postalCode: string,
+    location: number[]
+  }
+  deliveryDate: string;
+  orderItems: OrderItem[]
 }

@@ -4,7 +4,7 @@ import { RxCross1 } from "react-icons/rx";
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/lib/store';
-import { cartAction } from '@/lib/slice';
+import { cartAction, IProductCart } from '@/lib/slice';
 import QuantityBtn from "./QuantityBtn";
 import { Product } from "@/types/type";
 import { HiOutlineTrash } from "react-icons/hi2";
@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/accordion"
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
+import { useRouter } from "next/navigation";
 
 
 interface CartProps {
@@ -25,6 +26,7 @@ interface CartProps {
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
   const dispatch = useDispatch();
+  const router = useRouter()
   const { items, totalQty } = useSelector((state: RootState) => state.cart);
   const prevTotalQty = useRef(totalQty);
 
@@ -133,7 +135,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
 
 
-                {items.map((item: Product) => (
+                {items.map((item: IProductCart) => (
                   <div
                     key={item.id}
                     className="mb-4 grid grid-cols-4 grid-rows-1 gap-8 items-center  border-b pb-4 group "
@@ -204,6 +206,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                       onClick={() => {
                         console.log('Checkout', items);
                         onClose();
+                        router.push('/checkout')
                       }}
                     >
                       پرداخت
