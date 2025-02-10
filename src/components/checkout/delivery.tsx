@@ -4,6 +4,7 @@ import { IoIosSearch } from 'react-icons/io'
 const Delivery = () => {
     return (
         <div className='w-full'>
+            
             <span>تحویل</span>
             <div className='w-full flex justify-between gap-2'>
                 <input type="text" name="lastname" id="lastname" placeholder='نام خانوادگی' className='w-1/2 px-3 py-2 border
@@ -29,6 +30,7 @@ const Delivery = () => {
                 <label htmlFor="saveinfo" >این اطلاعات را برای دفعه بعد ذخیره کنید</label>
                 <input type="checkbox" name="saveinfo" id="saveinfo" className='accent-[#605E5C]' />
             </div>
+            
         </div>
     )
 }
