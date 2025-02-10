@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/accordion"
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
+import { useRouter } from "next/navigation";
 
 
 interface CartProps {
@@ -25,6 +26,7 @@ interface CartProps {
 
 const Cart = ({ isOpen, onClose }: CartProps) => {
   const dispatch = useDispatch();
+  const router = useRouter()
   const { items, totalQty } = useSelector((state: RootState) => state.cart);
   const prevTotalQty = useRef(totalQty);
 
@@ -204,6 +206,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                       onClick={() => {
                         console.log('Checkout', items);
                         onClose();
+                        router.push('/checkout')
                       }}
                     >
                       پرداخت

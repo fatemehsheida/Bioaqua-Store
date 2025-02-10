@@ -65,6 +65,11 @@ export const cartSlice = createSlice({
             }
 
         },
+        RemoveCart(state, action) {
+            state.items = []
+            state.totalQty = 0
+
+        },
         DecrementQuantity(state, action) {
             const id = action.payload
             const item = state.items.find((item) => item.id == id)

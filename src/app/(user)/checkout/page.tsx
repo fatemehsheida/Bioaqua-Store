@@ -1,13 +1,10 @@
 'use client'
-import { cartAction, IProductCart } from '@/lib/slice';
+import {  IProductCart } from '@/lib/slice';
 import { RootState } from '@/lib/store';
 import React, { useEffect, useRef } from 'react'
-import { HiOutlineTrash } from 'react-icons/hi2';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Link from "next/link";
-import { PiAirplaneTiltLight, PiHeartThin, PiUploadSimpleThin } from "react-icons/pi";
-import { CiDeliveryTruck } from "react-icons/ci";
-import { RiShare2Line } from "react-icons/ri";
+
 import {
   Accordion,
   AccordionContent,
@@ -161,7 +158,7 @@ const Checkout = () => {
         </div>
       ) : (<div></div>)}
       <div className='left bg-white flex flex-col justify-center items-start lg:w-1/2 w-full'>
-        <CheckoutForm/>
+        <CheckoutForm items={items} totalQty={totalQty}/>
       </div>
 
     </div>
