@@ -39,7 +39,7 @@ const AccordionCheckout = () => {
                     <span className="text-gray-500">{totalAmount}.000 تومان</span>
 
                 </div>
-                <AccordionContent className="text-sm font-normal text-[#918e99] pb-0 pt-0 ">
+                <AccordionContent className="text-sm font-normal  pb-0 pt-0 ">
                     <div className='right bg-[#FFF6EE] w-full h-full flex flex-col justify-start items-end pt-10 px-6'>
                         <div className='w-full'>
 
@@ -61,7 +61,7 @@ const AccordionCheckout = () => {
                                                     <img src={item.images.main} alt={item.titleFa} className=" rounded-lg" />
                                                 </div>
                                             </Link>
-                                            <div className="absolute lg:bottom-16 xl:left-[58px] lg:left-12 text-white rounded-full bg-[#706C69] px-2 pt-1
+                                            <div className="absolute -right-2 -top-2 text-white rounded-full bg-[#706C69] px-1.5 pt-1 pb-0.5
        text-xs font-normal flex items-center justify-center">
                                                 {item.quantity}
                                             </div>
@@ -83,14 +83,16 @@ const AccordionCheckout = () => {
 
 
                                 <input type="text" placeholder='کد تخفیف' className='w-full text-black bg-transparent rounded-md ring-1
-                                ring-[#FDD8D8] py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#605E5C] ' onChange={(e) => setInputValue(e.target.value)}/>
+                                ring-[#FDD8D8] py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#605E5C] ' onChange={(e) => setInputValue(e.target.value)} />
                             </div>
 
                             <div className='w-full my-9 flex flex-col gap-2'>
                                 <div className='w-full flex justify-between items-center'>
                                     <span className="text-xs font-medium text-gray-500">{totalAmount}.000 تومان</span>
-                                    <span className='text-base font-medium'>جمع محصولات</span>
-                                </div>
+                                    <div className='flex items-center gap-1'>
+                                        <span className='text-sm font-medium text-[#353535]'>({totalQty})مورد </span>
+                                        <span className='text-base font-medium'>.جمع محصولات</span>
+                                    </div>                                </div>
 
                                 <div className='w-full flex justify-between items-center'>
                                     <span className="text-xs font-medium text-gray-500">{shipping}.000 تومان</span>

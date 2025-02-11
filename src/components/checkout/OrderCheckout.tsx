@@ -43,7 +43,7 @@ const OrderCheckout = () => {
                                     <img src={item.images.main} alt={item.titleFa} className=" rounded-lg" />
                                 </div>
                             </Link>
-                            <div className="absolute lg:bottom-16 xl:left-[58px] lg:left-12 text-white rounded-full bg-[#706C69] px-2 pt-1
+                            <div className="absolute lg:-top-2 xl:-right-3 lg:-right-3 text-white rounded-full bg-[#706C69] px-1.5 pt-1.5 pb-0.5 
          text-xs font-normal flex items-center justify-center">
                                 {item.quantity}
                             </div>
@@ -69,7 +69,11 @@ const OrderCheckout = () => {
             <div className='w-full my-9 flex flex-col gap-2'>
                 <div className='w-full flex justify-between items-center'>
                     <span className="text-xs font-medium text-gray-500">{totalAmount}.000 تومان</span>
-                    <span className='text-base font-medium'>جمع محصولات</span>
+                    <div className='flex items-center gap-1'>
+                    <span className='text-sm font-medium text-[#353535]'>({totalQty})مورد </span>
+                    <span className='text-base font-medium'>.جمع محصولات</span>
+                    </div>
+
                 </div>
 
                 <div className='w-full flex justify-between items-center'>
