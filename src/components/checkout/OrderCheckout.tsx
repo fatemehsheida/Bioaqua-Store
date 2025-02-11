@@ -1,9 +1,10 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { IProductCart } from '@/lib/slice';
 import { RootState } from '@/lib/store';
 import { useSelector } from 'react-redux';
 import Link from "next/link";
+import clsx from 'clsx';
 
 
 
@@ -19,7 +20,7 @@ const OrderCheckout = () => {
     console.log(totalAmount)
     const shipping = Number(1)
     const totalPrice = Number(totalAmount - shipping)
-
+    const [inputValue, setInputValue] = useState("");
 
     return (
         <div className='xl:w-3/4 sm:w-1/8'>
@@ -52,8 +53,17 @@ const OrderCheckout = () => {
             ))}
 
             <div className='w-full flex justify-between items-center gap-3'>
-                <button className='w-36 bg-[#FFF1E4] border-[#FDD8D8] border py-2 px-4 text-sm font-normal'>اعمال شود</button>
-                <input type="text" placeholder='کد تخفیف' className='w-full bg-transparent border-[#FDD8D8] border py-2 px-4' />
+                <button  type="submit"
+                 disabled={!inputValue.trim()}
+                 className={clsx(
+                    "w-36 rounded-md focus:outline-none focus:ring-2 focus:ring-[#605E5C] py-2 px-4 text-sm font-normal",
+                    {
+                        "bg-[#D1A980] text-[#130D07]": inputValue.trim(),
+                        "bg-[#FFF1E4] text-[#7F7B77] border-[#FDD8D8] border": !inputValue.trim(),
+                    }
+                )}>اعمال شود</button>
+                <input type="text" placeholder='کد تخفیف' className='w-full bg-transparent ring-[#FDD8D8] rounded-md ring-1 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#605E5C]' 
+                onChange={(e) => setInputValue(e.target.value)}/>
             </div>
 
             <div className='w-full my-9 flex flex-col gap-2'>
