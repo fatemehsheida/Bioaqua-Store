@@ -38,7 +38,7 @@ const Header = () => {
               <IoMdSearch className="size-6 hover:scale-125" />
             </button>
             <button className="mx-2">
-              <Link href="/login">
+              <Link href="/profile">
                 <FaRegUser className="size-5 hover:scale-125" />
               </Link>
             </button>
