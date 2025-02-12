@@ -10,7 +10,7 @@ const ProfileUser = () => {
 
             <div className='grid lg:grid-cols-5 grid-cols-6 justify-center items-start object-cover h-44 lg:h-64 '>
                 <img src="cute_profile.jpg" className='md:w-64 md:h-64 w-44 h-44 rounded-full lg:col-span-2 col-span-2 lg:p-6' />
-                <div className='w-full flex flex-col justify-center items-start pt-8 px-4 lg:col-span-3 col-span-4 text-wrap gap-2 text-[#434241]/80'>
+                <div className='w-full flex flex-col justify-center items-start pt-8 lg:px-4 px-8 lg:col-span-3 col-span-4 text-wrap gap-2 text-[#434241]/80'>
                     <div className='flex gap-2'>
                         <span className='text-2xl font-semibold text-[#434241]'>یوسف</span>
                         <span className='text-2xl font-semibold text-[#434241]'>عرب اسدی</span>
