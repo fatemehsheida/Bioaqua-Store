@@ -24,7 +24,7 @@ const AccordionOrder = () => {
                 </div>
                 <AccordionContent className="text-sm font-normal text-[#918e99] pb-0 pt-0 ">
                     <div className='right w-full h-full flex flex-col justify-start items-end py-2 px-6 '>
-                        <div className='w-full space-y-4 transition-all duration-700'>
+                        <div className='w-full transition-all duration-700 gap-4 flex flex-col'>
                             <Link href="/profile/order">
                                 <div className="border border-gray-200 rounded-md py-2 px-6 flex gap-16 justify-center items-center hover:ring-2 hover:ring-gray-600/50 cursor-pointer">
                                     <h4 className="text-base font-medium">سفارش شماره: #12345</h4>

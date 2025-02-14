@@ -5,6 +5,10 @@ import {
   useMaterialReactTable,
   type MRT_ColumnDef,
 } from 'material-react-table';
+import { OrderRequest } from '@/types/type';
+import Addresorder from '@/components/order/Addresorder';
+import UserInfo from '@/components/order/UserInfo';
+import DeliveryOrder from '@/components/order/DeliveryOrder';
 
 //example data type
 type Person = {
@@ -66,7 +70,7 @@ const data: Person[] = [
   },
 ];
 
-const Example = () => {
+const Example = ({}) => {
   //should be memoized or stable
   const columns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
@@ -105,10 +109,19 @@ const Example = () => {
   });
 
 
+
   return (
-    <div className="w-screen h-screen py-4">
-    <MaterialReactTable table={table} />
-  </div>
+    <div className='w-full bg-white flex flex-col items-center '>
+      <div className='flex lg:flex-row flex-col items-center justify-evenly px-28 w-full'>
+        <div><UserInfo/></div>
+       <Addresorder/>
+        
+        <div><DeliveryOrder/></div>
+      </div>
+      <div className="w-screen pt-4">
+        <MaterialReactTable table={table} />
+      </div>
+    </div >
   );
 };
 

@@ -12,7 +12,7 @@ const OrderItem = () => {
                                      text-gray-700 text-xs px-5 py-3 w-1/8 rounded-lg font-semibold'>مشاهده جزئیات</button>
                     </div> */}
                 </div>
-                <div className="space-y-4">
+                <div className="gap-4 flex flex-col">
                     <Link href="/profile/order">
                         <div className="border border-gray-200 rounded-md p-4 flex gap-9 hover:ring-2 hover:ring-gray-600/50 cursor-pointer">
                             <h4 className="text-base font-medium">سفارش شماره: #12345</h4>
