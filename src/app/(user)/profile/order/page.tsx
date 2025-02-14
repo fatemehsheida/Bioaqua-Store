@@ -104,7 +104,12 @@ const Example = () => {
     data, //data must be memoized or stable (useState, useMemo, defined outside of this component, etc.)
   });
 
-  return <MaterialReactTable table={table} />;
+
+  return (
+    <div className="w-screen h-screen py-4">
+    <MaterialReactTable table={table} />
+  </div>
+  );
 };
 
 export default Example;
