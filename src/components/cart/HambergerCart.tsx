@@ -146,7 +146,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     <div className="flex-col col-span-2 ">
                       <h3 className="font-noraml group-hover:underline rounded-lg">{item.titleFa}</h3>
                       <p className="text-gray-600 text-xs">
-                      {item.bestSeller.lastPrice} تومان
+                        {item.bestSeller.lastPrice} تومان
                       </p>
                       <div className="flex gap-5 items-end">
                         <button className="mb-3 pb-2" onClick={() => handleRemove(item.id)}>
@@ -190,8 +190,8 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     </Accordion>
 
                   </div>
-
-                  <div className="border-t p-4">
+                  <hr />
+                  <div className=" p-4">
                     <div className="mb-4 flex justify-between text-lg font-noraml">
                       <span className="text-gray-700">جمع کل</span>
                       <span className="text-gray-500">{totalAmount}.000 تومان</span>

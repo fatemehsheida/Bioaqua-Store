@@ -69,7 +69,7 @@ const Header = () => {
 
             {totalQty > 0 && (
               <span className="absolute top-6 px-0  left-6 flex items-center justify-center w-5 h-5 text-xs
-              font-noraml text-[#79B3AA] bg-black rounded-full">
+              font-noraml text-[#79B3AA] bg-black rounded-full dark:bg-slate-300 dark:text-gray-950">
                 {totalQty}
               </span>
             )}

@@ -27,8 +27,7 @@ export default function RootLayout({
           <link href="../style.css" rel="stylesheet"></link>
         </head>
 
-        <body className=" bg-gradient-to-bl from-[#6BB0A9] from-4% via-[#CCC6B0] to-[#F0D6C0]
-          transition-all duration-5 bg-fixed flex flex-col justufy-center items-center">
+        <body className="background-home transition-all duration-5 bg-fixed flex flex-col justufy-center items-center">
           <Header />
           
           {children}

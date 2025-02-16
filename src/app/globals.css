@@ -111,16 +111,25 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /* General sidebar styles */
+.background-home{background: linear-gradient(
+  to top right,
+  #C9D5BF,
+  #D4CAAE,
+  #C1C2A8,
+  #A2BAA3,
+  #82B19E,
+  #72AE9C
+);}
 .bm-menu {
   background: linear-gradient(
-    to top right,
-    #C9D5BF,
-    #D4CAAE,
-    #C1C2A8,
-    #A2BAA3,
-    #82B19E,
-    #72AE9C
-  );
+  to top right,
+  #C9D5BF,
+  #D4CAAE,
+  #C1C2A8,
+  #A2BAA3,
+  #82B19E,
+  #72AE9C
+);
   padding: 2.5em  0;
   font-size: 1.15em;
   width: 20rem;
@@ -374,7 +383,7 @@ body:has(.hidden-checkbox:checked) .toggle-button:hover {
 
 /* Change Theme */
 body:has(.hidden-checkbox:checked) {
-  background: #111827;
+    background:#16181E;
   color: #f3f4f6;
 }
 /* #endregion darkmode */
