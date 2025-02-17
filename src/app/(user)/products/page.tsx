@@ -1,7 +1,6 @@
 'use client'
 import ProductList from "@/components/product/productList";
 import CategoryList from "@/components/product/CategoryList";
-import updateQueryParams from "@/utils/Query";
 import {
   ProductsResponse,
   CategoriesResponse,
@@ -9,7 +8,6 @@ import {
   Category,
 } from "@/types/type";
 import React, { useEffect, useState } from "react";
-
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -73,6 +71,7 @@ export default function ProductsPage() {
     if (page < totalPages) setPage(prev => prev + 1);
   };
 
+  console.log(totalPages)
   return (
     <div className="w-full bg-[#F4F3EF] dark:bg-[#21242D]">
       <div className="p-4 bg-white dark:bg-transparent shadow-md">

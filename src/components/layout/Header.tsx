@@ -48,11 +48,11 @@ const Header = () => {
               </div>
         </Menu>
       ) : (<div></div>)}
-
       <div className=" md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
      md:py-3  pt-2 pb-1.5 mx-16 md:justify-between justify-around pl-24 relative">
 
         <div className="flex opacity-80 items-center justify-between  py-2">
+
           <button className="mx-2">
             <IoMdSearch className="size-6 hover:scale-125" />
           </button>
@@ -74,6 +74,7 @@ const Header = () => {
               </span>
             )}
           </button>
+
         </div>
         <div className='flex gap-10'>
 
