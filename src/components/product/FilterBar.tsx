@@ -6,6 +6,15 @@ import Facet from '../filter/Facet';
 import SortSelect from '../filter/SortSelect';
 import { RxCross1 } from "react-icons/rx";
 
+
+
+interface FilterBarProps {
+  onSelectCategory: (categoryId: string) => void;
+  selectedCategory: string;
+  onSelectBrand: (brandId: string) => void;
+  selectedBrand: string;
+}
+
 export interface FilterOption {
   titleFa: string;
   slug: string;
@@ -15,11 +24,11 @@ export interface FilterOption {
 export interface FacetProps {
   title: string;
   options: FilterOption[];
-  selectedValues: string[];
+  selectedValues: string | string[];
   onFilterChange: (value: string) => void;
 }
 
-const FilterBar = () => {
+const FilterBar = ({  onSelectCategory, selectedCategory,onSelectBrand,selectedBrand}:FilterBarProps) => {
   const [availabilityOptions, setAvailabilityOptions] = useState<Category[]>([]);
   const [productTypeOptions, setProductTypeOptions] = useState<Brand[]>([]);
   const [selectedFilters, setSelectedFilters] = useState<Record<string, string[]>>({});
@@ -70,15 +79,15 @@ const FilterBar = () => {
             <Facet
               title="دسته بندی ها"
               options={availabilityOptions}
-              selectedValues={selectedFilters.availability || []}
-              onFilterChange={value => handleFilterChange('availability', value)}
+              selectedValues={selectedCategory}
+              onFilterChange={value =>onSelectCategory(value)}
             />
 
             <Facet
               title="برند ها"
               options={productTypeOptions}
-              selectedValues={selectedFilters.productType || []}
-              onFilterChange={value => handleFilterChange('productType', value)}
+              selectedValues={selectedBrand}
+              onFilterChange={value => onSelectBrand(value)}
             />
 
           </div>

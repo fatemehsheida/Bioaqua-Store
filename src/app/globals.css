@@ -111,15 +111,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /* General sidebar styles */
-.background-home{background: linear-gradient(
-  to top right,
-  #C9D5BF,
-  #D4CAAE,
-  #C1C2A8,
-  #A2BAA3,
-  #82B19E,
-  #72AE9C
-);}
 .bm-menu {
   background: linear-gradient(
   to top right,
