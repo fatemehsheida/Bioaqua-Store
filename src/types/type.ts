@@ -122,3 +122,30 @@ export interface OrderRequest {
   deliveryDate: string;
   orderItems: OrderItem[]
 }
+
+export interface Order {
+  id: string;
+  shippingAddress: {
+    street: string;
+    city: string;
+    postalCode: string;
+    location: number[];
+  };
+  user: string;
+  deliveryDate: string;
+  orderStatus: string;
+  orderItems: OrderItemType[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface OrderItemType {
+  productSeller: {
+    product: {
+      titleFa: string;
+      code: number;
+    };
+    price: number;
+  };
+  quantity: number;
+}
