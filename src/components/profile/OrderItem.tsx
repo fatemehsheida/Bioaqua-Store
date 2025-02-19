@@ -8,6 +8,7 @@ const OrderItem = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
+        //TODO: fix headers
         const res = await fetch('http://localhost:8000/orders',{headers:{ "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWM5M2VjYmQ4Mjg0ZTQ4NWViYzMzZSIsInJvbGUiOjMsImlhdCI6MTczOTgyNTI3MCwiZXhwIjoxNzQwNDMwMDcwfQ.OeWnS_y1qZFqUJtJJqv3y9MUleOResHvTmgQ-W8Y9Nw"}})
         const data = await res.json()
         setOrders(data.results)

@@ -18,6 +18,7 @@ const Example = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
+        //TODO: fix headers
         const res = await fetch('http://localhost:8000/orders',{headers:{ "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWM5M2VjYmQ4Mjg0ZTQ4NWViYzMzZSIsInJvbGUiOjMsImlhdCI6MTczOTgyNTI3MCwiZXhwIjoxNzQwNDMwMDcwfQ.OeWnS_y1qZFqUJtJJqv3y9MUleOResHvTmgQ-W8Y9Nw"}})
         const data = await res.json()
         const foundOrder = data.results.find((o: Order) => o.id === id)
