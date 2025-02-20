@@ -55,7 +55,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 cart-overlay transition-all duration-1000" onClick={onClose}>
-      <div className=" right-0 h-full w-[80%] max-w-md z-50 cart-modal bg-white transition duration-1000"
+      <div className=" right-0 h-full w-[80%] max-w-md z-50 cart-modal bg-white dark:bg-[#15171d] transition duration-1000"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex h-full flex-col">
@@ -117,7 +117,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 <div className="flex-col space-y-3 ">
                   <div className="flex items-center justify-between">
 
-                    <h2 className="text-xl font-noraml text-gray-600">سبد خرید ({totalQty})</h2>
+                    <h2 className="text-xl font-noraml  dark:text-slate-200 text-gray-600">سبد خرید ({totalQty})</h2>
                     <button
                       onClick={onClose}
                       className="rounded p-2 hover:bg-gray-100"
@@ -126,7 +126,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
 
                     </button>
                   </div>
-                  <div className="flex justify-between text-sm items-center pb-4 text-gray-500  border-b">
+                  <div className="flex justify-between text-sm items-center pb-4  dark:text-slate-200 text-gray-500  border-b">
                     <p >محصولات</p>
                     <p> مجموع</p>
                   </div>
@@ -147,7 +147,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     </Link>
                     <div className="flex-col col-span-2 ">
                       <h3 className="font-noraml group-hover:underline rounded-lg">{item.titleFa}</h3>
-                      <p className="text-gray-600 text-xs">
+                      <p className=" dark:text-slate-200 text-gray-600 text-xs">
                         {item.bestSeller.lastPrice} تومان
                       </p>
                       <div className="flex gap-5 items-end">
@@ -160,7 +160,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                       </div>
                     </div>
                     <div>
-                      <p className="text-gray-600 col-span-1">
+                      <p className=" dark:text-slate-200 text-gray-600 col-span-1">
                         {item.bestSeller.lastPrice * item.quantity}.000 تومان
                       </p>
                     </div>
@@ -170,18 +170,18 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                   </div>
                 ))}
 
-                <div className="fixed bottom-0 bg-white w-[417px] ">
+                <div className="fixed bottom-0 bg-transparent  w-[417px] ">
                   <div className="border-t px-4">
                     <Accordion type="single" collapsible>
                       <div >
                         <AccordionItem value="item-1">
                           <AccordionTrigger className="flex gap-3">
-                            <p className="text-sm font-normal text-gray-500">توضیحات سفارش</p>
+                            <p className="text-sm font-normal  dark:text-slate-200 text-gray-500">توضیحات سفارش</p>
                           </AccordionTrigger>
-                          <AccordionContent className="text-sm font-normal text-[#918e99]">
+                          <AccordionContent className="text-sm font-normal text-[#918e99]  dark:text-slate-100/60">
                             <textarea id="CartDrawer-Note" rows={4}
-                              className="w-full p-2 border border-gray-300 rounded-md resize-y focus:ring-2
-                   focus:ring-blue-500" name="note" placeholder=""></textarea>
+                              className="w-full p-2 dark:bg-[#21242d] border border-gray-300 dark:focus:ring-gray-300
+                               rounded-md resize-y focus:ring-2 focus:ring-slate-500" name="note" placeholder=""></textarea>
 
                           </AccordionContent>
                         </AccordionItem>
@@ -195,11 +195,11 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                   <hr />
                   <div className=" p-4">
                     <div className="mb-4 flex justify-between text-lg font-noraml">
-                      <span className="text-gray-700">جمع کل</span>
-                      <span className="text-gray-500">{totalAmount}.000 تومان</span>
+                      <span className=" dark:text-slate-200 text-gray-700">جمع کل</span>
+                      <span className=" dark:text-slate-200 text-gray-500">{totalAmount}.000 تومان</span>
                     </div>
                     <div className="mb-2">
-                      <span className="text-gray-500 text-xs">مالیات و هزینه ارسال در زمان پرداخت محاسبه میگردد</span>
+                      <span className=" dark:text-slate-200 text-gray-500 text-xs">مالیات و هزینه ارسال در زمان پرداخت محاسبه میگردد</span>
                     </div>
                     <button
                       className="w-full rounded-lg bg-[#94D2BD] py-3 text-white hover:scale-[101%] transition duration-500"
