@@ -65,7 +65,8 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu className="text-right ">
+    <NavigationMenu className="text-right z-30">
+
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
@@ -100,7 +101,7 @@ export function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium bg-cover w-48 h-full p-0">
-                      <img src="card.avif" className="w-full h-full" />
+                      <img src="http://localhost:8000/uploads/image-1738660291605-406662467.avif" className="w-full h-full" />
                     </div>
 
                   </Link>
@@ -147,10 +148,9 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/products/category/about" legacyBehavior passHref>
+          <Link href="/dashboard" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              درباره ما
-            </NavigationMenuLink>
+داشبورد            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 

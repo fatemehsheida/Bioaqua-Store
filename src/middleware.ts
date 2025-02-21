@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { refreshTokenAction } from "@/actions/auth/refresh-token";
+import { refreshTokenAction } from "./actions/auth/refresh-token";
 
 // 1. Specify protected and public routes
 const protectedRoutes = "/dashboard";
@@ -10,7 +10,7 @@ export default async function middleware(req: NextRequest) {
   // 2. Check if the current route is protected or public
   const path = req.nextUrl.pathname;
   const isProtectedRoute = path.startsWith(protectedRoutes);
-  const isPublicRoute = path.includes(publicRoutes);
+  const isPublicRoute = path.startsWith(publicRoutes);
 
   // 3. Decrypt the session from the cookie
   const accessToken = (await cookies()).get("accessToken")?.value;
@@ -33,6 +33,13 @@ export default async function middleware(req: NextRequest) {
   //   return NextResponse.redirect(new URL("/dashboard", req.nextUrl));
   // }
 
+
+  // if (isPublicRoute && !isProtectedRoute && isLogin) {
+  //   return NextResponse.redirect(new URL("/dashboard", req.nextUrl));
+  // }
+  // if (isPublicRoute && !isProtectedRoute && isLogin) {
+  //   return NextResponse.redirect(new URL("/dashboard", req.nextUrl));
+  // }
 
   return NextResponse.next();
 }

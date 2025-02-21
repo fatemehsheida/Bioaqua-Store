@@ -4,7 +4,7 @@ import { IBadge, PaginatedResultApi } from "@/api/server-api/types";
 import AlertDialog from "@/components/DeleteAlertDialog";
 import AITable from "@/components/tables/AITable";
 import { Edit, Delete } from "@mui/icons-material";
-import { Stack, Tooltip, IconButton } from "@mui/material";
+import { Stack, Tooltip, IconButton, Box } from "@mui/material";
 import Link from "next/link";
 import { use } from "react";
 
@@ -49,7 +49,21 @@ export function BadgesTable({
           },
           {
             title: "icon",
-            render: (row) => row.icon,
+            render: (row) =>
+            <Link href={row.icon} target="_blank">
+            <Box
+            component="img"
+            sx={{
+              height: 100,
+              width: 100,
+              maxHeight: { xs: 233, md: 167 },
+              maxWidth: { xs: 350, md: 250 },
+            }}
+            alt="The house from the offer."
+            src={row.icon}
+            />
+
+            </Link>
           },
           {
             title: "بروزرسانی",

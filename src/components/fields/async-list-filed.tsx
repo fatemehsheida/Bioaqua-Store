@@ -12,7 +12,8 @@ type Props<T extends { id: string }> = {
   label: string;
   setQuery: (q: string) => void;
   error?: boolean;
-  helperText?: string;
+  helperText?: string | string[];
+  onChange?: (value: T | null) => void;
 };
 
 export default function AsyncListField<T extends { id: string }>({
@@ -26,14 +27,12 @@ export default function AsyncListField<T extends { id: string }>({
   setQuery,
   error,
   helperText,
+  onChange,
 }: Props<T>) {
   const [inputValue, setInputValue] = useState("");
-  const [value, setValue] = useState<T | null>(null);
-  useEffect(() => {
-    if (defaultValue) {
-      setValue(defaultValue);
-    }
-  }, [defaultValue]);
+  const [value, setValue] = useState<T | null>(defaultValue ?? null);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateQuery = useCallback(
     debounce((inputValue: string, value) => {
       setQuery(value ? "" : inputValue);
@@ -43,18 +42,21 @@ export default function AsyncListField<T extends { id: string }>({
 
   return (
     <>
-      <input
-        type="hidden"
-        name={name} // This will be sent to the backend
-        defaultValue={value?.id || ""}
-      />
+      {value?.id && (
+        <input
+          type="hidden"
+          name={name} // This will be sent to the backend
+          defaultValue={value?.id}
+        />
+      )}
       <Autocomplete
         fullWidth
         disablePortal
         inputValue={inputValue}
         value={value}
-        onChange={(event: any, newValue: T | null) => {
+        onChange={(event: unknown, newValue: T | null) => {
           setValue(newValue);
+          onChange?.(newValue);
         }}
         onInputChange={(event, newInputValue) => {
           setInputValue(newInputValue);

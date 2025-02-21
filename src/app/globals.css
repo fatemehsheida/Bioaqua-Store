@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -70,7 +72,7 @@
   width: 26px;
   height: 20px;
   left: 30px;
-  top: 16px;
+  top: 28px;
   
 }
 
@@ -111,14 +113,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .bm-menu {
   background: linear-gradient(
-    to top right,
-    #C9D5BF,
-    #D4CAAE,
-    #C1C2A8,
-    #A2BAA3,
-    #82B19E,
-    #72AE9C
-  );
+  to top right,
+  #C9D5BF,
+  #D4CAAE,
+  #C1C2A8,
+  #A2BAA3,
+  #82B19E,
+  #72AE9C
+);
   padding: 2.5em  0;
   font-size: 1.15em;
   width: 20rem;
@@ -147,6 +149,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background:  rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
+
 
 @font-face {
 	font-family: KalamehWeb;
@@ -183,6 +186,8 @@ body {
 	direction: rtl;
 	background-color: #cdcdcd;
 	margin: 0;
+  overflow: scroll !important;
+  padding-right: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -244,3 +249,132 @@ h1, h2, h3, h4, h5, h6{
 .box900, .box900 h1{
 	font-weight:900;
 }
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999 !important;
+}
+
+.cart-modal {
+  position: relative;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 28rem;
+  background-color: white;
+  z-index: 10000 !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+} 
+
+
+
+/* #region darkmode */
+/* General Styles */
+/* body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: background 0.4s, color 0.4s;
+} */
+
+body.light {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+body.dark {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+/* Hide the checkbox */
+.hidden-checkbox {
+  display: none;
+}
+
+/* Button Styles */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} 
+
+.toggle-button {
+  /* background: #e5e7eb; */
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  transition: background 0.3s, transform 0.5s ease-in-out;
+}
+
+/* Rotation Effect */
+.toggle-button:has(.hidden-checkbox:checked) {
+  transform: rotate(180deg);
+}
+
+.toggle-button:hover {
+  background: #d1d5db;
+}
+
+
+
+/* bg-moon */
+/* body:has(.hidden-checkbox:checked) .toggle-button {
+  background: #374151;
+} */
+
+body:has(.hidden-checkbox:checked) .toggle-button:hover {
+  background: #4b5563;
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon Styles */
+.iconn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.moon {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+/* Toggle between sun and moon */
+.hidden-checkbox:checked + .toggle-button .sun {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.hidden-checkbox:checked + .toggle-button .moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Change Theme */
+body:has(.hidden-checkbox:checked) {
+    background:#16181E;
+  color: #f3f4f6;
+}
+/* #endregion darkmode */

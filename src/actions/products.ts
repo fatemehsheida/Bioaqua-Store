@@ -3,6 +3,7 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
+  addProductPrice,
 } from "@/api/server-api/products";
 import { ApiError } from "@/api/server-api/base";
 import { ensureAuthenticated } from "@/lib/session";
@@ -10,28 +11,37 @@ import { ProductFormState, ProductSchemaZod } from "@/lib/validations";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { formDataToObject } from "@/lib/utils";
-
 export async function createOrUpdateProductAction(
-  state: ProductFormState,
+  state: any,
   formData: FormData
 ) {
-  /// validate input
+  // Validate input and ensure authentication
   await ensureAuthenticated();
   const id = formData.get("id");
-  const validatedFields = ProductSchemaZod.safeParse(
-    formDataToObject(formData)
-  );
+  console.log(formData)
+  const parsed = ProductSchemaZod.safeParse(formDataToObject(formData));
+  console.log({parsed})
 
-  if (!validatedFields.success) {
+  if (!parsed.success) {
+  console.log('error')
+  console.log(parsed.error)
     return {
-      errors: validatedFields.error.flatten().fieldErrors,
+      errors: parsed.error.flatten().fieldErrors,
     };
   }
+
+  // Separate the price field from the rest of the product data.
+  console.log({parsed})
+  const { price, ...productData } = parsed.data;
   try {
     if (id) {
-      await updateProduct(id.toString(), validatedFields.data);
+      await updateProduct(id.toString(), productData);
     } else {
-      await createProduct(validatedFields.data);
+      await createProduct(productData);
+    }
+    // If a price is provided and a product code exists, post the price to the separate endpoint.
+    if (price !== undefined && productData.code) {
+      await addProductPrice(productData.code, price);
     }
   } catch (e) {
     console.log(e);
@@ -53,7 +63,7 @@ export async function createOrUpdateProductAction(
 export async function deleteProductAction(id: string) {
   await ensureAuthenticated();
   try {
-    const res = await deleteProduct(id);
+    await deleteProduct(id);
   } catch (e) {
     if (e instanceof ApiError) {
       return {

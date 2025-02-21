@@ -4,7 +4,7 @@ import { IProduct, PaginatedResultApi } from "@/api/server-api/types";
 import DeleteAlertDialog from "@/components/DeleteAlertDialog";
 import AITable from "@/components/tables/AITable";
 import { Delete, Edit } from "@mui/icons-material";
-import { IconButton, Stack, Tooltip } from "@mui/material";
+import { Box, IconButton, Stack, Tooltip } from "@mui/material";
 import Link from "next/link";
 
 export function ProductTable({
@@ -41,6 +41,24 @@ export function ProductTable({
         {
           title: "کد",
           render: (row) => row.code,
+        },
+        {
+          title: "آیکون",
+          render: (row) =>
+          <Link href={row.images.main} target="_blank">
+          <Box
+          component="img"
+          sx={{
+            height: 50,
+            width: 50,
+            maxHeight: { xs: 233, md: 167 },
+            maxWidth: { xs: 350, md: 250 },
+          }}
+          alt="The house from the offer."
+          src={row.images.main}
+          />
+
+          </Link>
         },
         {
           title: "نام فارسی",
