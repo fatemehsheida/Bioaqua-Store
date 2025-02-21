@@ -9,7 +9,7 @@ import { ProductType } from "@/lib/validations";
 
 // Create a new Product
 export const createProduct = async (
-  body: Partial<ProductType>
+  body: Partial<IProduct>
 ): Promise<IProduct> => {
   return apiFetch<IProduct>(`${BASE_URL}/products`, {
     method: "POST",
@@ -17,10 +17,10 @@ export const createProduct = async (
   });
 };
 
-// Update an existing city
+// Update an existing Product
 export const updateProduct = async (
   id: string,
-  body: Partial<ProductType>
+  body: Partial<IProduct>
 ): Promise<IProduct> => {
   try {
     const data = await apiFetch<IProduct>(`${BASE_URL}/products/${id}`, {
@@ -32,6 +32,17 @@ export const updateProduct = async (
   } catch (e) {
     throw e;
   }
+};
+
+// New function: Add Price to Product
+export const addProductPrice = async (
+  code: string,
+  price: number
+): Promise<any> => {
+  return apiFetch(`http://localhost:8000/shop/sellers/product/${code}/add-price`, {
+    method: "POST",
+    body: JSON.stringify({ price }),
+  });
 };
 
 // Get a paginated list of products

@@ -5,13 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 export function HambergerMenu() {
@@ -62,7 +56,8 @@ export function HambergerMenu() {
 
       <div className="w-full hover:bg-[#62A496]/50 hover:border-y transition-all duration-500 px-10 py-1 ">
         <Link href="/dashboard" legacyBehavior passHref>
-داشبورد        </Link>
+          داشبورد        
+        </Link>
       </div>
 
     </div>

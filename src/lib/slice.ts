@@ -2,15 +2,14 @@ import { Product } from '@/types/type';
 import { createSlice } from '@reduxjs/toolkit';
 
 
-interface IItem extends Product {
+export interface IProductCart extends Product {
     quantity: number,
     totalPrice: number
 }
 interface IInitialState {
-    items: IItem[],
+    items: IProductCart[],
     totalQty: number
 }
-
 export const cartSlice = createSlice({
     name: 'cart',
     initialState: {
@@ -64,6 +63,11 @@ export const cartSlice = createSlice({
                 state.items = state.items.filter((item) => item.id != id)
                 state.totalQty -= item.quantity
             }
+
+        },
+        RemoveCart(state, action) {
+            state.items = []
+            state.totalQty = 0
 
         },
         DecrementQuantity(state, action) {

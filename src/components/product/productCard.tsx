@@ -19,7 +19,7 @@ return(
                 <img src={product.images.list[1]} className=" rounded-xl hidden group-hover:block object-cover w-44 h-44" />
               </div>
 
-              <div className="text-[#2E2A39] pb-4 pt-2">
+              <div className="text-[#2E2A39] dark:text-slate-300 pb-4 pt-2">
                 <span className="flex flex-row items-start flex-1 group-hover:underline
                      justify-start gap-3 text-sm font-noraml w-full ">
                   {product.titleFa}
@@ -34,7 +34,7 @@ return(
 
             </div>
           </Link>
-          <AddToCart product={product} quantity={1} style={" w-full bg-white ring-1 ring-[#2E2A39] hover:ring-2 px-4 py-3 rounded-lg text-[#2E2A39] text-sm font-normal"} />
+          <AddToCart product={product} quantity={1} style={" w-full bg-white dark:bg-[#16181E]/85 ring-1 ring-[#2E2A39] dark:ring-slate-400/80 hover:ring-2 px-4 py-3 rounded-lg dark:text-[#F9FAFB] dark:text-slate-200 text-sm font-normal"} />
         </div>
       </div>
     </div >
