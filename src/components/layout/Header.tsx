@@ -52,7 +52,7 @@ const Header = () => {
       <div className=" md:w-[80%] md:h-24 items-center flex flex-row w-[90%] px-1
      md:py-3  pt-2 pb-1.5 mx-16 md:justify-between justify-around pl-24 relative">
 
-        <div className="flex opacity-80 items-center justify-between  py-2">
+        <div className="flex opacity-80 items-center justify-between gap-2  py-2">
 
           <button className="mx-1">
             <IoMdSearch className="size-6 hover:scale-125" />
@@ -65,7 +65,7 @@ const Header = () => {
           <button className="relative mx-1 hover:scale-125" onClick={() => setIsCartOpen(true)}>
             <HiOutlineShoppingBag  className='size-7'/>
             {totalQty > 0 && (
-              <span className="absolute top-6 px-0  left-6 flex items-center justify-center w-5 h-5 text-xs
+              <span className="absolute top-4 px-0  left-4 flex items-center justify-center w-5 h-5 text-xs
               font-noraml text-[#79B3AA] bg-black rounded-full dark:bg-slate-300 dark:text-gray-950">
                 {totalQty}
               </span>
@@ -82,7 +82,7 @@ const Header = () => {
                   <NavigationMenuDemo />
                 </div>
               </div>
-              <div className='2xl:-right-32 lg:-right-28 top-4 absolute'>
+              <div className='2xl:-right-32 lg:-right-28 top-3 absolute'>
                 <ButtonMode />
               </div>
             </div>
