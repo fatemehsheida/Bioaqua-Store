@@ -19,6 +19,7 @@ import StyledInputBase from "./components/StyledInputBase";
 import { AppBar } from "./components/HeaderAppBar";
 import { DrawerContext } from "./DrawerProvider";
 import { Divider } from "@mui/material";
+import { logoutAction } from "@/actions/auth/logout";
 
 export default function DashboardHeader() {
   const { isOpen, handleOpen } = React.useContext(DrawerContext);
@@ -66,7 +67,7 @@ export default function DashboardHeader() {
       <MenuItem onClick={handleMenuClose}>پروفایل</MenuItem>
       <MenuItem onClick={handleMenuClose}>مشاهده حساب</MenuItem>
       <Divider />
-      <MenuItem onClick={handleMenuClose}>خروج</MenuItem>
+      <MenuItem onClick={async () => logoutAction()}>خروج</MenuItem>
     </Menu>
   );
 
@@ -136,14 +137,15 @@ export default function DashboardHeader() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography>
+          <Box
+            component="img"
+            sx={{
+              height: 40,
+              width: 100,
+            }}
+          
+             src="http://localhost:8000/uploads/image-1738349698115-546474799.avif" alt="Bioaqoua" />
+       
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

@@ -1,32 +1,23 @@
-import Link from "next/link";
-
-interface Category {
-  titleEn: string;
-  titleFa: string;
-  slug: string;
-  id: string;
-}
+import { Category } from "@/types/type";
 
 interface CategoryListProps {
   categories: Category[];
+  onSelectCategory: (categoryId: string) => void;
+  selectedCategory: string;
 }
 
-export default function CategoryList({ categories }: CategoryListProps) {
+export default function CategoryList({ categories, onSelectCategory, selectedCategory }: CategoryListProps) {
   return (
     <div>
-      {/* <h3>Categories</h3>
-      <ul>
-        {categories.map((category) => (
-          <li key={category.id}>
-            <Link
-              href={`/products/category/${category.slug}`} // Link to the dynamic category page
-              className="category-link"
-            >
-              {category.titleFa} ({category.titleEn})
-            </Link>
-          </li>
-        ))}
-      </ul> */}
+      {categories.map((cat) => (
+        <button
+          key={cat.id}
+          onClick={() => onSelectCategory(cat.id)}
+          style={{ fontWeight: selectedCategory === cat.id ? 'bold' : 'normal' }}
+        >
+          {cat.titleFa}
+        </button>
+      ))}
     </div>
   );
 }

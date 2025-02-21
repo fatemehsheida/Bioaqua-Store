@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/product/page.tsx"
-  ],
+, "src/app/(user)/profile/order"  ],
 
 
   "exclude": ["node_modules"]

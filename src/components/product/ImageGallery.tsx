@@ -2,7 +2,6 @@
 import { useState } from 'react';
 
 interface ImageGalleryProps {
-  main_image: string;
   images: string[];
 }
 

@@ -1,7 +1,6 @@
 "use client";
-import { deleteBadgeAction } from "@/actions/badges";
 import { deleteSellerAction } from "@/actions/sellers";
-import { ISeller, IUser, PaginatedResultApi } from "@/api/server-api/types";
+import { ISeller, PaginatedResultApi } from "@/api/server-api/types";
 import AlertDialog from "@/components/DeleteAlertDialog";
 import AITable from "@/components/tables/AITable";
 import { Edit, Delete } from "@mui/icons-material";
@@ -52,13 +51,13 @@ export function SellerTable({
             title: "نشانه",
             render: (row) => row.slug,
           },
-          {
-            title: "کاربر",
-            render: (row) => row.user.email,
-          },
+          // {
+          //   title: "کاربر",
+          //   render: (row) => row.user.email,
+          // },
         ]}
       />
     </>
   );
 }
-const RoleMap = ["مشتری", "فروشنده", "ادمین"];
+export const RoleMap = ["مشتری", "فروشنده", "ادمین"];

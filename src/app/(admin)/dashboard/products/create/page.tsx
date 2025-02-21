@@ -1,5 +1,5 @@
 import ProductForm from "@/components/forms/product-form";
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import { BoProductFormx, Card, CardContent, Typography } from "@mui/material";
 
 export default async function CreateProductPage() {
   return (

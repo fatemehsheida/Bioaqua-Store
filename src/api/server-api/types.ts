@@ -38,7 +38,7 @@ export type ServerPageProps = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export interface Column<T extends { id: string }> {
+export interface Column<T extends { id?: string; _id?: string }> {
   title: string;
   render: (row: T) => ReactNode;
 }
@@ -90,9 +90,9 @@ export interface IProduct extends Timestamp {
   badges: [];
   category: ICategory;
   brand: IBrand;
-  review: IPropertyValue[];
+  review: string;
   specifications: IPropertyValue[];
-  expert_reviews: string;
+  expert_review: string;
   id: string;
 }
 export interface IUser {

@@ -1,60 +1,90 @@
+import { Product } from '@/types/type';
 import { createSlice } from '@reduxjs/toolkit';
 
 
+export interface IProductCart extends Product {
+    quantity: number,
+    totalPrice: number
+}
+interface IInitialState {
+    items: IProductCart[],
+    totalQty: number
+}
 export const cartSlice = createSlice({
-    name:'cart',
+    name: 'cart',
     initialState: {
         items: [],
         totalQty: 0,
-    },
+    } as IInitialState,
     reducers: {
-        addItemToCart(state,action){
-            console.log('addItemToCart reducers redux', {state, action})
+        addItemToCart(state, action) {
+            console.log('addItemToCart reducers redux', { state, action })
             const newItem = action.payload
-            const existingItme = state.items.find((item)=>item.id == newItem.id)
+            const existingItme = state.items.find((item) => item.id == newItem.id)
             state.totalQty += newItem.quantity
-            
-            if (existingItme){
+
+            if (existingItme) {
                 existingItme.quantity += newItem.quantity
-                existingItme.totalPrice += newItem.totalPrice
-                console.log('addItemToCart reducers redux existingItem', {existingItme})
+                existingItme.totalPrice += Number(newItem.totalPrice)
+                console.log('addItemToCart reducers redux existingItem', { existingItme })
             }
-            else{
+            else {
                 state.items.push(
                     newItem
                 )
-                console.log('addItemToCart reducers redux state', {state})
+                console.log('addItemToCart reducers redux state', { state })
             }
         },
-        removeItemFromCart(state,action){
-            const {id, quantity} = action.payload
-            const existingItme = state.items.find((item)=>item.id == id)
+        removeItemFromCart(state, action) {
+            const { id, quantity } = action.payload
+            const existingItme = state.items.find((item) => item.id == id)
             state.totalQty -= quantity
-            
-            if (existingItme){
-                state.items.filter((item)=>item.id != id)
-            }
-            
-        },
-        IncrementQuantity(state,action){
-            const id = action.payload
-            const item = state.items.find((item)=> item.id == id)
 
-            item.quantity ++
-            item.totalPrice += item.price
-            state.totalQty ++
-        },
-        DecrementQuantity(state,action){
-            const id = action.payload
-            const item = state.items.find((item)=> item.id == id)
-            
-            if (item.quantity == 1){
-                state.items.filter((item)=>item.id != id)
+            if (existingItme) {
+                state.items.filter((item) => item.id != id)
             }
-            else{
-                item.quantity --
-                item.totalPrice -= item.price
-                state.totalQty --
+
+        },
+        IncrementQuantity(state, action) {
+            const id = action.payload
+            const item = state.items.find((item) => item.id == id)
+            if (item) {
+                item.quantity++
+                item.totalPrice += item.bestSeller.lastPrice
+                state.totalQty++
+            }
+
+
+        },
+        RemoveItem(state, action) {
+            const id = action.payload
+            const item = state.items.find((item) => item.id == id)
+            if (item) {
+                state.items = state.items.filter((item) => item.id != id)
+                state.totalQty -= item.quantity
+            }
+
+        },
+        RemoveCart(state, action) {
+            state.items = []
+            state.totalQty = 0
+
+        },
+        DecrementQuantity(state, action) {
+            const id = action.payload
+            const item = state.items.find((item) => item.id == id)
+            if (item) {
+                console.log(item.quantity)
+                if (item.quantity == 1) {
+                    console.log(id, item.id)
+                    state.items = state.items.filter((item) => item.id != id)
+                    state.totalQty--
+                }
+                else {
+                    item.quantity--
+                    item.totalPrice -= item.bestSeller.lastPrice
+                    state.totalQty--
+                }
             }
 
         }
