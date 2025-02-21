@@ -13,7 +13,7 @@ const CheckoutAddress = () => {
          transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         </span>
                     </label>
-                    <label className="ml-2 text-slate-600 cursor-pointer text-base px-2" htmlFor="address">همان آدرس حمل و نقل</label>
+                    <label className="ml-2 text-slate-600 dark:text-white cursor-pointer text-base px-2" htmlFor="address">همان آدرس حمل و نقل</label>
                 </div>
                 <div className="inline-flex items-center border border-slate-300 rounded-b-lg py-2 px-3 has-[:checked]:border-slate-800">
                     <label className="relative flex items-center cursor-pointer" htmlFor="otheraddress">
@@ -23,7 +23,7 @@ const CheckoutAddress = () => {
         transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         </span>
                     </label>
-                    <label className="ml-2 text-slate-600 cursor-pointer text-base px-2" htmlFor="otheraddress">از آدرس صورتحساب دیگری استفاده کنید</label>
+                    <label className="ml-2 text-slate-600 dark:text-white cursor-pointer text-base px-2" htmlFor="otheraddress">از آدرس صورتحساب دیگری استفاده کنید</label>
                 </div>
             </div>
         </div>

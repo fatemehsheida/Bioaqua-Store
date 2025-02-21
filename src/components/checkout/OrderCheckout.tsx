@@ -32,7 +32,7 @@ const OrderCheckout = () => {
                 >
                     <div className='flex justify-start items-start gap-4 w-full'>
                         <div className='flex items-center justify-between w-full'>
-                            <p className="text-gray-600 text-sm font-normal">
+                            <p className="text-gray-600 dark:text-slate-200 text-sm font-normal">
                                 {item.bestSeller.lastPrice * item.quantity}.000 تومان
                             </p>
                             <h3 className="font-noraml group-hover:underline rounded-lg text-base">{item.titleFa}</h3>
@@ -68,21 +68,21 @@ const OrderCheckout = () => {
 
             <div className='w-full my-9 flex flex-col gap-2'>
                 <div className='w-full flex justify-between items-center'>
-                    <span className="text-xs font-medium text-gray-500">{totalAmount}.000 تومان</span>
+                    <span className="text-xs font-medium text-gray-500 dark:text-slate-200">{totalAmount}.000 تومان</span>
                     <div className='flex items-center gap-1'>
-                    <span className='text-sm font-medium text-[#353535]'>({totalQty})مورد </span>
+                    <span className='text-sm font-medium text-[#353535] dark:text-slate-200/60'>({totalQty})مورد </span>
                     <span className='text-base font-medium'>.جمع محصولات</span>
                     </div>
 
                 </div>
 
                 <div className='w-full flex justify-between items-center'>
-                    <span className="text-xs font-medium text-gray-500">{shipping}.000 تومان</span>
+                    <span className="text-xs font-medium text-gray-500 dark:text-slate-200">{shipping}.000 تومان</span>
                     <span className='text-base font-medium'>حمل و نقل</span>
                 </div>
 
                 <div className='w-full flex justify-between items-center'>
-                    <span className="text-xs font-medium text-gray-500">{totalPrice}.000 تومان</span>
+                    <span className="text-xs font-medium text-gray-500 dark:text-slate-200">{totalPrice}.000 تومان</span>
                     <span className='text-base font-normal'>جمع کل</span>
                 </div>
             </div>

@@ -12,19 +12,19 @@ const ProfileUser = () => {
                 <img src="cute_profile.jpg" className='md:w-64 md:h-64 w-44 h-44 rounded-full lg:col-span-2 col-span-2 lg:p-6' />
                 <div className='w-full flex flex-col justify-center items-start pt-8 lg:px-4 px-8 lg:col-span-3 col-span-4 text-wrap gap-2 text-[#434241]/80'>
                     <div className='flex gap-2'>
-                        <span className='text-2xl font-semibold text-[#434241]'>یوسف</span>
-                        <span className='text-2xl font-semibold text-[#434241]'>عرب اسدی</span>
+                        <span className='text-2xl font-semibold text-[#434241]'>نام</span>
+                        <span className='text-2xl font-semibold text-[#434241]'>نام خانوادگی</span>
                     </div>
                     <div className='grid grid-cols-7 grid-rows-3 space-x-1 space-y-3 items-center [&_span]:flex [&_span]:items-center pt-5'>
 
 
                         <span className=' col-span-2 text-md font-semibold cursor-pointer  '>ایمیل</span>
-                        <span className='text-md underline cursor-pointer hover:text-[#434241]/90 col-span-5'>yosofasady2@gmial.com</span>
+                        <span className='text-md underline cursor-pointer hover:text-[#434241]/90 col-span-5'>testemail@text.com</span>
 
                         <span className='text-md font-semibold cursor-pointer  col-span-2'>آدرس</span>
-                        <span className='w-full text-md  col-span-5'>مشهد - بلوار کوهسنگی - کوهسنگی 22</span>
+                        <span className='w-full text-md  col-span-5'>آدرس - شهر - استان - کوچه</span>
                         <span className='text-md font-semibold cursor-pointer  col-span-2'>تاریخ تولد</span>
-                        <span className='text-md cursor-pointer  col-span-5'>1382/11/10</span>
+                        <span className='text-md cursor-pointer  col-span-5'>1222/11/28</span>
                     </div>
 
                     <div className='flex gap-2 flex-col'>

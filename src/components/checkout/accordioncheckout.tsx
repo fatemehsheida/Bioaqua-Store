@@ -30,17 +30,17 @@ const AccordionCheckout = () => {
 
 
     return (
-        <Accordion type="single" collapsible className='w-full bg-[#F6F6F6]'>
+        <Accordion type="single" collapsible className='w-full bg-[#F6F6F6] dark:bg-[#2a2d36e0]'>
             <AccordionItem value="item-1 w-full ">
                 <div className='flex items-center w-full justify-between px-6'>
                     <AccordionTrigger className="flex gap-3 w-20  text-base font-normal">
                         سفارشات
                     </AccordionTrigger>
-                    <span className="text-gray-500">{totalAmount}.000 تومان</span>
+                    <span className="text-gray-500 dark:text-slate-200">{totalAmount}.000 تومان</span>
 
                 </div>
                 <AccordionContent className="text-sm font-normal  pb-0 pt-0 ">
-                    <div className='right bg-[#FFF6EE] w-full h-full flex flex-col justify-start items-end pt-10 px-6'>
+                    <div className='right bg-[#FFF6EE] dark:bg-[#363942e0] w-full h-full flex flex-col justify-start items-end pt-10 px-6'>
                         <div className='w-full'>
 
                             {items.map((item: IProductCart) => (
@@ -50,7 +50,7 @@ const AccordionCheckout = () => {
                                 >
                                     <div className='flex justify-start items-start gap-4 w-full'>
                                         <div className='flex items-center justify-between w-full'>
-                                            <p className="text-gray-600 text-sm font-normal">
+                                            <p className="text-gray-600 dark:text-slate-200/80 text-sm font-normal">
                                                 {item.bestSeller.lastPrice * item.quantity}.000 تومان
                                             </p>
                                             <h3 className="font-noraml group-hover:underline rounded-lg text-base">{item.titleFa}</h3>
@@ -83,24 +83,24 @@ const AccordionCheckout = () => {
 
 
                                 <input type="text" placeholder='کد تخفیف' className='w-full text-black bg-transparent rounded-md ring-1
-                                ring-[#FDD8D8] py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#605E5C] ' onChange={(e) => setInputValue(e.target.value)} />
+                                ring-[#FDD8D8] py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#605E5C] dark:text-slate-200' onChange={(e) => setInputValue(e.target.value)} />
                             </div>
 
                             <div className='w-full my-9 flex flex-col gap-2'>
                                 <div className='w-full flex justify-between items-center'>
-                                    <span className="text-xs font-medium text-gray-500">{totalAmount}.000 تومان</span>
+                                    <span className="text-xs font-medium text-gray-500 dark:text-slate-200">{totalAmount}.000 تومان</span>
                                     <div className='flex items-center gap-1'>
-                                        <span className='text-sm font-medium text-[#353535]'>({totalQty})مورد </span>
+                                        <span className='text-sm font-medium text-[#353535] dark:text-slate-200/60'>({totalQty})مورد </span>
                                         <span className='text-base font-medium'>.جمع محصولات</span>
                                     </div>                                </div>
 
                                 <div className='w-full flex justify-between items-center'>
-                                    <span className="text-xs font-medium text-gray-500">{shipping}.000 تومان</span>
+                                    <span className="text-xs font-medium text-gray-500 dark:text-slate-200">{shipping}.000 تومان</span>
                                     <span className='text-base font-medium'>حمل و نقل</span>
                                 </div>
 
                                 <div className='w-full flex justify-between items-center'>
-                                    <span className="text-xs font-medium text-gray-500">{totalPrice}.000 تومان</span>
+                                    <span className="text-xs font-medium text-gray-500 dark:text-slate-200">{totalPrice}.000 تومان</span>
                                     <span className='text-base font-normal'>جمع کل</span>
                                 </div>
                             </div>

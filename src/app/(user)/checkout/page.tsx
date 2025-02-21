@@ -25,11 +25,11 @@ const Checkout = () => {
         <AccordionCheckout />
       ) : (<div></div>)}
       {!isMobile ? (
-        <div className='right bg-[#FFF6EE] w-1/2 h-full flex flex-col justify-start items-end pt-10 px-6'>
+        <div className='right bg-[#FFF6EE] dark:bg-[#373941] w-1/2 h-full flex flex-col justify-start items-end pt-10 px-6'>
           <OrderCheckout />
         </div>
       ) : (<div></div>)}
-      <div className='left bg-white flex flex-col justify-center items-start lg:w-1/2 w-full'>
+      <div className='left bg-white dark:bg-[#21242d] flex flex-col justify-center items-start lg:w-1/2 w-full'>
         <CheckoutForm items={items} totalQty={totalQty} />
       </div>
 

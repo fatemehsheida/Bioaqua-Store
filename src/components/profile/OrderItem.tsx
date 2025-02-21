@@ -34,7 +34,7 @@ const OrderItem = () => {
   }
 
   return (
-    <div className='left w-1/2 h-full flex flex-col justify-start items-start pt-10 pl-6'>
+    <div className='left w-1/2 h-full flex flex-col justify-start items-start pt-10 pl-6 mb-5'>
       <div className='w-full'>
         <div className='flex flex-row justify-between w-full pb-2'>
           <h3 className="text-lg font-medium mt-6 mb-2">تاریخچه سفارشات</h3>

@@ -17,9 +17,9 @@ const SendingMethod = () => {
 
                     </label>
                     <div className='px-2  '>
-                        <label className="ml-2 text-slate-600 cursor-pointer text-xs font-normal" htmlFor="html">✈ حمل و نقل استاندارد قابل ردیاب</label>
-                        <label className="ml-2 text-slate-600 cursor-pointer text-xs font-normal" htmlFor="html">(ارسال رایگان برای سفارش های بالای 20 تومان)</label>
-                        <span className="ml-2 text-slate-950 cursor-pointer text-xs font-normal">150.000 تومان</span>
+                        <label className="ml-2 text-slate-600 cursor-pointer text-xs font-normal dark:text-white" htmlFor="html">✈ حمل و نقل استاندارد قابل ردیاب</label>
+                        <label className="ml-2 text-slate-600 cursor-pointer text-xs font-normal dark:text-white" htmlFor="html">(ارسال رایگان برای سفارش های بالای 20 تومان)</label>
+                        <span className="ml-2 text-slate-950 cursor-pointer text-xs font-normal dark:text-white">150.000 تومان</span>
                     </div>
                 </div>
                 <div className="inline-flex items-center border border-slate-300 rounded-b-lg py-2 px-3 has-[:checked]:border-slate-800">
@@ -31,8 +31,8 @@ const SendingMethod = () => {
                         </span>
                     </label>
                     <div className='px-2'>
-                        <label className="ml-2 text-slate-600 cursor-pointer text-xs font-normal" htmlFor="react">⚡ ارسال سریعتر در زمان انتظار خود صرفه جویی کنید</label>
-                        <span className="ml-2 text-slate-950 cursor-pointer text-xs font-normal">70.000 تومان</span>
+                        <label className="ml-2 text-slate-600 cursor-pointer text-xs font-normal dark:text-white" htmlFor="react">⚡ ارسال سریعتر در زمان انتظار خود صرفه جویی کنید</label>
+                        <span className="ml-2 text-slate-950 cursor-pointer text-xs font-normal dark:text-white/50">70.000 تومان</span>
                     </div>
                 </div>
 

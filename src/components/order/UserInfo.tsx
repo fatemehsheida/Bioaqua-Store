@@ -28,14 +28,14 @@ const UserInfo = () => {
                     <div className='flex gap-1 w-full'>
                         <span className='text-sm font-semibold cursor-pointer w-1/2'>نام و نام خانوادگی</span>
                         <div className='flex items-center gap-2 w-2/3'>
-                        <span className='text-sm'>یوسف </span>
-                        <span className='text-sm'> عرب اسدی </span>
+                        <span className='text-sm'> نام </span>
+                        <span className='text-sm'>نام خانوادگی</span>
                         </div>
                     </div>
 
                     <div className='flex gap-4'>
                         <span className=' col-span-2 text-sm font-semibold cursor-pointer  '>ایمیل</span>
-                        <span className='text-sm underline cursor-pointer hover:text-[#434241]/90 col-span-5'>yosofasady2@gmial.com</span>
+                        <span className='text-sm underline cursor-pointer hover:text-[#434241]/90 col-span-5'>testemail@gmial.com</span>
                     </div>
                 </div>
 
