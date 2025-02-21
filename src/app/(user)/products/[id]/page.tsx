@@ -2,6 +2,7 @@ import { Product } from "@/types/type";
 import ProductDetailCart from "@/components/cart/ProductDetailCart";
 import ImageGallery from "@/components/product/ImageGallery";
 import AccordionDetail from "@/components/product/AccordionDetail";
+import CommentsSection from "@/components/product/CommenSection";
 
 interface ProductDetailPageProps {
   params: {
@@ -67,6 +68,8 @@ export default async function ProductDetailPage({
             </div >
           </div>
           <p dangerouslySetInnerHTML={{ __html: product.expert_reviews }} className="text-sm font-normal text-[#5F5C68]/80 py-8"></p >
+          <CommentsSection productId={params.id} />
+
         </div>
       </div>
     </div >

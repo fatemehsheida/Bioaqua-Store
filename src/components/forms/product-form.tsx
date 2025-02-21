@@ -9,7 +9,6 @@ import {
   Divider,
   FormControlLabel,
   MenuItem,
-  Select,
   Stack,
   TextField,
   Typography,
@@ -109,6 +108,14 @@ function ProductForm({ defaultValue }: ProductFormProps) {
               error: !!state.errors?.expert_review,
               helperText: state.errors?.expert_review,
             },
+            {
+              name: "price",
+              label: "قیمت",
+              type: "number",
+              defaultValue: defaultValue?.price,
+              error: !!state.errors?.price,
+              helperText: state.errors?.price,
+            },
           ]}
         />
         <Divider />
@@ -116,12 +123,12 @@ function ProductForm({ defaultValue }: ProductFormProps) {
         {category?.properties.map((item, i) => (
           <Stack gap={1} key={item.id}>
             <input
-              hidden
+                
               name={`specifications.${i}.name`}
               defaultValue={item.name}
             />
             <input
-              hidden
+              
               name={`specifications.${i}.title`}
               defaultValue={item.label}
             />
@@ -138,7 +145,9 @@ function ProductForm({ defaultValue }: ProductFormProps) {
                   label={item.label}
                   name={`specifications.${i}.value`}
                 >
-                  <MenuItem value="">لطفا یک مورد را انتخاب کنید</MenuItem>
+                  <MenuItem value="">
+                    لطفا یک مورد را انتخاب کنید
+                  </MenuItem>
                   {item.options.map((o) => (
                     <MenuItem value={o.value} key={o.id}>
                       {o.value}
