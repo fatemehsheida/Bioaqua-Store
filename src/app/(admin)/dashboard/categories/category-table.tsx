@@ -64,24 +64,41 @@ export function CategoriesTable({
       }}
       data={categories}
       schema={[
+        // {
+        //   title: "آیکون",
+        //   render: (row) =>
+        //     <Box
+        //       component="img"
+        //       sx={{
+        //         height: 80,
+        //         width: 80,
+        //         maxHeight: { xs: 233, md: 167 },
+        //         maxWidth: { xs: 350, md: 250 },
+        //       }}
+        //       alt="The house from the offer."
+        //       src={row.icon}
+        //     />
+        // },
         {
-          title: "آیکون",
-          render: (row) =>
-            <Box
-              component="img"
+          title: "ویژگی ها",
+          render: (row) => row.properties?.map((item) => (
+            <Box 
+              key={item.id}
               sx={{
-                height: 80,
-                width: 80,
-                maxHeight: { xs: 233, md: 167 },
-                maxWidth: { xs: 350, md: 250 },
+                display: 'inline-block',
+                p: 0.5,
+                m: 0.2,
+                bgcolor: '#f5f5f5',
+                borderRadius: 1
               }}
-              alt="The house from the offer."
-              src={row.icon}
-            />
+            >
+              {item.name}
+            </Box>
+          )) || "-",
         },
         {
           title: "نشانک",
-          render: (row) => row.slug,
+          render: (row) => row.slug || "-",
         },
         {
           title: "دسته بندی مادر",
@@ -89,15 +106,25 @@ export function CategoriesTable({
         },
         {
           title: "نام فارسی",
-          render: (row) => row.titleFa,
+          render: (row) => row.titleFa || "-",
         },
         {
           title: "نام انگلیسی",
-          render: (row) => row.titleEn,
+          render: (row) => row.titleEn || "-",
+        },
+        {
+          title: "ایجاد",
+          render: (row) => row.createdAt ? 
+            new Date(row.createdAt).toLocaleDateString("fa") : "-",
         },
         {
           title: "بروزرسانی",
-          render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
+          render: (row) => row.updatedAt ? 
+            new Date(row.updatedAt).toLocaleDateString("fa") : "-",
+        },
+        {
+          title: "شرایط بازگشت",
+          render: (row) => row.returnReasonAlert,
         },
       ]}
     />

@@ -32,6 +32,8 @@ export interface PaginatedResultApi<T> {
   totalPages: number;
   page: number;
   pageSize: number;
+  createdAt: string;
+  updatedAt: string;
 }
 export type ServerPageProps = {
   params: Promise<{ [key: string]: string }>;
@@ -102,12 +104,18 @@ export interface IUser {
   role: 1 | 2 | 3;
   isActive: boolean;
   id: string;
+  createdAt: string;
+  updatedAt: string;
 }
 export interface ISeller extends Timestamp {
   user: IUser;
   name: string;
   slug: string;
   id: string;
+  createdAt: string;
+  updatedAt: string;
+  code: number;
+  specification: string;
 }
 
 export enum OrderStatus {
@@ -123,6 +131,7 @@ export interface IOrder {
     city: string;
     postalCode: string;
     location: [number, number];
+
   };
   user: IUser;
   deliveryDate: string;
@@ -131,6 +140,7 @@ export interface IOrder {
   createdAt: string;
   updatedAt: string;
   id: string;
+  price:number;
 }
 export interface IOrderItem {
   id: string;

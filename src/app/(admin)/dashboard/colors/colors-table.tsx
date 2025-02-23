@@ -44,20 +44,20 @@ export function ColorsTable({
           title: "نام",
           render: (row) => row.title,
         },
-        {
-          title: " رنگ",
-          render: (row) => (
-            <Box sx={{ bgcolor: row.hexCode, height: 20, width: 20 }} />
-          ),
-        },
+        // {
+        //   title: " رنگ",
+        //   render: (row) => (
+        //     <Box sx={{ bgcolor: row.hexCode, height: 20, width: 20 }} />
+        //   ),
+        // },
         {
           title: "کد رنگ",
           render: (row) => row.hexCode,
         },
-        {
-          title: "بروزرسانی",
-          render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
-        },
+        // {
+        //   title: "بروزرسانی",
+        //   render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
+        // },
       ]}
     />
   );

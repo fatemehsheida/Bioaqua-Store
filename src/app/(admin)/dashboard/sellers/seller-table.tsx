@@ -44,7 +44,7 @@ export function SellerTable({
             render: (row) => row.id,
           },
           {
-            title: "نام",
+            title: "نام فروشگاه",
             render: (row) => row.name,
           },
           {
@@ -52,9 +52,33 @@ export function SellerTable({
             render: (row) => row.slug,
           },
           // {
+          //   title: "نشانه",
+          //   render: (row) => row.slug,
+          // },
+          // {
           //   title: "کاربر",
           //   render: (row) => row.user.email,
           // },
+          {
+            title: "مشخصات فروشنده",
+            render: (row) => row.specification,
+          },
+          {
+            title: "کد فروشگاه",
+            render: (row) => row.code,
+          },
+          // {
+          //   title: "نام فروشنده",
+          //   render: (row) => row.user.firstName,
+          // },
+          {
+            title: "ایجاد",
+            render: (row) => new Date(row.createdAt).toLocaleDateString("fa"),
+          },
+          {
+            title: "بروزرسانی",
+            render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
+          },
         ]}
       />
     </>

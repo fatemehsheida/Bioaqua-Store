@@ -35,6 +35,14 @@ export function UsersTable({
             render: (row) => row.id,
           },
           {
+            title: "نام",
+            render: (row) => row.firstName,
+          },
+          {
+            title: "نام خانوادگی",
+            render: (row) => row.lastName,
+          },
+          {
             title: "ایمیل",
             render: (row) => row.email,
           },
@@ -46,6 +54,14 @@ export function UsersTable({
             title: "نقش",
             render: (row) => RoleMap[row.role - 1],
           },
+          {
+            title: "ایجاد",
+            render: (row) => new Date(row.createdAt).toLocaleDateString("fa"),
+          },
+          {
+            title: "بروزرسانی",
+            render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
+          },,
         ]}
       />
     </>
