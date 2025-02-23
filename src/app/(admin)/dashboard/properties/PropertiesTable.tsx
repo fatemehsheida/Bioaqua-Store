@@ -80,13 +80,15 @@ export function PropertiesTable({
           title: "مقادیر پیشنهادی",
           render: (row) => row.options?.map((item) => (
             <Box 
-              key={item.id} // اضافه کردن key
+              key={item.id} 
               sx={{ 
-                display: 'inline-block',
+                display: 'flex',
                 p: 1,
                 m: 0.5,
-                border: '1px solid #ddd',
-                borderRadius: 1
+                gap:20,
+                alignItems:"center",
+                // border: '1px solid #ddd',
+                // borderRadius: 1
               }}
             >
               {item.label} ({item.value})
