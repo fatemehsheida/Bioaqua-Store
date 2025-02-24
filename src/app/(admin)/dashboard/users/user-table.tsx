@@ -15,19 +15,19 @@ export function UsersTable({
   return (
     <>
       <AITable
-        actions={(p) => (
-          <Stack direction={"row"}>
-            <Tooltip title="ویرایش">
-              <IconButton
-                color="secondary"
-                component={Link}
-                href={"/dashboard/users/update/" + p.id}
-              >
-                <Edit />
-              </IconButton>
-            </Tooltip>
-          </Stack>
-        )}
+        // actions={(p) => (
+        //   // <Stack direction={"row"}>
+        //   //   <Tooltip title="ویرایش">
+        //   //     <IconButton
+        //   //       color="secondary"
+        //   //       component={Link}
+        //   //       href={"/dashboard/users/update/" + p.id}
+        //   //     >
+        //   //       <Edit />
+        //   //     </IconButton>
+        //   //   </Tooltip>
+        //   // </Stack>
+        // )}
         data={allUsers}
         schema={[
           {

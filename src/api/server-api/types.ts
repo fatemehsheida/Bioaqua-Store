@@ -15,6 +15,7 @@ export interface IProperty extends Timestamp {
   type: string;
   label: string;
   options?: IPropertyOption[];
+  total: number; 
 }
 
 export interface ICity {

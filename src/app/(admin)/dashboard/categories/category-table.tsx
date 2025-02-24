@@ -45,7 +45,7 @@ export function CategoriesTable({
         key: "properties",
         schema: [
           {
-            title: "شماره",
+            title: "شناسه",
             render: (row: IProperty) => row.id,
           },
           {
@@ -59,6 +59,10 @@ export function CategoriesTable({
           {
             title: "نوع داده",
             render: (row) => row.type,
+          },
+          {
+            title: "تعداد",
+            render: (row) => row.total,
           },
         ],
       }}

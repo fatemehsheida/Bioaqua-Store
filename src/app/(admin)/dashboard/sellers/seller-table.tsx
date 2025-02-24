@@ -28,13 +28,13 @@ export function SellerTable({
                 <Edit />
               </IconButton>
             </Tooltip>
-            <Tooltip title="حذف">
+            {/* <Tooltip title="حذف">
               <AlertDialog onConfirm={async () => deleteSellerAction(p.id)}>
                 <IconButton color="error">
                   <Delete />
                 </IconButton>
               </AlertDialog>
-            </Tooltip>
+            </Tooltip> */}
           </Stack>
         )}
         data={allSeller}
@@ -48,28 +48,21 @@ export function SellerTable({
             render: (row) => row.name,
           },
           {
-            title: "نشانه",
-            render: (row) => row.slug,
-          },
-          // {
-          //   title: "نشانه",
-          //   render: (row) => row.slug,
-          // },
-          // {
-          //   title: "کاربر",
-          //   render: (row) => row.user.email,
-          // },
-          {
-            title: "مشخصات فروشنده",
-            render: (row) => row.specification,
-          },
-          {
             title: "کد فروشگاه",
             render: (row) => row.code,
           },
+        //  TODO: need
           // {
           //   title: "نام فروشنده",
           //   render: (row) => row.user.firstName,
+          // },
+          // {
+          //   title: "نام خانوادگی فروشنده",
+          //   render: (row) => row.user.lastName,
+          // },
+          // {
+          //   title: "ایمیل فروشنده",
+          //   render: (row) => row.user.email,
           // },
           {
             title: "ایجاد",
