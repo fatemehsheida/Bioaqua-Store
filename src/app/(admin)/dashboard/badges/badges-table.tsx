@@ -65,10 +65,10 @@ export function BadgesTable({
 
             </Link>
           },
-          {
-            title: "بروزرسانی",
-            render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
-          },
+          // {
+          //     title: "بروزرسانی",
+          //   render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
+          // },
         ]}
       />
     </>

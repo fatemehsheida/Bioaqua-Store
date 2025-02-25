@@ -138,7 +138,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 {items.map((item: IProductCart) => (
                   <div
                     key={item.id}
-                    className="mb-4 grid grid-cols-4 grid-rows-1 gap-8 items-center  border-b pb-4 group pt-2"
+                    className="mb-4 grid grid-cols-4 grid-rows-1 items-center  border-b pb-4 group pt-2"
                   >
                     <Link href={`/products/${item.code}`} className="w-[100]">
                       <div className="col-span-1 pl-2">
@@ -147,22 +147,23 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                     </Link>
                     <div className="flex-col col-span-2 ">
                       <h3 className="font-noraml group-hover:underline rounded-lg">{item.titleFa}</h3>
-                      <p className=" dark:text-slate-200 text-gray-600 text-xs">
+                      <p className=" dark:text-slate-200 text-gray-600 text-sm">
                         {item.bestSeller.lastPrice} تومان
                       </p>
-                      <div className="flex gap-5 items-end">
-                        <button className="mb-3 pb-2" onClick={() => handleRemove(item.id)}>
+                      <div className="flex gap-2 items-end">
+                        <button className="mb-3 pb-1.5" onClick={() => handleRemove(item.id)}>
 
-                          <HiOutlineTrash />
+                          <HiOutlineTrash className="size-6"/>
                         </button>
                         <QuantityBtn count={item.quantity} dec={() => handleDecrement(item.id)}
                           inc={() => handleIncrement(item.id)} setCount={undefined} />
                       </div>
                     </div>
-                    <div>
-                      <p className=" dark:text-slate-200 text-gray-600 col-span-1">
-                        {item.bestSeller.lastPrice * item.quantity}.000 تومان
+                    <div className=" col-span-1 w-full flex items-center gap-2 ml-5 dark:text-slate-200 text-gray-600 text-sm">
+                      <p>
+                        {item.bestSeller.lastPrice * item.quantity}.000 
                       </p>
+                      <p>تومان</p>
                     </div>
 
 
