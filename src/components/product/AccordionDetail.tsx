@@ -16,7 +16,7 @@ const AccordionDetail = () => {
             <div>
                 <AccordionItem value="item-1">
                     <AccordionTrigger className="flex gap-3">
-                        <div className="flex justify-start items-center gap-3 text-[#4b4756] font-normal">
+                        <div className="flex justify-start items-center gap-3 text-[#4b4756] font-normal dark:text-white/50">
                             <CiDeliveryTruck className="w-5 h-5 " /> آیا ارسال به سراسر دنیا دارید؟
                         </div>
                     </AccordionTrigger>
@@ -39,7 +39,7 @@ const AccordionDetail = () => {
             <div>
                 <AccordionItem value="item-2">
                     <AccordionTrigger>
-                        <div className="flex justify-start items-center gap-3 text-[#4b4756] font-normal">
+                        <div className="flex justify-start items-center gap-3 text-[#4b4756] font-normal dark:text-white/50">
                             <PiAirplaneTiltLight className="w-5 h-5 " /> آیا ارسال سریع‌تر امکان‌پذیر است؟
                         </div>
                     </AccordionTrigger>
@@ -52,7 +52,7 @@ const AccordionDetail = () => {
             <div>
                 <AccordionItem value="item-3">
                     <AccordionTrigger>
-                        <div className="flex justify-start items-center gap-3 text-[#4b4756] font-normal">
+                        <div className="flex justify-start items-center gap-3 text-[#4b4756] font-normal dark:text-white/50">
                             <PiHeartThin className="w-5 h-5 " /> آیا ضمانت بازگشت وجه دارید؟
                         </div>
                     </AccordionTrigger>
@@ -62,8 +62,8 @@ const AccordionDetail = () => {
                 </AccordionItem>
             </div>
 
-            <div className="items-center py-4 transition-all hover:underline flex gap-3 cursor-pointer">
-                <RiShare2Line className="w-[0.85rem] h-[0.85rem] stroke-[0.05px] " /><p className="text-[#4b4756] font-normal text-sm font-nnormal "> انتشار</p>
+            <div className="items-center py-4 transition-all hover:underline flex gap-3 cursor-pointer ">
+                <RiShare2Line className="w-[0.85rem] h-[0.85rem] stroke-[0.05px] " /><p className="text-[#4b4756] dark:text-white/50 font-normal text-sm font-nnormal "> انتشار</p>
             </div>
 
 

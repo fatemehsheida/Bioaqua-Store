@@ -70,6 +70,10 @@ export function BrandsTable({
           render: (row) => row.titleEn,
         },
         {
+          title: "ایجاد",
+          render: (row) => new Date(row.createdAt).toLocaleDateString("fa"),
+        },
+        {
           title: "بروزرسانی",
           render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
         },

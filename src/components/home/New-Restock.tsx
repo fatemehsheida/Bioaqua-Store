@@ -20,7 +20,7 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
                                 <Link href={`/products/${product.code}`}>
                                     <div key={product.code} className='group'>
                                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
-                                            <img src={product.images.main} className="group-hover:scale-105 rounded-3xl" />
+                                            <img src={product.images.main} className="group-hover:scale-105 rounded-3xl transition-all duration-700" />
                                         </div>
 
                                         <div >

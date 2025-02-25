@@ -7,7 +7,7 @@ const Contact = () => {
             <div className='w-full flex justify-between text-[#272727]'>
                 <span className=' font-normal text-base'>تماس بگیرید</span>
                 <Link href="/login" >
-                    <span className='underline text-xs text-[#929190]'>وارد شوید</span>
+                    <span className='underline text-xs text-[#929190] dark:text-white/80'>وارد شوید</span>
                 </Link>
             </div>
             <div className='w-full flex flex-col'>

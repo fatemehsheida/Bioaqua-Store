@@ -24,7 +24,7 @@ export default async function ProductDetailPage({
 
   return (
     <div>
-      <div className="w-full lg:px-40 2xl:px-80 bg-[#F1F3F1]">
+      <div className="w-full lg:px-40 2xl:px-80 bg-[#F1F3F1] dark:bg-[#21242d]">
         <div className="px-12 pt-9 pb-7">
           <div dir="ltr" className="grid md:grid-cols-2  justify-center  gap-12">
             <ImageGallery images={product.images.list} />
@@ -32,9 +32,9 @@ export default async function ProductDetailPage({
               <div className="flex flex-col gap-3">
                 <div>
                   <div>
-                    <p className="font-light text-xs text-gray-600">BIOAQUA® OFFICIAL STORE</p></div>
+                    <p className="font-light text-xs text-gray-600 dark:text-white/50">BIOAQUA® OFFICIAL STORE</p></div>
                   <div>
-                    <h1 className="font-normal text-gray-800 text-5xl">{product.titleFa}</h1>
+                    <h1 className="font-normal text-gray-800 text-5xl dark:text-white/80">{product.titleFa}</h1>
                   </div>
                   <div>
                     <p className="font-normal text-lg ">{product.bestSeller.lastPrice}.000 تومان</p>
@@ -67,7 +67,7 @@ export default async function ProductDetailPage({
               </div>
             </div >
           </div>
-          <p dangerouslySetInnerHTML={{ __html: product.expert_reviews }} className="text-sm font-normal text-[#5F5C68]/80 py-8"></p >
+          <p dangerouslySetInnerHTML={{ __html: product.expert_reviews }} className="text-sm font-normal text-[#5F5C68]/80 py-8 dark:text-white/70"></p >
           <CommentsSection productId={params.id} />
 
         </div>

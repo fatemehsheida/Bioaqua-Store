@@ -8,7 +8,7 @@ import {
 import DeleteAlertDialog from "@/components/DeleteAlertDialog";
 import AITable from "@/components/tables/AITable";
 import { Delete, Edit } from "@mui/icons-material";
-import { IconButton, Stack, Tooltip } from "@mui/material";
+import { Box, IconButton, Stack, Tooltip } from "@mui/material";
 import Link from "next/link";
 
 export function PropertiesTable({
@@ -76,6 +76,25 @@ export function PropertiesTable({
           title: "نوع داده",
           render: (row) => row.type,
         },
+        {
+          title: "مقادیر پیشنهادی",
+          render: (row) => row.options?.map((item) => (
+            <Box 
+              key={item.id} 
+              sx={{ 
+                display: 'flex',
+                p: 1,
+                m: 0.5,
+                gap:20,
+                alignItems:"center",
+                // border: '1px solid #ddd',
+                // borderRadius: 1
+              }}
+            >
+              {item.label} ({item.value})
+            </Box>
+          )),
+        }
       ]}
     />
   );

@@ -21,7 +21,6 @@ export default function ProductsPage() {
   const [titleEn, setTitleEn] = useState("");
 
   const productsEndpoint = "http://localhost:8000/products";
-  const categoriesEndpoint = "http://localhost:8000/categories";
 
   const fetchData = async () => {
     try {
@@ -35,8 +34,10 @@ export default function ProductsPage() {
         ...(titleFa && { titleFa }),
         ...(titleEn && { titleEn }),
       };
+      console.log({queryParams})
 
       const query = new URLSearchParams(queryParams).toString();
+      console.log(query)
       const url = `${productsEndpoint}?${query}`;
       console.log({ url })
       console.log(brand)

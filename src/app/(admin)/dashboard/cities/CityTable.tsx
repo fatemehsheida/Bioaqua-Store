@@ -58,14 +58,14 @@ export default function CityTable({
           title: "پیش شماره",
           render: (row) => row.code,
         },
-        {
-          title: "تاریخ ساخت",
-          render: (row) => new Date(row.createdAt).toLocaleDateString("fa"),
-        },
-        {
-          title: "آخرین بروزرسانی",
-          render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
-        },
+        // {
+        //   title: "تاریخ ساخت",
+        //   render: (row) => new Date(row.createdAt).toLocaleDateString("fa"),
+        // },
+        // {
+        //   title: "آخرین بروزرسانی",
+        //   render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
+        // },
       ]}
     />
   );

@@ -20,6 +20,7 @@ export const FormInput = ({
     }));
     validateField(fieldPath, value);
   };
+  console.log({path})
 
   return (
     <input
