@@ -1,4 +1,3 @@
-// components/order/Example.tsx
 'use client'
 
 import { useMemo, useState, useEffect } from 'react';
@@ -9,7 +8,7 @@ import DeliveryOrder from '@/components/order/DeliveryOrder';
 import { Order } from '@/types/type';
 import { useParams } from 'next/navigation';
 
-const Example = () => {
+const Orders = () => {
   const params = useParams<{id: string}>()
   const id = params.id
   const [order, setOrder] = useState<Order | null>(null)
@@ -69,9 +68,9 @@ const Example = () => {
   return (
     <div className='w-full bg-white flex flex-col items-center '>
       <div className='flex lg:flex-row flex-col items-center justify-evenly p-8 xl:px-28 w-full gap-6 flex-wrap'>
-        <div><UserInfo/></div>
+        <div><UserInfo firstName={order.user.firstName} lastName={order.user.lastName} email={order.user.email}/></div>
         <Addresorder address={order.shippingAddress} />
-        <div><DeliveryOrder deliveryDate={order.deliveryDate} status={order.orderStatus} /></div>
+        <div><DeliveryOrder deliveryDate={order.deliveryDate} status={order.orderStatus} createAt={order.createdAt}/></div>
       </div>
       <div className="w-screen py-4 px-6  " dir='ltr'>
         <MaterialReactTable table={table} />
@@ -80,4 +79,4 @@ const Example = () => {
   )
 }
 
-export default Example
+export default Orders
