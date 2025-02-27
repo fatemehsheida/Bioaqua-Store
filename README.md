@@ -65,7 +65,7 @@ Developed by **Fatemeh Sheida** 👩💻
 ## 🛠 Tech Stack
 
 ### Frontend
-- **Framework**: Next.js 13 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Styling**: Tailwind CSS + Material UI
 - **State Management**: Redux Toolkit
 - **Form Handling**: React Hook Form
@@ -82,13 +82,75 @@ Developed by **Fatemeh Sheida** 👩💻
 ```bash
 src/
 ├── app/               # Next.js app router
+    ├──(admin)/
+        ├──auth/
+            ├──login
+            └──register
+        ├──dashboard/
+            ├──badges
+            ├──brands
+            ├──categories
+            ├──cities
+            ├──colors
+            ├──orders
+            ├──products
+            ├──properties
+            ├──sellers
+            └──users
+    └──(user)/
+        ├──auth/
+            ├──login
+            └──register
+        ├──checkout/
+            └──payment
+        ├──products/
+            ├──[id]
+            └──category/
+              └──[slug]
+        └──profile/
+            └──order/
+              └──[id]
 ├── components/        # Reusable components
-├── hooks/             # Custom hooks
+    ├──Auth
+    ├──cart
+    ├──checkout
+    ├──darkmode
+    ├──dashboard-layout/
+       └──components
+    ├──fields
+    ├──filter
+    ├──forms
+    ├──home
+    ├──layout
+    ├──order
+    ├──product
+    ├──profile
+    ├──svg
+    ├──tables
+    ├──Theme
+    ├──ui
+    └──upload
+├── actions/             # Custom hooks
+   └──auth
 ├── lib/               # Utility functions
-├── redux/             # Redux store & slices
-├── styles/            # Global styles
+├── API/               # API client and server functions
+    ├──client-api
+    └──server-api
 ├── types/             # TypeScript types
+├── utils/             # Utility functions
+├──validations         #validations functions
 └── public/            # Static assets
+    ├──best sellers
+    ├──collections
+    ├──fonts
+        ├──woff
+        └──woff2
+    ├──Makeup
+    ├──Multimedia collage
+    ├──new & Restock
+    ├──sheet-mask
+      └──product
+    └──Shop What's Popular Now
 ```
 
 ## ⚙️ Installation
