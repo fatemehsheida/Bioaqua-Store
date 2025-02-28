@@ -10,9 +10,9 @@ import { OrderRequest } from '@/types/type'
 import Swal from 'sweetalert2';
 import { FormContext } from './FormContext';
 import { cartAction, IProductCart } from '@/lib/slice';
-import { createOrder } from './checkout';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/navigation';
+import { createOrder } from '@/utils/apiClient';
 
 
 const CheckoutForm = ({ items, totalQty }: { items: IProductCart[], totalQty: number }) => {
