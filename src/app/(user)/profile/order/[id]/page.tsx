@@ -7,6 +7,7 @@ import UserInfo from '@/components/order/UserInfo';
 import DeliveryOrder from '@/components/order/DeliveryOrder';
 import { Order } from '@/types/type';
 import { useParams } from 'next/navigation';
+import { getOrders } from '@/utils/apiClient';
 
 const Orders = () => {
   const params = useParams<{id: string}>()
@@ -17,10 +18,9 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        //TODO: fix headers
-        const res = await fetch('http://localhost:8000/orders',{headers:{ "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWM5M2VjYmQ4Mjg0ZTQ4NWViYzMzZSIsInJvbGUiOjMsImlhdCI6MTczOTgyNTI3MCwiZXhwIjoxNzQwNDMwMDcwfQ.OeWnS_y1qZFqUJtJJqv3y9MUleOResHvTmgQ-W8Y9Nw"}})
-        const data = await res.json()
-        const foundOrder = data.results.find((o: Order) => o.id === id)
+        const data = await getOrders()
+               console.log({data})
+        const foundOrder = data[1].results.find((o: Order) => o.id === id)
         setOrder(foundOrder)
       } catch (error) {
         console.error('Error fetching order:', error)

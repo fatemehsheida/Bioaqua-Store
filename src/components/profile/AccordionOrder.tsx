@@ -7,6 +7,7 @@ import {
 import Link from 'next/link'
 import { Order, OrderItemType } from '@/types/type'
 import React, { useEffect, useState } from 'react'
+import { getOrders } from "@/utils/apiClient"
 
 
 
@@ -17,10 +18,9 @@ const AccordionOrder = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                //TODO: fix headers
-                const res = await fetch('http://localhost:8000/orders', { headers: { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWM5M2VjYmQ4Mjg0ZTQ4NWViYzMzZSIsInJvbGUiOjMsImlhdCI6MTczOTgyNTI3MCwiZXhwIjoxNzQwNDMwMDcwfQ.OeWnS_y1qZFqUJtJJqv3y9MUleOResHvTmgQ-W8Y9Nw" } })
-                const data = await res.json()
-                setOrders(data.results)
+                 const data = await getOrders()
+                        console.log({data})
+                        setOrders(data[1].results)
             } catch (error) {
                 console.error('Error fetching orders:', error)
             }
