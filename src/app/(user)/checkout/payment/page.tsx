@@ -1,6 +1,6 @@
 import { PiCreditCardThin } from "react-icons/pi";
 import { MdAddCard } from "react-icons/md";
-import path from "path";
+import Link from "next/link";
 
 
 const Payment = () => {
@@ -30,13 +30,15 @@ const Payment = () => {
 
       <div className="w-1/2 xl:pl-56 pr-10 pl-32 flex flex-col">
         {/* <span className="text-[#1A1D21]">BIOAQUA OFFICIAL STORE</span> */}
-        <div className="flex items-center gap-2 justify-end">
+<Link href="/checkout">
+        <div className="flex items-center gap-2 justify-end cursor-pointer">
           <span className="text-[#612FFF] hover:underline text-xs font-normal">بازگشت به تسویه حساب</span>
           <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-4 text-[#612FFF]">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
           </span>
         </div>
+</Link>
 
         <div className="border border-[#5153559d] flex flex-col gap-7 px-7 py-4 mt-10 rounded-md">
           <div className="flex items-center gap-1 ">
