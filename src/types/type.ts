@@ -149,15 +149,26 @@ export interface OrderItemType {
   };
   quantity: number;
 }
-
-
 export interface IUser {
-  firstName: string,
-  lastName: string,
-  email: string,
-  role: number,
-  isActive: boolean,
-  createdAt: string,
-  updatedAt: string,
-  id: string
+  firstName: string;
+  lastName: string;
+  email: string;
+  role: number;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+  id: string;
+}
+
+export interface Profile {
+  user: string;
+  addressList: unknown[];
+  createdAt: string;
+  updatedAt: string;
+  id: string;
+}
+
+export interface UserInfoResponse {
+  user: IUser;
+  profile: Profile;
 }
