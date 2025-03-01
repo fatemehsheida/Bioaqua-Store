@@ -8,6 +8,8 @@ import DeliveryOrder from '@/components/order/DeliveryOrder';
 import { Order, UserInfoResponse } from '@/types/type';
 import { useParams } from 'next/navigation';
 import { getOrders, getUserData } from '@/utils/apiClient';
+import { IoArrowBackOutline } from "react-icons/io5";
+import Link from 'next/link';
 
 const Orders = () => {
   const params = useParams<{id: string}>()
@@ -71,7 +73,12 @@ const Orders = () => {
 
   return (
     <div className='w-full bg-white flex flex-col items-center '>
-      <div className='flex lg:flex-row flex-col items-center justify-evenly p-8 xl:px-28 w-full gap-6 flex-wrap'>
+      <div className='pt-4 w-full flex justify-end px-7'>
+      <Link href='/profile'>
+      <IoArrowBackOutline className='size-7 opacity-75 cursor-pointer'/>
+      </Link>
+      </div>
+      <div className='flex lg:flex-row flex-col items-center justify-evenly p-8 pt-0 xl:px-28 w-full gap-6 flex-wrap'>
         {userData&&
         <div><UserInfo firstName={userData?.user.firstName} lastName={userData?.user.lastName} email={userData?.user.email}/></div>
 }
