@@ -1,4 +1,3 @@
-// components/order/Example.tsx
 'use client'
 
 import { useMemo, useState, useEffect } from 'react';
@@ -6,23 +5,30 @@ import { MaterialReactTable, useMaterialReactTable, type MRT_ColumnDef } from 'm
 import Addresorder from '@/components/order/Addresorder';
 import UserInfo from '@/components/order/UserInfo';
 import DeliveryOrder from '@/components/order/DeliveryOrder';
-import { Order } from '@/types/type';
+import { Order, UserInfoResponse } from '@/types/type';
 import { useParams } from 'next/navigation';
-import { getOrders } from '@/utils/apiClient';
+import { getOrders, getUserData } from '@/utils/apiClient';
+import { IoArrowBackOutline } from "react-icons/io5";
+import Link from 'next/link';
 
-const Example = () => {
+
+const Orders = () => {
   const params = useParams<{id: string}>()
   const id = params.id
   const [order, setOrder] = useState<Order | null>(null)
-
+  const [userData,setUserData] = useState<UserInfoResponse |null>(null)
+ 
 
   useEffect(() => {
     const fetchOrder = async () => {
       try {
         const data = await getOrders()
+        const userdata = await getUserData()
                console.log({data})
+               console.log({userdata})
         const foundOrder = data[1].results.find((o: Order) => o.id === id)
         setOrder(foundOrder)
+        setUserData(userdata[1])
       } catch (error) {
         console.error('Error fetching order:', error)
       }
@@ -68,10 +74,17 @@ const Example = () => {
 
   return (
     <div className='w-full bg-white flex flex-col items-center '>
-      <div className='flex lg:flex-row flex-col items-center justify-evenly p-8 xl:px-28 w-full gap-6 flex-wrap'>
-        <div><UserInfo/></div>
+      <div className='pt-4 w-full flex justify-end px-7'>
+      <Link href='/profile'>
+      <IoArrowBackOutline className='size-7 opacity-75 cursor-pointer'/>
+      </Link>
+      </div>
+      <div className='flex lg:flex-row flex-col items-center justify-evenly p-8 pt-0 xl:px-28 w-full gap-6 flex-wrap'>
+        {userData&&
+        <div><UserInfo firstName={userData?.user.firstName} lastName={userData?.user.lastName} email={userData?.user.email}/></div>
+}
         <Addresorder address={order.shippingAddress} />
-        <div><DeliveryOrder deliveryDate={order.deliveryDate} status={order.orderStatus} /></div>
+        <div><DeliveryOrder deliveryDate={order.deliveryDate} status={order.orderStatus} createAt={order.createdAt}/></div>
       </div>
       <div className="w-screen py-4 px-6  " dir='ltr'>
         <MaterialReactTable table={table} />
@@ -80,4 +93,4 @@ const Example = () => {
   )
 }
 
-export default Example
+export default Orders

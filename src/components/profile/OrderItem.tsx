@@ -1,3 +1,4 @@
+"use client"
 import { Order, OrderItemType } from '@/types/type'
 import { getOrders } from '@/utils/apiClient'
 import Link from 'next/link'

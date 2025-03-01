@@ -82,7 +82,7 @@ const Header = () => {
                   <NavigationMenuDemo />
                 </div>
               </div>
-              <div className='2xl:-right-32 lg:-right-28 top-3 absolute'>
+              <div className='2xl:-right-32 lg:-right-28 top-6 absolute'>
                 <ButtonMode />
               </div>
             </div>

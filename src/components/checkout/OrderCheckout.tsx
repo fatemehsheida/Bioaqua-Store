@@ -23,7 +23,7 @@ const OrderCheckout = () => {
     const [inputValue, setInputValue] = useState("");
 
     return (
-        <div className='xl:w-3/4 sm:w-1/8'>
+        <div className='xl:w-3/4 sm:w-1/8 h-fit'>
 
             {items.map((item: IProductCart) => (
                 <div

@@ -34,3 +34,6 @@ export async function getOrders() {
 export async function createOrder(formData:OrderRequest){
 	return axiosHandler('post','/orders', JSON.stringify(formData))
 }
+export async function getUserData(){
+	return axiosHandler('get','/auth/user')
+}
