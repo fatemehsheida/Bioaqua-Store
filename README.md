@@ -97,7 +97,7 @@ src/
             ├──properties
             ├──sellers
             └──users
-    └──(user)/
+    ├──(user)/
         ├──auth/
             ├──login
             └──register
@@ -110,6 +110,7 @@ src/
         └──profile/
             └──order/
               └──[id]
+    └──payment
 ├── components/        # Reusable components
     ├──Auth
     ├──cart
@@ -123,6 +124,7 @@ src/
     ├──home
     ├──layout
     ├──order
+    ├──payment
     ├──product
     ├──profile
     ├──svg
