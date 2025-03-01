@@ -14,7 +14,11 @@ import React from 'react'
 
 
 
-const UserInfo = () => {
+const UserInfo = ({ firstName, lastName, email }: {
+    firstName: string,
+    lastName: string,
+    email: string,
+}) => {
     return (
         <div className=''>
             <div className='relative w-full flex flex-col justify-center items-start pl-8 pr-4 text-wrap gap-2 text-[#434241]/80 ring-2
@@ -24,18 +28,21 @@ const UserInfo = () => {
 
                 <div className='items-start flex flex-col justify-center py-2  gap-2  w-72'>
 
+                    <div className='flex flex-col gap-1 w-full'>
+                        <div className='flex w-full'>
+                            <span className='text-sm font-semibold cursor-pointer w-1/2'> نام  </span>
+                            <span className='text-sm w-2/3'>{firstName}</span>
+                        </div>
 
-                    <div className='flex gap-1 w-full'>
-                        <span className='text-sm font-semibold cursor-pointer w-1/2'>نام و نام خانوادگی</span>
-                        <div className='flex items-center gap-2 w-2/3'>
-                        <span className='text-sm'> نام </span>
-                        <span className='text-sm'>نام خانوادگی</span>
+                        <div className='flex w-full'>
+                            <span className='text-sm font-semibold cursor-pointer w-1/2'>
+                                نام خانوادگی</span>
+                            <span className='text-sm w-2/3'>{lastName}</span>
                         </div>
                     </div>
-
                     <div className='flex gap-4'>
-                        <span className=' col-span-2 text-sm font-semibold cursor-pointer  '>ایمیل</span>
-                        <span className='text-sm underline cursor-pointer hover:text-[#434241]/90 col-span-5'>testemail@gmial.com</span>
+                        <span className=' col-span-2 text-sm font-semibold cursor-pointer'>ایمیل</span>
+                        <span className='text-sm underline cursor-pointer hover:text-[#434241]/90 col-span-5'>{email}</span>
                     </div>
                 </div>
 

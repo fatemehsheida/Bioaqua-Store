@@ -131,7 +131,7 @@ export interface Order {
     postalCode: string;
     location: number[];
   };
-  user: string;
+  user: IUser;
   deliveryDate: string;
   orderStatus: string;
   orderItems: OrderItemType[];
@@ -148,4 +148,27 @@ export interface OrderItemType {
     price: number;
   };
   quantity: number;
+}
+export interface IUser {
+  firstName: string;
+  lastName: string;
+  email: string;
+  role: number;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+  id: string;
+}
+
+export interface Profile {
+  user: string;
+  addressList: unknown[];
+  createdAt: string;
+  updatedAt: string;
+  id: string;
+}
+
+export interface UserInfoResponse {
+  user: IUser;
+  profile: Profile;
 }

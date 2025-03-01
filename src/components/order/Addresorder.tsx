@@ -14,7 +14,7 @@ import React from 'react'
 //     },
 
 
-const Addresorder = ({ address }: { address: Order['shippingAddress'] }) => {
+const Addresorder = ({ address }: { address: Order['shippingAddress'] , }) => {
     return (
       <div className=''>
         <div className='relative w-full flex flex-col justify-center items-start pl-8 pr-4 text-wrap gap-2 text-[#434241]/80 ring-2
@@ -28,6 +28,10 @@ const Addresorder = ({ address }: { address: Order['shippingAddress'] }) => {
             <div className='flex gap-4'>
               <span className='text-sm font-semibold cursor-pointer'>کد پستی</span>
               <span className='text-sm underline cursor-pointer hover:text-[#434241]/90'>{address.postalCode}</span>
+            </div>
+            <div className='flex gap-4'>
+              <span className='text-sm font-semibold cursor-pointer'>شماره تماس</span>
+              <span className='text-sm underline cursor-pointer hover:text-[#434241]/90'>09152684253</span>
             </div>
           </div>
         </div>

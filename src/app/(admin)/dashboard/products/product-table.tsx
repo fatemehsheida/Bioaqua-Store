@@ -44,41 +44,75 @@ export function ProductTable({
         },
         {
           title: "آیکون",
-          render: (row) =>
-          <Link href={row.images.main} target="_blank">
-          <Box
-          component="img"
-          sx={{
-            height: 50,
-            width: 50,
-            maxHeight: { xs: 233, md: 167 },
-            maxWidth: { xs: 350, md: 250 },
-          }}
-          alt="The house from the offer."
-          src={row.images.main}
-          />
-
-          </Link>
+          render: (row) => row.images?.main ? (
+            <Link href={row.images.main} target="_blank">
+              <Box
+                component="img"
+                sx={{
+                  height: 50,
+                  width: 50,
+                  maxHeight: { xs: 233, md: 167 },
+                  maxWidth: { xs: 350, md: 250 },
+                }}
+                alt="Product image"
+                src={row.images.main}
+              />
+            </Link>
+          ) : "-",
         },
         {
           title: "نام فارسی",
-          render: (row) => row.titleFa,
+          render: (row) => row.titleFa || "-",
         },
         {
           title: "نام انگلیسی",
-          render: (row) => row.titleEn,
+          render: (row) => row.titleEn || "-",
+        },
+        {
+          title: "وضعیت فروش",
+          render: (row) => row.status,
+        },
+        {
+          title: "رنگ ها",
+          render: (row) => row.colors?.map((item) => (
+            <Box
+              key={item.hexCode}
+              sx={{
+                bgcolor: item.hexCode,
+                height: 20,
+                width: 20,
+                display: 'inline-block',
+                mx: 0.5,
+                border: "1px solid #ccc"
+              }}
+            />
+          )) || "-",
+        },
+        {
+          title: "برچسب ها",
+          render: (row) => row.badges
+            ?.join("، ") || "-",
         },
         {
           title: "دسته بندی",
-          render: (row) => row.category.titleFa,
+          render: (row) => row.category?.titleFa || "-",
         },
         {
           title: "برند",
-          render: (row) => row.brand.titleFa,
+          render: (row) => row.brand?.titleFa || "-",
+        },
+        {
+          title: "توضیحات",
+          render: (row) => row.review || "-",
+        },
+        {
+          title: "توضیحات تخصصی",
+          render: (row) => row.expert_review || "-",
         },
         {
           title: "بروزرسانی",
-          render: (row) => new Date(row.updatedAt).toLocaleDateString("fa"),
+          render: (row) => row.updatedAt ? 
+            new Date(row.updatedAt).toLocaleDateString("fa") : "-",
         },
       ]}
     />
