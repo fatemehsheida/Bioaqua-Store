@@ -10,7 +10,7 @@ const Collctions = () => {
 
         <div className='group transition-all duration-75'>
           <div className='group-hover:overflow-hidden group-hover:rounded-2xl w-80 h-80 cursor-pointer '>
-            <img src="collections/rem.webp" className="group-hover:scale-105 rounded-2xl " />
+            <img src="collections/rem.webp" className="group-hover:scale-105 rounded-2xl transition-all duration-700 " />
           </div>
           <button>
             <div className="flex flex-row items-center
@@ -27,7 +27,7 @@ const Collctions = () => {
 
         <div className='group'>
           <div className='group-hover:overflow-hidden group-hover:rounded-2xl w-80 h-80 cursor-pointer'>
-            <img src="collections/balm.webp" className="group-hover:scale-105 rounded-2xl" />
+            <img src="collections/balm.webp" className="group-hover:scale-105 rounded-2xl transition-all duration-700" />
           </div>
           <button>
             <div className="flex flex-row items-center
@@ -44,7 +44,7 @@ const Collctions = () => {
 
         <div className='group'>
           <div className='group-hover:overflow-hidden group-hover:rounded-2xl w-80 h-80 cursor-pointer'>
-            <img src="collections/skin-care.webp" className="group-hover:scale-105 rounded-2xl" />
+            <img src="collections/skin-care.webp" className="group-hover:scale-105 rounded-2xl transition-all duration-700" />
           </div>
           <button>
             <div className="flex flex-row items-center 

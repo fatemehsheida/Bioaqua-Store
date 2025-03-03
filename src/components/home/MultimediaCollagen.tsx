@@ -10,7 +10,7 @@ const MultimediaCollagen = () => {
 
                     <div className="flex flex-col gap-[70px]">
                         <div className='group w-[340px] h-[243px] group-hover:overflow-hidden group-hover:rounded-lg'>
-                            <img src="Multimedia collage/cleanse & exfolitors.webp" className="group-hover:scale-105 rounded-lg" />
+                            <img src="Multimedia collage/cleanse & exfolitors.webp" className="group-hover:scale-105 rounded-lg transition-all duration-700" />
                             <div>
                                 <button>
                                     <div className="flex flex-row items-center 
@@ -25,7 +25,7 @@ const MultimediaCollagen = () => {
                         </div>
                         <div className='group'>
                             <div className='group w-[340px] h-[340px] group-hover:overflow-hidden group-hover:rounded-lg'>
-                            <img src="sheet-mask/golden-osmanthus.webp" className="group-hover:scale-105 rounded-lg" />
+                            <img src="sheet-mask/golden-osmanthus.webp" className="group-hover:scale-105 rounded-lg transition-all duration-700" />
                             </div>
                             <div>
                                 <button>
@@ -45,7 +45,7 @@ const MultimediaCollagen = () => {
                     <div className="flex flex-col gap-4">
                         <div className="group">
                             <div className='w-[750px] h-[651px] group-hover:overflow-hidden group-hover:rounded-lg'>
-                                <img src="Multimedia collage/acen&blemishedtreatmants.webp" className="group-hover:scale-105 rounded-lg object-cover h-[651px] w-[750px] group-hover:overflow-hidden" />
+                                <img src="Multimedia collage/acen&blemishedtreatmants.webp" className="group-hover:scale-105 rounded-lg transition-all duration-700 object-cover h-[651px] w-[750px] group-hover:overflow-hidden" />
                             </div>
                             <div>
                                 <button>

@@ -21,7 +21,7 @@ export default async function Home() {
           alt="BioAqua" className="relative w-full md:h-[550px] h-[300px] object-cover dark:bg-white/30" />
 
           <div className="absolute lg:top-64 xl:right-48 lg:right-32 top-36 right-9 flex justify-center items-center flex-col lg:gap-5 gap">
-            <span className="lg:text-3xl text-lg font-medium text-slate-50">مراقبت از پوست، هدیه ای برای زیبایی تو</span>
+            <span className="lg:text-3xl text-lg font-medium text-slate-50 cursor-context-menu">مراقبت از پوست، هدیه ای برای زیبایی تو</span>
             <div className="lg:text-sm text-xs font-medium text-[#33333393] flex items-center gap-5">
               <Link href="/products/category/new">
               <button className="bg-slate-50 px-3 py-2 rounded-lg hover:scale-110">محصولات جدید</button>

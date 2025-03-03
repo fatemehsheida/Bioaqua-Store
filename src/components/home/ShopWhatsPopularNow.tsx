@@ -11,7 +11,7 @@ const ShopWhatsPopularNow = () => {
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44 ">
-                            <img src="Shop What's Popular Now/snake venom peptide ceye cream.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
+                            <img src="Shop What's Popular Now/snake venom peptide ceye cream.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                         </div>
 
                         <div >
@@ -34,7 +34,7 @@ const ShopWhatsPopularNow = () => {
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
-                            <img src="new & Restock/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
+                            <img src="new & Restock/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                         </div>
 
                         <div >
@@ -59,7 +59,7 @@ const ShopWhatsPopularNow = () => {
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
-                            <img src="new & Restock/eyelash.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
+                            <img src="new & Restock/eyelash.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                             <span className='px-4 py-1 bg-[#2E2A39] text-[#FAFAFA] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
                         <span className="flex flex-row items-center  flex-1 group-hover:underline
@@ -83,7 +83,7 @@ const ShopWhatsPopularNow = () => {
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
-                            <img src="new & Restock/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
+                            <img src="new & Restock/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                         </div>
                         <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
@@ -106,7 +106,7 @@ const ShopWhatsPopularNow = () => {
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
-                            <img src="new & Restock/peptidecollagen mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 " />
+                            <img src="new & Restock/peptidecollagen mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
 
                         </div>
                         <span className="flex flex-row items-center group-hover:underline
