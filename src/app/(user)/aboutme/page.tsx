@@ -17,7 +17,7 @@ const page = () => {
                   <path fill="currentColor" d="M0,160L48,170.7C96,181,192,203,288,213.3C384,224,480,224,576,202.7C672,181,768,139,864,138.7C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
                 </svg>
               </div>
-              <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+              <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 mt-4">
                 <span className="text-[#3A7C76]">زیبایی</span>
                 <span className="text-[#6BB0A9] mx-2 md:mx-3">•</span>
                 <span className="text-[#F0D6C0]">آرامش</span>
