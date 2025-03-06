@@ -21,7 +21,7 @@ export default function RootLayout({
 
   return (
     <ReduxProvider>
-      <html lang="fn" dir="rtl" className="h-screen w-full items-center dark">
+      <html lang="fn" dir="rtl" className=" w-full items-center dark">
         <head>
           <meta charSet="utf-8" />
           <link href="../style.css" rel="stylesheet"></link>
