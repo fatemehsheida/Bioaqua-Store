@@ -12,7 +12,7 @@ const BestSellers = () => {
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
-                            <img src="best sellers/deep hydration mositurising face cream.webp" className="group-hover:scale-105 rounded-3xl" />
+                            <img src="best sellers/deep hydration mositurising face cream.webp" className="group-hover:scale-105 rounded-3xl transition-all duration-700" />
                         </div>
 
                         <div >
@@ -36,7 +36,7 @@ const BestSellers = () => {
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
-                            <img src="best sellers/nenshong pink body cream.webp" className="group-hover:scale-105 rounded-3xl" />
+                            <img src="best sellers/nenshong pink body cream.webp" className="group-hover:scale-105 rounded-3xl transition-all duration-700" />
                             <span className='px-4 py-1 bg-[#2E2A39] text-[#FAFAFA] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
                         <span className="flex flex-row items-center  flex-1 group-hover:underline
@@ -60,7 +60,7 @@ const BestSellers = () => {
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
-                            <img src="sheet-mask/golden-osmanthus.webp" className="group-hover:scale-105 rounded-3xl" />
+                            <img src="sheet-mask/golden-osmanthus.webp" className="group-hover:scale-105 rounded-3xl transition-all duration-700" />
                         </div>
                         <span className="flex flex-row items-center flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
@@ -83,7 +83,7 @@ const BestSellers = () => {
 
                     <div className="w-60 h-[325px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
-                            <img src="sheet-mask/ance-rejuvenation.webp" className="group-hover:scale-105 rounded-3xl" />
+                            <img src="sheet-mask/ance-rejuvenation.webp" className="group-hover:scale-105 rounded-3xl transition-all duration-700" />
 
                         </div>
                         <span className="flex flex-row items-center group-hover:underline

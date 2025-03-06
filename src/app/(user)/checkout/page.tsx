@@ -7,7 +7,6 @@ import CheckoutForm from '@/components/checkout/CheckoutForm';
 import AccordionCheckout from '@/components/checkout/accordioncheckout';
 import OrderCheckout from '@/components/checkout/OrderCheckout';
 
-
 const Checkout = () => {
   const { items, totalQty } = useSelector((state: RootState) => state.cart);
   const prevTotalQty = useRef(totalQty);
@@ -19,14 +18,14 @@ const Checkout = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
-    <div className='flex lg:flex-row flex-col items-center w-full '>
+    <div className='flex lg:flex-row flex-col items-center w-full h-full'>
 
       {isMobile ? (
         <AccordionCheckout />
       ) : (<div></div>)}
       {!isMobile ? (
-        <div className='right bg-[#FFF6EE] dark:bg-[#373941] w-1/2 h-full flex flex-col justify-start items-end pt-10 px-6'>
-          <OrderCheckout />
+        <div className='right bg-[#FFF6EE] h-full dark:bg-[#373941] w-1/2 flex flex-col justify-start items-end pt-10 px-6'>
+          <OrderCheckout/>
         </div>
       ) : (<div></div>)}
       <div className='left bg-white dark:bg-[#21242d] flex flex-col justify-center items-start lg:w-1/2 w-full'>

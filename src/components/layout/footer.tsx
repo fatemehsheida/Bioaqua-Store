@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -15,7 +16,9 @@ const Footer = () => {
                     </h1>
                 </div>
                 <button className="text-start text-sm font-normal  text-[#2E2A39]/40 space-y-2 dark:text-slate-300/50">
+                <Link href="/aboutme">
                     <h3>درباره ما</h3>
+                </Link>
                     <h3>تماس با ما </h3>
                     <h3>عمده‌فروشی</h3>
                 </button>
