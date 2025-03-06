@@ -3,9 +3,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='w-full bg-[#FCF8F5]'>
+    <div className='w-full bg-[#FCF8F5] dark:bg-[#21242D]'>
 
-      <div className="about-us rtl bg-[#FCF8F5] py-12 md:py-20 px-4 sm:px-6 ">
+      <div className="about-us rtl bg-[#FCF8F5] dark:bg-[#21242D] py-12 md:py-20 px-4 sm:px-6 ">
         <div className='border-[#EDF0ED] border-4 pb-10 max-w-5xl mx-auto px-16 rounded-lg'>
 
           <div className="max-w-7xlxl mx-auto space-y-16 md:space-y-24 ">
@@ -30,12 +30,12 @@ const page = () => {
             {/* بخش بنیانگذار */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="relative group">
-                <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-tr from-[#F0D6C0] to-transparent rounded-xl md:rounded-3xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
-                <div className="relative bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg">
-                  <h2 className="text-xl md:text-2xl text-[#3A7C76] font-bold mb-4 md:mb-6">
+                <div className="absolute -inset-2 md:-inset-4 dark:bg-[#97806c] bg-gradient-to-tr from-[#F0D6C0] to-transparent rounded-xl md:rounded-3xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                <div className="relative bg-white dark:bg-[#74706e] p-6 md:p-8 rounded-xl md:rounded-2xl shadow-lg">
+                  <h2 className="text-xl md:text-2xl text-[#3A7C76] dark:text-[#bde3e0] font-bold mb-4 md:mb-6">
                     <span className="border-b-4 border-[#F0D6C0] pb-2">از علاقه تا اشتراک</span>
                   </h2>
-                  <p className="text-[#6BB0A9] text-sm md:text-base leading-7 md:leading-8 mb-4">
+                  <p className="text-[#6BB0A9] dark:text-[#b3e4df]  text-sm md:text-base leading-7 md:leading-8 mb-4">
                     من فاطمه شیدا ، به عنوان یک برنامه‌نویس و عاشق زیبایی، این مسیر رو با اشتیاق به مراقبت پوستی پایدار شروع کردم.
                     <br className="hidden md:block" />
                     ایده اصلی ما ساده بود: ایجاد فضایی که در آن علم و طبیعت در هماهنگی کامل عمل کنند.
@@ -45,8 +45,8 @@ const page = () => {
                       <span className="text-[#3A7C76] text-lg md:text-xl ">💡</span>
                     </div>
                     <div>
-                      <p className="text-[#6BB0A9] text-sm md:text-base font-medium">ما باور داریم که:</p>
-                      <p className="text-[#3A7C76] text-xs md:text-sm">"زیبایی واقعی از ترکیب دانش و احترام به طبیعت زاده می‌شود"</p>
+                      <p className="text-[#6BB0A9] dark:text-[#c5d1d0] text-sm md:text-base font-medium">ما باور داریم که:</p>
+                      <p className="text-[#3A7C76] dark:text-[#49b8ad] text-xs md:text-sm">"زیبایی واقعی از ترکیب دانش و احترام به طبیعت زاده می‌شود"</p>
                     </div>
                   </div>
                 </div>

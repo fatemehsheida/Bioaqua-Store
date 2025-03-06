@@ -22,18 +22,18 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="min-h-screen w-full py-16 px-4 md:px-8" style={{backgroundColor: '#FCF8F5'}}>
+    <section className="min-h-screen w-full py-16 px-4 md:px-8 dark:bg-[#21242D] bg-[#FCF8F5]">
       <div className="w-full mx-auto">
-        <h2 className="text-4xl font-playfair text-center mb-12" style={{color: '#6BB0A9'}}>
+        <h2 className="text-4xl font-playfair text-center mb-12 text-[#6BB0A9] ">
           با ما در ارتباط باشید
         </h2>
 
-        <div className="flex flex-col md:flex-row gap-8 bg-white rounded-2xl p-8 shadow-lg">
+        <div className="flex flex-col md:flex-row gap-8 bg-white rounded-2xl p-8 shadow-lg dark:bg-[#383a40]">
           {/* فرم تماس */}
           <div className="flex-1 space-y-6">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-gray-700 mb-2 font-medium">نام شما</label>
+                <label className="block text-gray-700 mb-2 font-medium dark:text-white">نام شما</label>
                 <input 
                   type="text"
                   name="name"
@@ -46,7 +46,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 mb-2 font-medium">ایمیل</label>
+                <label className="block text-gray-700 mb-2 font-medium dark:text-white">ایمیل</label>
                 <input 
                   type="email"
                   name="email"
@@ -59,7 +59,7 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 mb-2 font-medium">پیام شما</label>
+                <label className="block text-gray-700 mb-2 font-medium dark:text-white">پیام شما</label>
                 <textarea 
                   rows="5"
                   name="message"
@@ -82,7 +82,7 @@ const ContactSection = () => {
           </div>
 
           {/* اطلاعات تماس */}
-          <div className="flex-1 space-y-8 p-6 rounded-lg justify-between" style={{backgroundColor: '#fcede3'}}>
+          <div className="flex-1 space-y-8 p-6 rounded-lg justify-between bg-[#fcede3] dark:bg-[#586b69]/50">
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-full" style={{backgroundColor: '#6BB0A9'}}>
@@ -93,7 +93,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1" style={{color: '#6BB0A9'}}>آدرس</h3>
-                    <p className="text-gray-700">تهران، خیابان ولیعصر، پلاک ۱۲۳</p>
+                    <p className="text-gray-700 dark:text-white">تهران، خیابان ولیعصر، پلاک ۱۲۳</p>
                   </div>
                 </div>
   
@@ -105,7 +105,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1" style={{color: '#6BB0A9'}}>تلفن</h3>
-                    <p className="text-gray-700">۰۲۱-۱۲۳۴۵۶۷۸</p>
+                    <p className="text-gray-700 dark:text-white">۰۲۱-۱۲۳۴۵۶۷۸</p>
                   </div>
                 </div>
   
@@ -117,7 +117,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-1" style={{color: '#6BB0A9'}}>ایمیل</h3>
-                    <p className="text-gray-700">bioaqua@gmail.com</p>
+                    <p className="text-gray-700 dark:text-white">bioaqua@gmail.com</p>
                   </div>
                 </div>
               </div>
