@@ -98,6 +98,7 @@ src/
             ├──sellers
             └──users
     ├──(user)/
+        ├──aboutme
         ├──auth/
             ├──login
             └──register
