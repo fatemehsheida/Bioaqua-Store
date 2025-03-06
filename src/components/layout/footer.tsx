@@ -19,7 +19,9 @@ const Footer = () => {
                 <Link href="/aboutme">
                     <h3>درباره ما</h3>
                 </Link>
+                <Link href="/contact">
                     <h3>تماس با ما </h3>
+                </Link>
                     <h3>عمده‌فروشی</h3>
                 </button>
             </div>
