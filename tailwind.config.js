@@ -16,6 +16,12 @@ export const theme = {
 			sm: 'calc(var(--radius) - 4px)'
 		},
 		colors: {
+			DarkPurple: "#2E2A39",
+			DarkGray: "#33333393",
+			LightGray:"#EFF5F4",
+			LightMint: "#EEF5F4",
+
+
 			background: 'hsl(var(--background))',
 			foreground: 'hsl(var(--foreground))',
 			card: {
