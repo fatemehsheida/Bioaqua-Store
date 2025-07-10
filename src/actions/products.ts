@@ -11,53 +11,57 @@ import { ProductFormState, ProductSchemaZod } from "@/lib/validations";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { formDataToObject } from "@/lib/utils";
+
 export async function createOrUpdateProductAction(
-  state: any,
+  state: ProductFormState,
   formData: FormData
 ) {
-  // Validate input and ensure authentication
+  console.log('start updating product')
   await ensureAuthenticated();
   const id = formData.get("id");
-  console.log(formData)
+  
+  // Convert FormData to object and validate
   const parsed = ProductSchemaZod.safeParse(formDataToObject(formData));
-  console.log({parsed})
-
+  
   if (!parsed.success) {
-  console.log('error')
-  console.log(parsed.error)
+    console.log(parsed.error)
+
     return {
       errors: parsed.error.flatten().fieldErrors,
     };
   }
+  console.log(parsed)
 
-  // Separate the price field from the rest of the product data.
-  console.log({parsed})
+  // Separate price from product data
   const { price, ...productData } = parsed.data;
+
   try {
-    if (id) {
-      await updateProduct(id.toString(), productData);
-    } else {
-      await createProduct(productData);
-    }
-    // If a price is provided and a product code exists, post the price to the separate endpoint.
-    if (price !== undefined && productData.code) {
+    // Create/update product
+    const result = id 
+      ? await updateProduct(id.toString(), productData)
+      : await createProduct(productData);
+
+    // Handle price update if provided
+    if (typeof price === "number" && productData.code) {
       await addProductPrice(productData.code, price);
     }
+
+    return result;
   } catch (e) {
-    console.log(e);
+    console.error(e);
     if (e instanceof ApiError) {
       return {
         message: e.message,
-        errors: e.body?.errors,
-      };
-    } else {
-      return {
-        message: "failed with call api",
-        success: false,
+        errors: e.body?.errors as ProductFormState["errors"],
       };
     }
+    return {
+      message: "An unexpected error occurred",
+      success: false,
+    };
+  } finally {
+    revalidatePath("/dashboard/products");
   }
-  redirect("/dashboard/products");
 }
 
 export async function deleteProductAction(id: string) {

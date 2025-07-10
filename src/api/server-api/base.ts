@@ -27,6 +27,8 @@ export const apiFetch = async <T>(
   });
   if (!res.ok) {
     const errorBody = await res.json().catch(() => null);
+    console.log(errorBody.message)
+    console.log(errorBody)
     throw new ApiError(res.status, res.statusText, errorBody);
   }
   return res.json();

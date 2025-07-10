@@ -53,7 +53,7 @@ export default function CommentsSection({ productId }: { productId: string }) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OWM5M2VjYmQ4Mjg0ZTQ4NWViYzMzZSIsInJvbGUiOjMsImlhdCI6MTc0MDAxMzE3MywiZXhwIjoxNzQwNjE3OTczfQ.iOThng8UWCg_E7s1-dsgYFal_KPm8bl_BqZLStBfCyA"
+          "Authorization": "Bearer"
         },
         body: JSON.stringify({
           text: data.text,

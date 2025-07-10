@@ -95,8 +95,11 @@ export interface IProduct extends Timestamp {
   brand: IBrand;
   review: string;
   specifications: IPropertyValue[];
-  expert_review: string;
+  expert_reviews: string;
   id: string;
+  bestSeller:{
+    lastPrice:number
+  }
 }
 export interface IUser {
   firstName: string;

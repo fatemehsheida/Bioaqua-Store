@@ -41,7 +41,7 @@ export const addProductPrice = async (
 ): Promise<any> => {
   return apiFetch(`http://localhost:8000/shop/sellers/product/${code}/add-price`, {
     method: "POST",
-    body: JSON.stringify({ price }),
+    body: JSON.stringify({ price,count:1000,discount:0 }),
   });
 };
 

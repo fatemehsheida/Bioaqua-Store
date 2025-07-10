@@ -4,8 +4,8 @@ import ProductDetailCart from "@/components/cart/ProductDetailCart";
 import ImageGallery from "@/components/product/ImageGallery";
 import AccordionDetail from "@/components/product/AccordionDetail";
 import CommentsSection from "@/components/product/CommenSection";
-// import { IoArrowBackOutline } from "react-icons/io5";
-// import { useRouter } from 'next/navigation'
+import { IoArrowBackOutline } from "react-icons/io5";
+import Link from "next/link";
 
 interface ProductDetailPageProps {
   params: {
@@ -17,7 +17,6 @@ export default async function ProductDetailPage({
   params,
 }: ProductDetailPageProps) {
   const endpoint = `http://localhost:8000/products/${params.id}`;
-  // const router = useRouter()
 
   const res = await fetch(endpoint);
   if (!res.ok) {
@@ -29,15 +28,17 @@ export default async function ProductDetailPage({
   return (
     <div>
       <div className="w-full lg:px-40 2xl:px-80 bg-[#F1F3F1] dark:bg-[#21242d]">
-        {/* <div className="w-full flex justify-end pt-8 opacity-65">
+
+        <div className="w-full flex justify-end pt-8 opacity-65">
+          <Link href="/products">
         <button 
-            onClick={() => router.back()}
             type="button"
             className="cursor-pointer hover:opacity-75 transition-opacity"
-          >
+            >
             <IoArrowBackOutline size={32} />
           </button>
-        </div> */}
+            </Link>
+        </div>
         <div className="px-12 pt-9 pb-7">
           <div dir="ltr" className="grid md:grid-cols-2  justify-center  gap-12">
             <ImageGallery images={product.images.list} />

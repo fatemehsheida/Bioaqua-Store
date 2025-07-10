@@ -28,7 +28,7 @@ export interface FacetProps {
   onFilterChange: (value: string) => void;
 }
 
-const FilterBar = ({  onSelectCategory, selectedCategory,onSelectBrand,selectedBrand}:FilterBarProps) => {
+const FilterBar = ({ onSelectCategory, selectedCategory, onSelectBrand, selectedBrand }: FilterBarProps) => {
   const [availabilityOptions, setAvailabilityOptions] = useState<Category[]>([]);
   const [productTypeOptions, setProductTypeOptions] = useState<Brand[]>([]);
   const [selectedFilters, setSelectedFilters] = useState<Record<string, string[]>>({});
@@ -38,24 +38,28 @@ const FilterBar = ({  onSelectCategory, selectedCategory,onSelectBrand,selectedB
   const fetchData = async () => {
     try {
       const [responseCtgr, responseBrnd] = await Promise.all([
-        apiClient.get('/categories'),
-        apiClient.get('/brands')
+        apiClient.get('categories/'),
+        apiClient.get('brands/')
       ]);
 
       const categoryResponse: CategoriesResponse = responseCtgr.data;
       const brandResponse: BrandsResponse = responseBrnd.data;
-
-      setAvailabilityOptions(categoryResponse.results);
-      setProductTypeOptions(brandResponse.results);
+      console.log(categoryResponse)
+      setAvailabilityOptions(categoryResponse.results || []);
+      setProductTypeOptions(brandResponse.results || []);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  };
-
+  }
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    console.log("Categories:", availabilityOptions);
+    console.log("Brands:", productTypeOptions);
+  }, [availabilityOptions, productTypeOptions]);
 
   const handleFilterChange = (facetType: string, value: string) => {
     setSelectedFilters(prev => ({
@@ -80,7 +84,7 @@ const FilterBar = ({  onSelectCategory, selectedCategory,onSelectBrand,selectedB
               title="دسته بندی ها"
               options={availabilityOptions}
               selectedValues={selectedCategory}
-              onFilterChange={value =>onSelectCategory(value)}
+              onFilterChange={value => onSelectCategory(value)}
             />
 
             <Facet
