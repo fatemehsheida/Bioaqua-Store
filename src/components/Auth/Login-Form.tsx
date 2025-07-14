@@ -72,7 +72,7 @@ export function LoginForm({
                 </div>
               </div>
               <div className="w-24 mx-auto ">
-                <Button type="submit" className="w-full bg-[#94D2BD] hover:bg-[#75B2A9] transition-all duration-300">
+                <Button type="submit" className="w-full bg-Minty hover:bg-Teal transition-all duration-300">
                   <p>
                     ورود
                   </p>

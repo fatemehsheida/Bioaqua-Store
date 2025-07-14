@@ -43,7 +43,7 @@ const OrderCheckout = () => {
                                     <img src={item.images.main} alt={item.titleFa} className=" rounded-lg" />
                                 </div>
                             </Link>
-                            <div className="absolute lg:-top-2 xl:-right-3 lg:-right-3 text-white rounded-full bg-[#706C69] px-1.5 pt-1.5 pb-0.5 
+                            <div className="absolute lg:-top-2 xl:-right-3 lg:-right-3 text-white rounded-full bg-Taupe px-1.5 pt-1.5 pb-0.5 
          text-xs font-normal flex items-center justify-center">
                                 {item.quantity}
                             </div>
@@ -56,13 +56,13 @@ const OrderCheckout = () => {
                 <button  type="submit"
                  disabled={!inputValue.trim()}
                  className={clsx(
-                    "w-36 rounded-md focus:outline-none focus:ring-2 focus:ring-[#605E5C] py-2 px-4 text-sm font-normal",
+                    "w-36 rounded-md focus:outline-none focus:ring-2 focus:ring-Flint py-2 px-4 text-sm font-normal",
                     {
-                        "bg-[#D1A980] text-[#130D07]": inputValue.trim(),
-                        "bg-[#FFF1E4] text-[#7F7B77] border-[#FDD8D8] border": !inputValue.trim(),
+                        "bg-Amber text-Onyx": inputValue.trim(),
+                        "bg-Blush text-Granite border-PeachFuzz border": !inputValue.trim(),
                     }
                 )}>اعمال شود</button>
-                <input type="text" placeholder='کد تخفیف' className='w-full bg-transparent ring-[#FDD8D8] rounded-md ring-1 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#605E5C]' 
+                <input type="text" placeholder='کد تخفیف' className='w-full bg-transparent ring-PeachFuzz rounded-md ring-1 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-Flint' 
                 onChange={(e) => setInputValue(e.target.value)}/>
             </div>
 
@@ -70,7 +70,7 @@ const OrderCheckout = () => {
                 <div className='w-full flex justify-between items-center'>
                     <span className="text-xs font-medium text-gray-500 dark:text-slate-200">{totalAmount}.000 تومان</span>
                     <div className='flex items-center gap-1'>
-                    <span className='text-sm font-medium text-[#353535] dark:text-slate-200/60'>({totalQty})مورد </span>
+                    <span className='text-sm font-medium text-Charcoal dark:text-slate-200/60'>({totalQty})مورد </span>
                     <span className='text-base font-medium'>.جمع محصولات</span>
                     </div>
 

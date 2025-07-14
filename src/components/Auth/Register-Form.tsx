@@ -93,7 +93,7 @@ export default function Component() {
             <div className="pt-6 mx-auto">
               <div className="w-40 mx-auto">
                 <Button type="submit"
-                  className="w-full bg-[#94D2BD] hover:bg-[#75B2A9] transition-all duration-300">
+                  className="w-full bg-Minty hover:bg-Teal transition-all duration-300">
                   <p>ثبت نام</p>
                 </Button>
               </div>

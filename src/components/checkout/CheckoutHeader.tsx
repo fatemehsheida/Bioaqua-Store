@@ -4,8 +4,8 @@ const CheckoutHeader = () => {
     return (
         <div className='w-full relative flex flex-col justify-center items-center'>
             <div className='flex flex-col justify-center items-center gap-3'>
-                <span className='text-[#707070] text-sm font-normal dark:text-slate-200'>تسویه حساب سریع</span>
-                <button className='bg-[#FFC439] w-56 h-10 items-center flex justify-center rounded-sm px-20 shadow-md shadow-slate-400 dark:shadow-[#4b5161]'>
+                <span className='text-Silver text-sm font-normal dark:text-slate-200'>تسویه حساب سریع</span>
+                <button className='bg-Sunflower w-56 h-10 items-center flex justify-center rounded-sm px-20 shadow-md shadow-slate-400 dark:shadow-Storm'>
                     <img src="paypal.svg" className='object-cover' />
                 </button>
             </div>

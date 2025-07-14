@@ -34,7 +34,7 @@ return(
 
             </div>
           </Link>
-          <AddToCart product={product} quantity={1} style={" w-full bg-white dark:bg-[#16181E]/85 ring-1 ring-DarkPurple dark:ring-slate-400/80 hover:ring-2 px-4 py-3 rounded-lg dark:text-[#F9FAFB] dark:text-slate-200 text-sm font-normal"} />
+          <AddToCart product={product} quantity={1} style={" w-full bg-white dark:bg-Abyss/85 ring-1 ring-DarkPurple dark:ring-slate-400/80 hover:ring-2 px-4 py-3 rounded-lg dark:text-[#F9FAFB] dark:text-slate-200 text-sm font-normal"} />
         </div>
       </div>
     </div >

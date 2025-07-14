@@ -96,7 +96,7 @@ const page = () => {
               </p>
             </section>
               <Link href="/" className='w-full absolute bottom-6 '>
-              <button className="  bg-CashmereBlush cursor-pointer text-DeepVerdigris px-6 py-3 md:px-8 md:py-4 rounded-full font-bold hover:bg-[#f5e3d2] transition duration-300 flex items-center justify-center mx-auto text-sm md:text-base">
+              <button className="  bg-CashmereBlush cursor-pointer text-DeepVerdigris px-6 py-3 md:px-8 md:py-4 rounded-full font-bold hover:bg-LightApricot transition duration-300 flex items-center justify-center mx-auto text-sm md:text-base">
                 <span>شروع تجربه جدید</span>
                 <span className="mr-2 text-lg md:text-xl">→</span>
               </button>

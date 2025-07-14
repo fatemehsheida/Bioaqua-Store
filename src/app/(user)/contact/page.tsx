@@ -40,7 +40,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2" 
-                  style={{borderColor: 'AquaHaze', focusBorderColor: 'AquaHaze'}}
+                  style={{borderColor: 'AquaHaze'}}
                   required
                 />
               </div>
@@ -53,27 +53,27 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2" 
-                  style={{borderColor: 'AquaHaze', focusBorderColor: 'AquaHaze'}}
+                  style={{borderColor: 'AquaHaze'}}
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-gray-700 mb-2 font-medium dark:text-white">پیام شما</label>
+                <label className="block  mb-2 font-medium dark:text-white">پیام شما</label>
                 <textarea 
-                  rows="5"
+                  rows={5}
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2" 
-                  style={{borderColor: 'AquaHaze', focusBorderColor: 'AquaHaze'}}
+                  style={{borderColor: 'AquaHaze'}}
                   required
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
-                className="w-full py-3 text-white font-medium rounded-lg transition-all hover:opacity-90"
+                className="w-full py-3 text-gray-700 dark:text-white font-medium rounded-lg transition-all hover:opacity-90"
                 style={{backgroundColor: 'AquaHaze'}}
               >
                 ارسال پیام
@@ -82,7 +82,7 @@ const ContactSection = () => {
           </div>
 
           {/* اطلاعات تماس */}
-          <div className="flex-1 space-y-8 p-6 rounded-lg justify-between bg-BlushPearl dark:bg-SlateTeal/50">
+          <div className="flex-1 space-y-8 p-6 rounded-lg justify-between bg-BlushPearl dark:bg-LightGray/10">
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="p-3 rounded-full" style={{backgroundColor: 'AquaHaze'}}>

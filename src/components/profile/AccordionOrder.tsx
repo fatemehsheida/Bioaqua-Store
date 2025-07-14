@@ -58,7 +58,7 @@ const AccordionOrder = () => {
 
                     </div>
                 </div>
-                <AccordionContent className="text-sm font-normal text-[#918e99] pb-0 pt-0 ">
+                <AccordionContent className="text-sm font-normal text-MauveGray pb-0 pt-0 ">
                     <div className='right w-full h-full flex flex-col justify-start items-end py-2 px-6'>
                         <div className='w-full transition-all duration-700 gap-4 flex flex-col '>
                             <Link href="/profile/order">

@@ -108,7 +108,7 @@ export default function CommentsSection({ productId }: { productId: string }) {
 
         <button
           type="submit"
-          className="bg-DarkPurple text-white px-6 py-2 rounded-md hover:bg-[#3b3647] transition-colors dark:bg-[#94d2bd] dark:hover:scale-105 "
+          className="bg-DarkPurple text-white px-6 py-2 rounded-md hover:bg-[#3b3647] transition-colors dark:bg-Minty dark:hover:scale-105 "
         >
           ارسال نظر
         </button>

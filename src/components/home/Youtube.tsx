@@ -10,7 +10,7 @@ const Youtube = () => {
             <span className="font-normal text-xl text-wrap w-[780px] text-center text-DarkPurple/60 dark:text-slate-200/50">
                 بیوآکوا در حوزه محصولات مراقبت از پوست گیاهی و آرایشی تخصص دارد. این برند به‌خودراه‌حل‌های تخصصی در درمان آکنه و جوش‌های سرسیاه، لایه‌برداری، ماسک‌ها، آبرسانی و موارد دیگر معروف است.
             </span>
-            <button className="bg-DarkPurple text-[#C3C3AE] py-2 px-4 rounded-xl hover:scale-105">
+            <button className="bg-DarkPurple text-Sage py-2 px-4 rounded-xl hover:scale-105">
                 <Link href="https://www.youtube.com/results?search_query=bioaqua">
                     تماشا
                 </Link>

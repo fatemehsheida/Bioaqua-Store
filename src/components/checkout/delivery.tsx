@@ -47,7 +47,7 @@ const Delivery = () => {
             </div>
             <div className='text-xs font-normal flex justify-end px-1 items-center gap-2'>
                 <label htmlFor="saveinfo" >این اطلاعات را برای دفعه بعد ذخیره کنید</label>
-                <input type="checkbox" name="saveinfo" id="saveinfo" className='accent-[#605E5C]' />
+                <input type="checkbox" name="saveinfo" id="saveinfo" className='accent-Flint' />
             </div>
             
         </div>

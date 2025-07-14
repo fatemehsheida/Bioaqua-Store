@@ -88,10 +88,10 @@ const ProfileUser = () => {
 
             <div className='flex flex-col mt-20 w-full gap-5 text-base font-semibold items-center'>
                 <div className='flex flex-row gap-4 justify-center w-full items-center lg:justify-start'>
-                    <button className='text-xs font-normal w-[10rem] bg-[#94D2BD] text-white py-4 rounded-lg
+                    <button className='text-xs font-normal w-[10rem] bg-Minty text-white py-4 rounded-lg
             hover:scale-[102%] transition duration-500 '>سفارشات</button>
 
-                    <div className="p-10 w-[10rem]  bg-[#94D2BD]  text-white  py-0.5 rounded-lg ">
+                    <div className="p-10 w-[10rem]  bg-Minty text-white  py-0.5 rounded-lg ">
                         <div className="dropdown flex justify-center relative ">
                             <button className="font-normal text-xs py-3  rounded gap-2 flex items-center">
                                 <span className="mr-1 text-sm">وضعیت </span>
@@ -115,11 +115,11 @@ const ProfileUser = () => {
 
 
                 <div className='flex gap-4 justify-start w-full mx-3'>
-                    <button className='bg-transparent  hover:ring-2  text-gray-700 w-1/2 hover:ring-[#94D2BD]
+                    <button className='bg-transparent  hover:ring-2  text-gray-700 w-1/2 hover:ring-Minty
              text-xs px-12 py-3 rounded-lg transition duration-500  font-semibold dark:text-white'>ویرایش</button>
 
 
-                    <Link href={"/"} className='bg-transparent transition duration-500 hover:ring-2 hover:ring-[#94D2BD]
+                    <Link href={"/"} className='bg-transparent transition duration-500 hover:ring-2 hover:ring-Minty
               text-gray-700 text-xs px-12 py-3 w-1/2
               rounded-lg dark:text-white font-semibold flex justify-center items-center'>
                         <button >تایید</button>

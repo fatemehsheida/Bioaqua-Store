@@ -20,7 +20,7 @@ const AccordionDetail = () => {
                             <CiDeliveryTruck className="w-5 h-5 " /> آیا ارسال به سراسر دنیا دارید؟
                         </div>
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm font-normal text-[#918e99]">
+                    <AccordionContent className="text-sm font-normal text-MauveGray">
                         <ul className="my-2">
                             <li>- ایالات متحده: ۷-۱۴ روز</li>
                             <li>- کانادا/استرالیا/نیوزیلند/اسرائیل/ژاپن/برزیل: ۸-۱۶ روز</li>
@@ -43,7 +43,7 @@ const AccordionDetail = () => {
                             <PiAirplaneTiltLight className="w-5 h-5 " /> آیا ارسال سریع‌تر امکان‌پذیر است؟
                         </div>
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm font-normal text-[#918e99]">
+                    <AccordionContent className="text-sm font-normal text-MauveGray">
                         برنامه‌های حمل و نقل مختلفی برای کشورهای گوناگون در نظر گرفته شده است. به طور کلی، زمان حمل‌ونقل می‌تواند ۳-۱۰ روز کاهش یابد. ما بهترین خدمات را برای شما فراهم می‌کنیم تا در وقت شما صرفه‌جویی شود.
                     </AccordionContent>
                 </AccordionItem>
@@ -56,7 +56,7 @@ const AccordionDetail = () => {
                             <PiHeartThin className="w-5 h-5 " /> آیا ضمانت بازگشت وجه دارید؟
                         </div>
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm font-normal text-[#918e99]">
+                    <AccordionContent className="text-sm font-normal text-MauveGray">
                         اگر بیش از ۳۰ روز (برای برخی کشورها ۴۵ روز) بسته شما نرسد و این مشکل ناشی از شما نباشد، ما ۱۰۰٪ مبلغ را به شما بازمی‌گردانیم.
                     </AccordionContent>
                 </AccordionItem>

@@ -45,6 +45,38 @@ export const theme = {
 			TidalFoam: "#B3E4DF",
 			QuietSilver: "#C5D1D0",
 			VerdigrisWave: "#49B8AD",
+			LightApricot: "#f5e3d2",
+			Smokey: "#1a1d215a",
+			impactful: "#612FFF",
+			Minty: "#94D2BD",
+			Teal: "#75B2A9",
+			Cloud: "#F7F9F3",
+			Mystic: "#625F6A",
+			MauveGray:"#918e99",
+			Pearl: "#FDFBF7",
+			SmokeWhite: "#F6F6F6",
+			Midnight: "#2a2d36e0",
+			Steel: "#363942e0",
+			Taupe: "#706C69",
+			Flint: "#605E5C",
+			Amber: "#D1A980",
+			Onyx: "#130D07",
+			Blush: "#FFF1E4",
+			Granite: "#7F7B77",
+			PeachFuzz: "#FDD8D8",
+			Charcoal: "#353535",
+			NavyBlue: "#003087",
+			Sunflower: "#FFC439",
+			Silver: "#707070",
+			Storm: "#4b5161",
+			JetBlack: "#272727",
+			SilverGray: "#929190",
+			Abyss: "#16181E",
+			Snow: "#FAFAFA",
+			Sage: "#C3C3AE",
+
+
+
 
 
 

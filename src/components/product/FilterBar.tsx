@@ -148,7 +148,7 @@ const FilterBar = ({ onSelectCategory, selectedCategory, onSelectBrand, selected
                 </div>
 
                 <button
-                  className="w-full mt-4 bg-[#94d2bd] text-white py-2 rounded-lg"
+                  className="w-full mt-4 bg-Minty text-white py-2 rounded-lg"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   اعمال فیلترها
