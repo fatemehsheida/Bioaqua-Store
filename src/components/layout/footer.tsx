@@ -15,7 +15,7 @@ const Footer = () => {
                         درباره
                     </h1>
                 </div>
-                <button className="text-start text-sm font-normal  text-[#2E2A39]/40 space-y-2 dark:text-slate-300/50">
+                <button className="text-start text-sm font-normal  text-DarkPurple/40 space-y-2 dark:text-slate-300/50">
                 <Link href="/aboutme">
                     <h3>درباره ما</h3>
                 </Link>
@@ -34,7 +34,7 @@ const Footer = () => {
                         خدمات مشتریان
                     </h1>
                 </div>
-                <button className="text-start text-sm space-y-2 font-normal text-[#2E2A39]/40 dark:text-slate-300/50">
+                <button className="text-start text-sm space-y-2 font-normal text-DarkPurple/40 dark:text-slate-300/50">
                     <h3>سوالات متداول</h3>
                     <h3>جستجو </h3>
                     <h3>گواهی‌ها (FDA, ISO)</h3>
@@ -50,7 +50,7 @@ const Footer = () => {
                 <div className="mb-5 text-lg ">
                     <h1 className="font-semibold">اصلی </h1>
                 </div>
-                <button className="text-start text-sm font-normal dark:text-slate-300/50 text-[#2E2A39]/40 space-y-2">
+                <button className="text-start text-sm font-normal dark:text-slate-300/50 text-DarkPurple/40 space-y-2">
                     <h3>خانه </h3>
                     <h3>جدید </h3>
                     <h3>پرفروش‌ترین‌ها </h3>

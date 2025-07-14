@@ -82,7 +82,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 </div>
 
 
-                <div className="flex flex-col items-center group text-[#2E2A39] justify-between h-[94%] pt-24">
+                <div className="flex flex-col items-center group text-DarkPurple justify-between h-[94%] pt-24">
                   <div className="flex flex-col mb-4 gap-6 items-center pb-4 group text-lg font-normal">
                     <p className="text-center  ">سبد خرید شما خالی است</p>
                     <div className="bg-[#94d2bd] text-[#F7F9F3] px-1 py-2 items-center text-center w-48 h-12 rounded-xl flex justify-center hover:scale-x-105">
@@ -181,7 +181,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                           </AccordionTrigger>
                           <AccordionContent className="text-sm font-normal text-[#918e99]  dark:text-slate-100/60">
                             <textarea id="CartDrawer-Note" rows={4}
-                              className="w-full p-2 dark:bg-[#21242d] border border-gray-300 dark:focus:ring-gray-300
+                              className="w-full p-2 dark:bg-ShadowBlue border border-gray-300 dark:focus:ring-gray-300
                                rounded-md resize-y focus:ring-2 focus:ring-slate-500" name="note" placeholder=""></textarea>
 
                           </AccordionContent>

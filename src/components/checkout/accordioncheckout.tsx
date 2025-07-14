@@ -40,7 +40,7 @@ const AccordionCheckout = () => {
 
                 </div>
                 <AccordionContent className="text-sm font-normal  pb-0 pt-0 ">
-                    <div className='right bg-[#FFF6EE] dark:bg-[#363942e0] w-full h-full flex flex-col justify-start items-end pt-10 px-6'>
+                    <div className='right bg-PearlBlush dark:bg-[#363942e0] w-full h-full flex flex-col justify-start items-end pt-10 px-6'>
                         <div className='w-full'>
 
                             {items.map((item: IProductCart) => (

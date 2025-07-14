@@ -11,7 +11,7 @@ const CheckoutHeader = () => {
             </div>
             <div className="inline-flex items-center justify-center w-full">
                 <hr className="w-full h-[1px] my-8 bg-gray-200 border-0 rounded-sm dark:bg-gray-700 shadow-md shadow-slate-40066" />
-                <div className="absolute px-2 -translate-x-1/2 bg-white  left-1/2 dark:bg-[#21242d] text-sm">
+                <div className="absolute px-2 -translate-x-1/2 bg-white  left-1/2 dark:bg-ShadowBlue text-sm">
                     یا
                 </div>
             </div>

@@ -74,7 +74,7 @@ export default function ProductsPage() {
 
   console.log(totalPages)
   return (
-    <div className="w-full bg-[#F4F3EF] dark:bg-[#21242D]">
+    <div className="w-full bg-PorcelainMist dark:bg-ShadowBlue">
       <div className="p-4 bg-white dark:bg-transparent shadow-md">
         <input
           type="text"

@@ -86,7 +86,7 @@ export default function CommentsSection({ productId }: { productId: string }) {
           <textarea
             {...register("text", { required: "لطفا نظر خود را وارد کنید" })}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
-             focus:ring-[#2E2A39] dark:bg-[#1f2127d8] dark:text-white/80"
+             focus:ring-DarkPurple dark:bg-[#1f2127d8] dark:text-white/80"
             rows={4}
           />
           {errors.text && <p className="text-red-500 text-sm mt-1">{errors.text.message}</p>}
@@ -96,7 +96,7 @@ export default function CommentsSection({ productId }: { productId: string }) {
           <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-white/80">امتیاز</label>
           <select
             {...register("rating", { required: "لطفا امتیاز را انتخاب کنید" })}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2E2A39] dark:bg-[#1f2127d8]"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-DarkPurple dark:bg-[#1f2127d8]"
           >
             <option value="" >انتخاب امتیاز</option>
             {[5, 4, 3, 2, 1].map(num => (
@@ -108,7 +108,7 @@ export default function CommentsSection({ productId }: { productId: string }) {
 
         <button
           type="submit"
-          className="bg-[#2E2A39] text-white px-6 py-2 rounded-md hover:bg-[#3b3647] transition-colors dark:bg-[#94d2bd] dark:hover:scale-105 "
+          className="bg-DarkPurple text-white px-6 py-2 rounded-md hover:bg-[#3b3647] transition-colors dark:bg-[#94d2bd] dark:hover:scale-105 "
         >
           ارسال نظر
         </button>
