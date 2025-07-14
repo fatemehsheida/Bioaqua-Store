@@ -74,7 +74,18 @@ export const theme = {
 			Abyss: "#16181E",
 			Snow: "#FAFAFA",
 			Sage: "#C3C3AE",
-
+			Mistral : "#62A496",
+			Silk : "#e5e7eb",
+			Noir : "#374151",
+			Marina: "#79B3AA",
+			DeepBasalt: "#4b4756",
+			NeonNoir: "#31333bd8",
+			HolographicSteel: "#3538427d",
+			VoidMatrix: "#1f2127d8",
+			Velvet : "#3b3647",
+			Linen : "#F9FAFB",
+			Iron : "#434241",
+			Luminous: "#f8f8f8e2",
 
 
 

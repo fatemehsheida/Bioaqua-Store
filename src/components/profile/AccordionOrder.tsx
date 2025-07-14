@@ -66,7 +66,8 @@ const AccordionOrder = () => {
                                     <Link key={order.id} href={`/profile/order/${order.id}`}>
                                         <div className="border border-gray-200 my-4 rounded-md p-4 flex gap-9 hover:ring-2 hover:ring-gray-600/50
                                          cursor-pointer">
-                                            <div className='w-full flex justify-between px-7'>                                                <h4 className="text-base font-medium">سفارش شماره: #{order.id.slice(-5)}</h4>
+                                            <div className='w-full flex justify-between px-7'>                                               
+                                                <h4 className="text-base font-medium">سفارش شماره: #{order.id.slice(-5)}</h4>
                                                 <p className="text-sm text-gray-600  dark:text-slate-50/70 ">
                                                     تاریخ: {new Date(order.deliveryDate).toLocaleDateString('fa-IR')}
                                                 </p>

@@ -80,13 +80,13 @@ export default function CommentsSection({ productId }: { productId: string }) {
       <h2 className="text-2xl font-normal mb-6 text-gray-800 dark:text-white/80">نظرات کاربران</h2>
 
       {/* Comment Form */}
-      <form onSubmit={handleSubmit(onSubmit)} className="mb-8 bg-white p-6 rounded-lg shadow-md dark:bg-[#3538427d]">
+      <form onSubmit={handleSubmit(onSubmit)} className="mb-8 bg-white p-6 rounded-lg shadow-md dark:bg-HolographicSteel">
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-white/80">نظر شما</label>
           <textarea
             {...register("text", { required: "لطفا نظر خود را وارد کنید" })}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2
-             focus:ring-DarkPurple dark:bg-[#1f2127d8] dark:text-white/80"
+             focus:ring-DarkPurple dark:bg-VoidMatrix dark:text-white/80"
             rows={4}
           />
           {errors.text && <p className="text-red-500 text-sm mt-1">{errors.text.message}</p>}
@@ -96,11 +96,11 @@ export default function CommentsSection({ productId }: { productId: string }) {
           <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-white/80">امتیاز</label>
           <select
             {...register("rating", { required: "لطفا امتیاز را انتخاب کنید" })}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-DarkPurple dark:bg-[#1f2127d8]"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-DarkPurple dark:bg-VoidMatrix"
           >
             <option value="" >انتخاب امتیاز</option>
             {[5, 4, 3, 2, 1].map(num => (
-              <option className="dark:bg-[#1f2127d8]" key={num} value={num}>{num} ستاره</option>
+              <option className="dark:bg-VoidMatrix" key={num} value={num}>{num} ستاره</option>
             ))}
           </select>
           {errors.rating && <p className="text-red-500 text-sm mt-1">{errors.rating.message}</p>}
@@ -108,7 +108,7 @@ export default function CommentsSection({ productId }: { productId: string }) {
 
         <button
           type="submit"
-          className="bg-DarkPurple text-white px-6 py-2 rounded-md hover:bg-[#3b3647] transition-colors dark:bg-Minty dark:hover:scale-105 "
+          className="bg-DarkPurple text-white px-6 py-2 rounded-md hover:bg-Velvet transition-colors dark:bg-Minty dark:hover:scale-105 "
         >
           ارسال نظر
         </button>
@@ -122,7 +122,7 @@ export default function CommentsSection({ productId }: { productId: string }) {
       ) : (
         <div className="space-y-6">
           {comments.map(comment => (
-            <div key={comment.id} className="bg-white dark:bg-[#31333bd8] p-6 rounded-lg shadow-md">
+            <div key={comment.id} className="bg-white dark:bg-NeonNoir p-6 rounded-lg shadow-md">
               <div className="flex justify-between items-start mb-3">
                 <div>
                   <h4 className="font-medium text-gray-800 dark:text-white/80">
