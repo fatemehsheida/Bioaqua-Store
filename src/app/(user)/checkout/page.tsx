@@ -18,21 +18,23 @@ const Checkout = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
-    <div className='flex lg:flex-row flex-col items-center w-full h-full'>
+    <div className='flex flex-col lg:flex-row items-stretch w-full min-h-screen bg-gray-100 dark:bg-[#21242d]'>
 
-      {isMobile ? (
+    {isMobile ? (
+      <div className='w-full'>
         <AccordionCheckout />
-      ) : (<div></div>)}
-      {!isMobile ? (
-        <div className='right bg-[#FFF6EE] h-full dark:bg-[#373941] w-1/2 flex flex-col justify-start items-end pt-10 px-6'>
-          <OrderCheckout/>
-        </div>
-      ) : (<div></div>)}
-      <div className='left bg-white dark:bg-[#21242d] flex flex-col justify-center items-start lg:w-1/2 w-full'>
-        <CheckoutForm items={items} totalQty={totalQty} />
       </div>
-
+    ) : (
+      <div className='right bg-[#FFF6EE] dark:bg-[#373941] lg:w-1/2 w-full flex flex-col justify-center items-center p-3 sticky top-0 h-screen'>
+        <OrderCheckout />
+      </div>
+    )}
+  
+    <div className='left bg-white dark:bg-[#21242d] flex flex-col justify-center items-start lg:w-1/2 w-full p-6 lg:p-12'>
+      <CheckoutForm items={items} totalQty={totalQty} />
     </div>
+  
+  </div>
   )
 }
 

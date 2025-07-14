@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import ThemeProvider from "@/components/Theme/ThemeProvider";
 import "./globals.css";
+import 'ckeditor5/ckeditor5.css';
+import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
 const vazir = Vazirmatn({
   variable: "--font-vazir-sans",

@@ -44,6 +44,7 @@ const OrderItem = () => {
           {orders.map((order) => (
             <Link key={order.id} href={`/profile/order/${order.id}`}>
               <div className="border border-gray-200 rounded-md p-4 flex gap-9 hover:ring-2 hover:ring-gray-600/50 cursor-pointer">
+              <div className='w-full flex justify-between px-7'>
                 <h4 className="text-base font-medium">سفارش شماره: #{order.id.slice(-5)}</h4>
                 <p className="text-sm text-gray-600">
                   تاریخ: {new Date(order.deliveryDate).toLocaleDateString('fa-IR')}
@@ -56,6 +57,7 @@ const OrderItem = () => {
                 <p className="text-xs text-gray-600">
                   جمع کل: {calculateTotal(order.orderItems)} تومان
                 </p>
+              </div>
               </div>
             </Link>
           ))}
