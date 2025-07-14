@@ -99,21 +99,28 @@ const ImageSchemaZod = z.object({
 
 // Main Product Zod Schema
 export const ProductSchemaZod = z.object({
-  code: z.coerce.number().int().positive("Code must be a positive integer"),
-  titleFa: z.string().min(1, "Title (FA) is required").trim(),
-  titleEn: z.string().min(1, "Title (EN) is required").trim(),
-  status: z.enum(["marketable", "unmarketable"]).default("marketable"),
-  images: ImageSchemaZod,
-  colors: z.array(z.string()).optional(),
-  badges: z.array(z.string()).optional(),
-  category: z.string(),
-  brand: z.string(),
-  review: z.string(),
-  specifications: z
-    .array(SpecificationSchemaZod)
-    .transform((specifications) => specifications.filter((i) => !!i.value))
-    .optional(),
-  expert_review: z.string().trim().optional(),
+  images: z.object({
+    list:z.array(z.string()).optional().default([]),
+    main:z.string().optional().default([]),
+  }),
+  id: z.string().optional(), // Handle string->number conversion
+  code: z.coerce.number().min(1),   // Handle string->number conversion
+  titleFa: z.string().min(2),
+  titleEn: z.string().optional().default(""),
+  expert_review: z.string().optional().default(""),
+  price: z.coerce.number().min(0),  // Handle string->number conversion
+  category: z.string().optional(),
+  brand: z.string().optional(),
+  badges: z.array(z.string()).optional().default([]),
+  colors: z.array(z.string()).optional().default([]),
+  specifications: z.array(
+    z.object({
+      name: z.string(),
+      title: z.string(),
+      value: z.union([z.string(), z.coerce.number()]), // Handle numeric strings
+      isDefault: z.boolean().optional().default(false)
+    })
+  ).optional().default([])
 });
 
 export type ProductType = z.infer<typeof ProductSchemaZod>;

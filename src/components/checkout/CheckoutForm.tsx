@@ -42,55 +42,12 @@ const CheckoutForm = ({ items, totalQty }: { items: IProductCart[], totalQty: nu
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const today = new Date();
+  e.preventDefault();
+  if (Object.keys(errors).length > 0) return;
 
-    const twoDaysLater = new Date(today);
-    twoDaysLater.setDate(today.getDate() + 2);
-
-    const formattedDate = twoDaysLater.toISOString()
-
-    formData.orderItems = items.map((item) => {
-      return { quantity: item.quantity, productSeller: item.bestSeller.id }
-    })
-
-    formData.deliveryDate = formattedDate;
-    console.log(formData)
-    // const cookieStore = await cookies();
-    // const accessToken = cookieStore.get("accessToken")?.value;
-    // const { accessToken } = await auth()
-    console.log('creating order')
-
-    const [status,result]=await createOrder(formData)
-    if (status){
-      console.log(result)
-              if (result==200) {
-                dispach(cartAction.RemoveCart({}))
-                Swal.fire({
-                  text: 'ثبت سفارش موفقیت آمیز بود',
-                  timer: 2000,
-                  icon: 'success',
-                });
-                router.push('/')
-              }
-              else{
-                Swal.fire({
-                  text: 'متاسفانه سفارش شما با خطا مواجه شد!',
-                  timer: 2000,
-                  icon: 'error',
-                });
-              }
-              
-    }
-    else{
-      Swal.fire({
-        text: 'خطا در ارسال سفارش',
-        timer: 2000,
-        icon: 'error',
-      });
-    }
-    if (Object.keys(errors).length > 0) return;
-  }
+  localStorage.setItem('checkoutFormData', JSON.stringify(formData));
+  router.push('/payment');
+};
 
   return (
     <FormContext.Provider value={{ formData, setFormData, errors, validateField }}>

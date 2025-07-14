@@ -19,9 +19,9 @@ const AccordionOrder = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                 const data = await getOrders()
-                        console.log({data})
-                        setOrders(data[1].results)
+                const data = await getOrders()
+                console.log({ data })
+                setOrders(data[1].results)
             } catch (error) {
                 console.error('Error fetching orders:', error)
             }
@@ -64,24 +64,26 @@ const AccordionOrder = () => {
                             <Link href="/profile/order">
                                 {orders.map((order) => (
                                     <Link key={order.id} href={`/profile/order/${order.id}`}>
-                                        <div className="border border-gray-200 my-4 rounded-md p-4 flex gap-9 hover:ring-2 hover:ring-gray-600/50 cursor-pointer">
-                                            <h4 className="text-base font-medium">سفارش شماره: #{order.id.slice(-5)}</h4>
-                                            <p className="text-sm text-gray-600  dark:text-slate-50/70 ">
-                                                تاریخ: {new Date(order.deliveryDate).toLocaleDateString('fa-IR')}
-                                            </p>
-                                            <p className="text-sm text-gray-600  dark:text-slate-50/70 ">
-                                                وضعیت: <span className="font-bold text-xs text-yellow-600">
-                                                    {getStatus(order.orderStatus)}
-                                                </span>
-                                            </p>
-                                            <p className="text-xs text-gray-600  dark:text-slate-50/70 ">
-                                                جمع کل: {calculateTotal(order.orderItems)} تومان
-                                            </p>
+                                        <div className="border border-gray-200 my-4 rounded-md p-4 flex gap-9 hover:ring-2 hover:ring-gray-600/50
+                                         cursor-pointer">
+                                            <div className='w-full flex justify-between px-7'>                                                <h4 className="text-base font-medium">سفارش شماره: #{order.id.slice(-5)}</h4>
+                                                <p className="text-sm text-gray-600  dark:text-slate-50/70 ">
+                                                    تاریخ: {new Date(order.deliveryDate).toLocaleDateString('fa-IR')}
+                                                </p>
+                                                <p className="text-sm text-gray-600  dark:text-slate-50/70 ">
+                                                    وضعیت: <span className="font-bold text-xs text-yellow-600">
+                                                        {getStatus(order.orderStatus)}
+                                                    </span>
+                                                </p>
+                                                <p className="text-xs text-gray-600  dark:text-slate-50/70 ">
+                                                    جمع کل: {calculateTotal(order.orderItems)} تومان
+                                                </p>
+                                            </div>
                                         </div>
                                     </Link>
                                 ))}
                             </Link>
-                           
+
                         </div>
                     </div>
                 </AccordionContent>

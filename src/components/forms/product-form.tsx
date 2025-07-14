@@ -13,7 +13,8 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useActionState, useState } from "react";
+import React, { useActionState, useState, useRef } from "react";
+import dynamic from "next/dynamic";
 import AIForm from "./AIForm";
 import SubmitButton from "../SubmitButton";
 import CategoryField from "../fields/category-field";
@@ -21,6 +22,16 @@ import SingleUpload from "../upload/single-upload";
 import BrandField from "../fields/brand-field";
 import BadgeField from "../fields/badges-fields";
 import ColorsField from "../fields/colors-field";
+import { Bold, ClassicEditor, Essentials, Italic, Paragraph } from "ckeditor5";
+import { FormatPainter } from "ckeditor5-premium-features";
+
+const CustomEditor = dynamic( () => import( '@/utils/custom-editor' ), { ssr: false } );
+
+// Dynamically import CKEditor to avoid SSR issues
+const CKEditor = dynamic(
+  () => import("@ckeditor/ckeditor5-react").then((mod) => mod.CKEditor),
+  { ssr: false }
+);
 
 type ProductFormProps = {
   defaultValue?: IProduct;
@@ -34,7 +45,14 @@ function ProductForm({ defaultValue }: ProductFormProps) {
   const [category, setCategory] = useState<ICategory | null>(
     defaultValue?.category ?? null
   );
+  // console.log(defaultValue)
+  // console.log(defaultValue?.expert_reviews)
+
+  // Refs for hidden textareas to store CKEditor content
+  const expertReviewRef = useRef<HTMLTextAreaElement>(null);
+
   return (
+    <>
     <form action={action}>
       {defaultValue?.id && (
         <input hidden name="id" defaultValue={defaultValue.id} />
@@ -93,31 +111,43 @@ function ProductForm({ defaultValue }: ProductFormProps) {
               helperText: state.errors?.titleEn,
             },
             {
-              name: "review",
-              label: "بررسی",
-              type: "textarea",
-              defaultValue: defaultValue?.review,
-              error: !!state.errors?.review,
-              helperText: state.errors?.review,
-            },
-            {
-              name: "expert_review",
-              label: "بررسی تخصصی",
-              type: "textarea",
-              defaultValue: defaultValue?.expert_review,
-              error: !!state.errors?.expert_review,
-              helperText: state.errors?.expert_review,
-            },
-            {
               name: "price",
               label: "قیمت",
               type: "number",
-              defaultValue: defaultValue?.price,
-              error: !!state.errors?.price,
-              helperText: state.errors?.price,
+              defaultValue: defaultValue?.bestSeller.lastPrice,
+              error: !!state.errors,
+              helperText: state.errors,
             },
           ]}
         />
+        
+        {/* Rich Text Editors */}
+        <Divider />
+        <Typography variant="h6">بررسی</Typography>
+        <Box>
+          <textarea
+            name="review"
+            ref={expertReviewRef}
+            style={{ display: "none" }}
+            defaultValue={defaultValue?.expert_reviews || ""}
+          />
+        <CustomEditor
+  initialData={defaultValue?.expert_reviews || ''}
+  editor={ClassicEditor}
+  onChange={(event, editor) => {
+    const data = editor.getData();
+    if (expertReviewRef.current) expertReviewRef.current.value = data;
+  }}
+/>
+          {state.errors?.expert_reviews && (
+            <Typography color="error" variant="body2">
+              {state.errors.expert_reviews}
+            </Typography>
+          )}
+        </Box>
+
+       
+
         <Divider />
         <Typography>ویژگی ها</Typography>
         {category?.properties.map((item, i) => (
@@ -177,6 +207,7 @@ function ProductForm({ defaultValue }: ProductFormProps) {
         <SubmitButton variant="contained">ذخیره</SubmitButton>
       </Stack>
     </form>
+    </>
   );
 }
 

@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { refreshTokenAction } from "./actions/auth/refresh-token";
 
 // 1. Specify protected and public routes
-const protectedRoutes = "/dashboard";
+const protectedRoutes =[ "/dashboard", "/profile"];
 const publicRoutes = "/";
 
 export default async function middleware(req: NextRequest) {

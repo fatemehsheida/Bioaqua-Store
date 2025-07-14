@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^44.2.0",
+    "@ckeditor/ckeditor5-build-classic": "^44.3.0",
     "@ckeditor/ckeditor5-react": "^9.5.0",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
@@ -31,6 +31,8 @@
     "@tanstack/react-query-devtools": "^5",
     "alpinejs": "^3.14.8",
     "axios": "^1.7.9",
+    "ckeditor5": "^44.3.0",
+    "ckeditor5-premium-features": "^44.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",

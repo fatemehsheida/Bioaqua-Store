@@ -3,6 +3,13 @@ import axios from 'axios';
 import { auth } from "@/lib/session";
 import { OrderRequest } from '@/types/type';
 
+export const apinoAuthClient = axios.create({
+	baseURL: 'http://localhost:8000/shop', headers: {
+		'Content-Type': 'application/json',
+	},
+});
+
+
 const apiClient = axios.create({
 	baseURL: 'http://localhost:8000/', headers: {
 		'Content-Type': 'application/json',
