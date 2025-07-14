@@ -77,12 +77,12 @@ const Payment = () => {
   return (
     <div className="px-20">
       <div className="flex items-center justify-between w-full  mb-16">
-        <span className="text-[#1a1d215a] text-left">BIOAQUA OFFICIAL STORE</span>
+        <span className="text-Smokey text-left">BIOAQUA OFFICIAL STORE</span>
         <div
       className="flex items-center gap-2 justify-end cursor-pointer"
       onClick={handleGoBack}
     >
-      <span className="text-[#612FFF] hover:underline text-xs font-normal">
+      <span className="text-impactful hover:underline text-xs font-normal">
         بازگشت به تسویه حساب
       </span>
       <span>
@@ -92,7 +92,7 @@ const Payment = () => {
           viewBox="0 0 24 24"
           strokeWidth={2}
           stroke="currentColor"
-          className="size-4 text-[#612FFF]"
+          className="size-4 text-impactful"
         >
           <path
             strokeLinecap="round"

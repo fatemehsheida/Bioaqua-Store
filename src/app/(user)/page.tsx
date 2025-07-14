@@ -14,7 +14,7 @@ export default async function Home() {
   const products:ProductsResponse = response.data
   console.log(products)
   return (
-    <div className=" w-full flex flex-col justify-center items-center content-center text-[#2E2A39]">
+    <div className=" w-full flex flex-col justify-center items-center content-center text-DarkPurple">
       <div className=" w-full dark:saturate-100 backdrop-brightness-90 ">
 
         <img src="bioaqua-banner-green_48645d6c-77a6-4c5d-92fc-d02d2d2f2bcc.webp"
@@ -22,7 +22,7 @@ export default async function Home() {
 
           <div className="absolute lg:top-64 xl:right-48 lg:right-32 top-36 right-9 flex justify-center items-center flex-col lg:gap-5 gap">
             <span className="lg:text-3xl text-lg font-medium text-slate-50 cursor-context-menu">مراقبت از پوست، هدیه ای برای زیبایی تو</span>
-            <div className="lg:text-sm text-xs font-medium text-[#33333393] flex items-center gap-5">
+            <div className="lg:text-sm text-xs font-medium text-DarkGray flex items-center gap-5">
               <Link href="/products/category/new">
               <button className="bg-slate-50 px-3 py-2 rounded-lg hover:scale-110">محصولات جدید</button>
               </Link>
@@ -31,7 +31,7 @@ export default async function Home() {
               </Link>
             </div>
           </div>
-        <div className="md:px-48 bg-[#EEF5F4]/80 dark:bg-[#21242d] md:py-2 dark:text-slate-300" >
+        <div className="md:px-48 bg-LightMint/80 dark:bg-LightGray md:py-2 dark:text-slate-300" >
           <NewRestock products={products.results} />
           <BestSellers />
           <MultimediaCollagen />
@@ -39,7 +39,7 @@ export default async function Home() {
           <SheetMasks />
         </div>
         <Youtube />
-        <div className="collctions px-48 bg-[#EFF5F4]/50 py-10" >
+        <div className="collctions px-48 bg-LightGray/50 py-10" >
           <Collctions />
         </div>
       </div>

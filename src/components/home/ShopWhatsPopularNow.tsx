@@ -60,7 +60,7 @@ const ShopWhatsPopularNow = () => {
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new & Restock/eyelash.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
-                            <span className='px-4 py-1 bg-[#2E2A39] text-[#FAFAFA] rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
+                            <span className='px-4 py-1 bg-DarkPurple text-Snow rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
                         <span className="flex flex-row items-center  flex-1 group-hover:underline
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
@@ -127,7 +127,7 @@ const ShopWhatsPopularNow = () => {
 
 
                 </div>
-                <div className="my-8 bg-[#94D2BD] group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
+                <div className="my-8 bg-Minty group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
 
                     <button >
                         <Link href="/">

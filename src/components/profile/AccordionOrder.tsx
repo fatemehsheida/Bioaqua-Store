@@ -58,7 +58,7 @@ const AccordionOrder = () => {
 
                     </div>
                 </div>
-                <AccordionContent className="text-sm font-normal text-[#918e99] pb-0 pt-0 ">
+                <AccordionContent className="text-sm font-normal text-MauveGray pb-0 pt-0 ">
                     <div className='right w-full h-full flex flex-col justify-start items-end py-2 px-6'>
                         <div className='w-full transition-all duration-700 gap-4 flex flex-col '>
                             <Link href="/profile/order">
@@ -66,7 +66,8 @@ const AccordionOrder = () => {
                                     <Link key={order.id} href={`/profile/order/${order.id}`}>
                                         <div className="border border-gray-200 my-4 rounded-md p-4 flex gap-9 hover:ring-2 hover:ring-gray-600/50
                                          cursor-pointer">
-                                            <div className='w-full flex justify-between px-7'>                                                <h4 className="text-base font-medium">سفارش شماره: #{order.id.slice(-5)}</h4>
+                                            <div className='w-full flex justify-between px-7'>                                               
+                                                <h4 className="text-base font-medium">سفارش شماره: #{order.id.slice(-5)}</h4>
                                                 <p className="text-sm text-gray-600  dark:text-slate-50/70 ">
                                                     تاریخ: {new Date(order.deliveryDate).toLocaleDateString('fa-IR')}
                                                 </p>

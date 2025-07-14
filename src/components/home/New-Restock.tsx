@@ -39,7 +39,7 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
                             ))}
 
                         </div>
-                        <div className="my-8 bg-[#94D2BD] text-white w-32 h-11 group-hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
+                        <div className="my-8 bg-Minty text-white w-32 h-11 group-hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
 
                             <button >
                                 <Link href="/products/category/new">
