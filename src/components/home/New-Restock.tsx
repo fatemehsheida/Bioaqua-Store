@@ -10,7 +10,7 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
     return (
         <section className="new-restock py-10 px-4">
             <div className="max-w-7xl mx-auto">
-                <h1 className="text-3xl font-medium text-right mb-8">جدید و موجودی مجدد</h1>
+                <h1 className="text-3xl font-medium text-right mb-8 dark:text-slate-50">جدید و موجودی مجدد</h1>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8">
                     {products.slice(0, 4).map((product) => (
@@ -28,11 +28,11 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
                             </div>
 
                             <div className="p-2">
-                                <h3 className="text-sm font-medium text-right line-clamp-2 group-hover:text-primary group-hover:underline">
+                                <h3 className="text-sm font-medium text-right line-clamp-2 group-hover:text-primary group-hover:underline dark:text-slate-300">
                                     {product.titleFa}
                                 </h3>
                                 <div className="flex justify-end mt-2">
-                                    <span className="text-sm font-medium">
+                                    <span className="text-sm font-medium dark:text-slate-300">
                                         {product.bestSeller.lastPrice.toLocaleString('fa-IR')}.000 تومان
                                     </span>
                                 </div>

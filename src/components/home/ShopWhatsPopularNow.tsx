@@ -4,7 +4,7 @@ import React from 'react'
 const ShopWhatsPopularNow = () => {
     return (
         <div className="New-&-Restock py-9 flex flex-col dark:text-zinc-800 gap-2 ">
-            <h1 className="font-medium text-3xl pb-8 text-right">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
+            <h1 className="font-medium text-3xl pb-8 text-right dark:text-slate-50">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex flex-row xl:justify-between  md:justify-center items-center md:gap-8  gap-2 flex-wrap mx-auto">
 
@@ -15,15 +15,15 @@ const ShopWhatsPopularNow = () => {
                         </div>
 
                         <div >
-                            <span className="flex flex-row items-center flex-1 group-hover:underline
+                            <span className="flex flex-row items-center flex-1 group-hover:underline dark:text-slate-300
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                                 دستمال مرطوب کننده آرایش آووکادو
                             </span>
-                            <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
+                            <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium dark:text-slate-300">
                                 <span>
                                     $3.656
                                 </span>
-                                <small className="line-through opacity-80">
+                                <small className="line-through dark:text-slate-400 opacity-80">
                                     $7.11
                                 </small>
                             </div>
@@ -38,15 +38,15 @@ const ShopWhatsPopularNow = () => {
                         </div>
 
                         <div >
-                            <span className="flex flex-row items-center flex-1 group-hover:underline
-                     justify-start gap-3 px-4 py-2 text-sm font-medium">
+                            <span className="flex flex-row items-center flex-1 group-hover:underline dark:text-slate-300
+                     justify-start gap-3 px-4 py-2 text-sm font-medium ">
                                 دستمال مرطوب کننده آرایش آووکادو
                             </span>
-                            <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
+                            <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium dark:text-slate-300">
                                 <span>
                                     $3.656
                                 </span>
-                                <small className="line-through opacity-80">
+                                <small className="line-through dark:text-slate-400 opacity-80">
                                     $7.11
                                 </small>
                             </div>
@@ -62,16 +62,16 @@ const ShopWhatsPopularNow = () => {
                             <img src="new & Restock/eyelash.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                             <span className='px-4 py-1 bg-DarkPurple text-Snow rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
                         </div>
-                        <span className="flex flex-row items-center  flex-1 group-hover:underline
+                        <span className="flex flex-row items-center  flex-1 group-hover:underline dark:text-slate-300
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             خط چشم مرطوب کننده لوسیون رشد مژه
                         </span>
-                        <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
+                        <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium dark:text-slate-300">
 
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through opacity-80">
+                            <small className="line-through dark:text-slate-400 opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -85,16 +85,16 @@ const ShopWhatsPopularNow = () => {
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new & Restock/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                         </div>
-                        <span className="flex flex-row items-center flex-1 group-hover:underline
+                        <span className="flex flex-row items-center flex-1 group-hover:underline dark:text-slate-300
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             ماسک چشم آبرسان پپتید
                         </span>
-                        <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
+                        <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium dark:text-slate-300">
 
                             <span>
                                 $3.656
                             </span>
-                            <small className="line-through opacity-80">
+                            <small className="line-through dark:text-slate-400 opacity-80">
                                 $7.11
                             </small>
                         </div>
@@ -109,16 +109,16 @@ const ShopWhatsPopularNow = () => {
                             <img src="new & Restock/peptidecollagen mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
 
                         </div>
-                        <span className="flex flex-row items-center group-hover:underline
+                        <span className="flex flex-row items-center group-hover:underline dark:text-slate-300
                      justify-start gap-3 px-4 py-2 text-sm font-medium">
                             ماسک کلاژن پپتاید
                         </span>
-                        <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
+                        <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium dark:text-slate-300">
                             <span>
                                 $3.656
                             </span>
 
-                            <small className="line-through opacity-80">
+                            <small className="line-through dark:text-slate-400 opacity-80">
                                 $7.11
                             </small>
                         </div>

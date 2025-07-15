@@ -68,15 +68,15 @@ const BestSellers = () => {
               </div>
 
               <div className="mt-4 px-2 pb-2 flex flex-col">
-                <h3 className="text-sm font-medium  group-hover:underline">
+                <h3 className="text-sm font-medium  group-hover:underline dark:text-slate-300">
                   ({product.id}) {product.name}
                 </h3>
                 <div className="mt-2 flex justify-end items-center gap-2">
-                  <span className="text-sm font-medium text-gray-900">
+                  <span className="text-sm font-medium text-gray-900 dark:text-slate-300">
                     ${product.price.toLocaleString()}
                   </span>
                   {product.originalPrice && (
-                    <span className="text-xs text-gray-500 line-through">
+                    <span className="text-xs text-gray-500 line-through dark:text-slate-400">
                       ${product.originalPrice.toLocaleString()}
                     </span>
                   )}
