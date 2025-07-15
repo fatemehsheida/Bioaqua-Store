@@ -14,8 +14,8 @@ export default async function Home() {
   const products:ProductsResponse = response.data
   console.log(products)
   return (
-    <div className=" w-full flex flex-col justify-center items-center content-center text-DarkPurple">
-      <div className=" w-full dark:saturate-100 backdrop-brightness-90 ">
+    <div className="w-full flex flex-col justify-center items-center content-center text-DarkPurple">
+      <div className="w-full dark:saturate-100 backdrop-brightness-90 ">
 
         <img src="bioaqua-banner-green_48645d6c-77a6-4c5d-92fc-d02d2d2f2bcc.webp"
           alt="BioAqua" className="relative w-full md:h-[550px] h-[300px] object-cover dark:bg-white/30" />
@@ -39,7 +39,7 @@ export default async function Home() {
           <SheetMasks />
         </div>
         <Youtube />
-        <div className="collctions px-48 bg-LightGray/50 py-10" >
+        <div className="collctions bg-LightGray/50 py-10" >
           <Collctions />
         </div>
       </div>

@@ -9,7 +9,7 @@ const ShopWhatsPopularNow = () => {
                 <div className="flex flex-row justify-center items-center mdgap-8  gap-2 flex-wrap ">
 
 
-                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group duration-300 hover:shadow-lg rounded-xl">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44 ">
                             <img src="Shop What's Popular Now/snake venom peptide ceye cream.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                         </div>
@@ -32,7 +32,7 @@ const ShopWhatsPopularNow = () => {
                     </div>
 
 
-                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group duration-300 hover:shadow-lg rounded-xl">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new & Restock/avacado-makeup-remover-wips.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                         </div>
@@ -57,7 +57,7 @@ const ShopWhatsPopularNow = () => {
 
 
 
-                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group duration-300 hover:shadow-lg rounded-xl">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new & Restock/eyelash.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                             <span className='px-4 py-1 bg-DarkPurple text-Snow rounded-3xl font-normal text-sm absolute bottom-3 left-3'>sold out</span>
@@ -81,7 +81,7 @@ const ShopWhatsPopularNow = () => {
 
 
 
-                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group duration-300 hover:shadow-lg rounded-xl">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new & Restock/-peptide-hydrating-eye-mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
                         </div>
@@ -104,7 +104,7 @@ const ShopWhatsPopularNow = () => {
 
 
 
-                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group">
+                    <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group duration-300 hover:shadow-lg rounded-xl">
                         <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-48 h-44">
                             <img src="new & Restock/peptidecollagen mask.webp" className="group-hover:scale-105 rounded-3xl w-48 h-44 transition-all duration-700" />
 

@@ -1,7 +1,6 @@
 import { Product } from '@/types/type';
-import Link from 'next/link'
-import React from 'react'
-
+import Link from 'next/link';
+import React from 'react';
 
 interface ProductListProps {
     products: Product[];
@@ -9,51 +8,50 @@ interface ProductListProps {
 
 const NewRestock: React.FC<ProductListProps> = ({ products }) => {
     return (
-        <div className="New-&-Restock flex flex-col  gap-5 mt-10">
-            <div className='flex flex-col'>
-                <h1 className="font-medium text-3xl pb-8 text-right">جدید و موجودی مجدد</h1>
-                <div className="flex flex-col justify-center items-center ">
-                    <div className="flex flex-col justify-center items-center md:gap-8 gap-2 ">
+        <section className="new-restock py-10 px-4">
+            <div className="max-w-7xl mx-auto">
+                <h1 className="text-3xl font-medium text-right mb-8">جدید و موجودی مجدد</h1>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8">
+                    {products.slice(0, 4).map((product) => (
+                        <Link 
+                            key={product.code}
+                            href={`/products/${product.code}`}
+                            className="group block transition-transform hover:shadow-lg rounded-xl duration-300"
+                        >
+                            <div className="relative overflow-hidden rounded-2xl aspect-square mb-3">
+                                <img 
+                                    src={product.images.main} 
+                                    alt={product.titleFa}
+                                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                                />
+                            </div>
 
-                        <div className=" flex xl:gap-8 gap-1 justify-between cursor-pointer flex-wrap">
-                            {products.slice(0, 4).map((product) => (
-                                <Link href={`/products/${product.code}`}>
-                                    <div key={product.code} className='group'>
-                                        <div className="relative group-hover:overflow-hidden group-hover:rounded-3xl w-60 h-60">
-                                            <img src={product.images.main} className="group-hover:scale-105 rounded-3xl transition-all duration-700" />
-                                        </div>
-
-                                        <div >
-                                            <span className="flex flex-row items-center flex-1 group-hover:underline
-                     justify-start gap-3 px-4 py-2 text-sm font-medium">
-                                                {product.titleFa}
-                                            </span>
-                                            <div className="gap-2 flex flex-row justify-end items-center px-4 text-sm font-medium">
-                                                <span>
-                                                   {product.bestSeller.lastPrice}.000 تومان
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-
-                        </div>
-                        <div className="my-8 bg-Minty text-white w-32 h-11 group-hover:scale-105 cursor-pointer items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
-
-                            <button >
-                                <Link href="/products/category/new">
-                                    دیدن همه
-                                </Link>
-                            </button>
-                        </div>
-
-                    </div>
+                            <div className="p-2">
+                                <h3 className="text-sm font-medium text-right line-clamp-2 group-hover:text-primary group-hover:underline">
+                                    {product.titleFa}
+                                </h3>
+                                <div className="flex justify-end mt-2">
+                                    <span className="text-sm font-medium">
+                                        {product.bestSeller.lastPrice.toLocaleString('fa-IR')}.000 تومان
+                                    </span>
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
 
+                <div className="flex justify-center mt-8">
+                    <Link 
+                        href="/products/category/new"
+                        className="bg-Minty text-white px-6 py-3 rounded-lg hover:bg-Minty/90 transition-colors duration-300 text-center w-32"
+                    >
+                        دیدن همه
+                    </Link>
+                </div>
             </div>
-        </div>
-    )
-}
+        </section>
+    );
+};
 
-export default NewRestock
+export default NewRestock;

@@ -44,7 +44,7 @@ const Header = () => {
             <HambergerMenu />
           </div>
 
-          <div className='right-8 bottom-4 absolute bg-Silk dark:bg-Noir rounded-full '>
+          <div className='right-8 bottom-4 absolute bg-Silk dark:bg-Noir rounded-full'>
             <ButtonMode />
           </div>
         </Menu>
