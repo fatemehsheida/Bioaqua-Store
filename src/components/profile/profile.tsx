@@ -54,16 +54,16 @@ const ProfileUser = () => {
 
             <div className='grid lg:grid-cols-5 grid-cols-6 justify-center items-start object-cover h-56 lg:h-64 '>
                 <img src="cute_profile.jpg" className='md:w-64 md:h-64 w-44 h-44 rounded-full lg:col-span-2 col-span-2 lg:p-6' />
-                <div className='w-full flex flex-col justify-center items-start pt-8 lg:px-4 px-8 lg:col-span-3 col-span-4 text-wrap gap-2 text-[#434241]/80'>
+                <div className='w-full flex flex-col justify-center items-start pt-8 lg:px-4 px-8 lg:col-span-3 col-span-4 text-wrap gap-2 text-Iron/80'>
                     <div className='flex gap-2'>
-                        <span className='text-2xl font-semibold text-[#434241] dark:text-slate-50/80'>{userData?.user.lastName}</span>
-                        <span className='text-2xl font-semibold text-[#434241] dark:text-slate-50/80'>{userData?.user.firstName}</span>
+                        <span className='text-2xl font-semibold text-Iron dark:text-slate-50/80'>{userData?.user.lastName}</span>
+                        <span className='text-2xl font-semibold text-Iron dark:text-slate-50/80'>{userData?.user.firstName}</span>
                     </div>
                     <div className='grid grid-cols-7 grid-rows-3 space-x-1 space-y-3 items-center [&_span]:flex [&_span]:items-center pt-5'>
 
 
                         <span className=' col-span-2 text-md font-semibold cursor-pointer dark:text-slate-50/70 '>ایمیل</span>
-                        <span className='text-md underline cursor-pointer hover:text-[#434241]/90 col-span-5 dark:text-slate-50/50'>{userData?.user.email}</span>
+                        <span className='text-md underline cursor-pointer hover:text-Iron/90 col-span-5 dark:text-slate-50/50'>{userData?.user.email}</span>
 
                         <span className='text-md font-semibold cursor-pointer  col-span-2 dark:text-slate-50/70 '>آدرس</span>
                         <span className='w-full text-md  col-span-5 dark:text-slate-50/50'>{order?.shippingAddress.city} - {order?.shippingAddress.street}</span>
@@ -75,7 +75,7 @@ const ProfileUser = () => {
                         <div className='flex gap-4'>
 
                         </div>
-                        <div className='flex gap-2 items-center mt-6 dark:text-[#f8f8f8e2]'>
+                        <div className='flex gap-2 items-center mt-6 dark:text-Luminous'>
                             <FaCakeCandles />
                             <span className='w-full text-md '>مشتری با 21 سال عضویت</span>
                         </div>
@@ -88,10 +88,10 @@ const ProfileUser = () => {
 
             <div className='flex flex-col mt-20 w-full gap-5 text-base font-semibold items-center'>
                 <div className='flex flex-row gap-4 justify-center w-full items-center lg:justify-start'>
-                    <button className='text-xs font-normal w-[10rem] bg-[#94D2BD] text-white py-4 rounded-lg
+                    <button className='text-xs font-normal w-[10rem] bg-Minty text-white py-4 rounded-lg
             hover:scale-[102%] transition duration-500 '>سفارشات</button>
 
-                    <div className="p-10 w-[10rem]  bg-[#94D2BD]  text-white  py-0.5 rounded-lg ">
+                    <div className="p-10 w-[10rem]  bg-Minty text-white  py-0.5 rounded-lg ">
                         <div className="dropdown flex justify-center relative ">
                             <button className="font-normal text-xs py-3  rounded gap-2 flex items-center">
                                 <span className="mr-1 text-sm">وضعیت </span>
@@ -115,11 +115,11 @@ const ProfileUser = () => {
 
 
                 <div className='flex gap-4 justify-start w-full mx-3'>
-                    <button className='bg-transparent  hover:ring-2  text-gray-700 w-1/2 hover:ring-[#94D2BD]
+                    <button className='bg-transparent  hover:ring-2  text-gray-700 w-1/2 hover:ring-Minty
              text-xs px-12 py-3 rounded-lg transition duration-500  font-semibold dark:text-white'>ویرایش</button>
 
 
-                    <Link href={"/"} className='bg-transparent transition duration-500 hover:ring-2 hover:ring-[#94D2BD]
+                    <Link href={"/"} className='bg-transparent transition duration-500 hover:ring-2 hover:ring-Minty
               text-gray-700 text-xs px-12 py-3 w-1/2
               rounded-lg dark:text-white font-semibold flex justify-center items-center'>
                         <button >تایید</button>

@@ -5,7 +5,7 @@ const CheckoutPayment = () => {
         <div>
             <div className='flex flex-col justify-center items-start'>
                 <span>پرداخت</span>
-                <span className='text-sm font-normal text-[#707070]/80 dark:text-white/80'>همه تراکنش ها امن و رمزگذاری شده است</span>
+                <span className='text-sm font-normal text-Silver/80 dark:text-white/80'>همه تراکنش ها امن و رمزگذاری شده است</span>
             </div>
 
             <div className="flex  flex-col my-3">

@@ -82,10 +82,10 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                 </div>
 
 
-                <div className="flex flex-col items-center group text-[#2E2A39] justify-between h-[94%] pt-24">
+                <div className="flex flex-col items-center group text-DarkPurple justify-between h-[94%] pt-24">
                   <div className="flex flex-col mb-4 gap-6 items-center pb-4 group text-lg font-normal">
                     <p className="text-center  ">سبد خرید شما خالی است</p>
-                    <div className="bg-[#94d2bd] text-[#F7F9F3] px-1 py-2 items-center text-center w-48 h-12 rounded-xl flex justify-center hover:scale-x-105">
+                    <div className="bg-Minty text-Cloud px-1 py-2 items-center text-center w-48 h-12 rounded-xl flex justify-center hover:scale-x-105">
                       <Link href="/products">
                         <button>به خرید ادامه دهید</button>
                       </Link>
@@ -94,7 +94,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                       <Link href="/login">
                         <span>حساب کاربری دارید؟</span>
                       </Link>
-                      <span className="text-[#625F6A] text-sm">برای بررسی سریعتر <a href="/register" className="underline">وارد شوید</a></span>
+                      <span className="text-Mystic text-sm">برای بررسی سریعتر <a href="/register" className="underline">وارد شوید</a></span>
                     </div>
                   </div>
                   <div className="group flex flex-col">
@@ -179,9 +179,9 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                           <AccordionTrigger className="flex gap-3">
                             <p className="text-sm font-normal  dark:text-slate-200 text-gray-500">توضیحات سفارش</p>
                           </AccordionTrigger>
-                          <AccordionContent className="text-sm font-normal text-[#918e99]  dark:text-slate-100/60">
+                          <AccordionContent className="text-sm font-normal text-MauveGray dark:text-slate-100/60">
                             <textarea id="CartDrawer-Note" rows={4}
-                              className="w-full p-2 dark:bg-[#21242d] border border-gray-300 dark:focus:ring-gray-300
+                              className="w-full p-2 dark:bg-ShadowBlue border border-gray-300 dark:focus:ring-gray-300
                                rounded-md resize-y focus:ring-2 focus:ring-slate-500" name="note" placeholder=""></textarea>
 
                           </AccordionContent>
@@ -203,7 +203,7 @@ const Cart = ({ isOpen, onClose }: CartProps) => {
                       <span className=" dark:text-slate-200 text-gray-500 text-xs">مالیات و هزینه ارسال در زمان پرداخت محاسبه میگردد</span>
                     </div>
                     <button
-                      className="w-full rounded-lg bg-[#94D2BD] py-3 text-white hover:scale-[101%] transition duration-500"
+                      className="w-full rounded-lg bg-Minty py-3 text-white hover:scale-[101%] transition duration-500"
                       onClick={() => {
                         console.log('Checkout', items);
                         onClose();

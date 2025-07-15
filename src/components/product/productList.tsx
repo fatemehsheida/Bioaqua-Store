@@ -15,7 +15,7 @@ const ProductList: React.FC<ProductListProps> = ({ products, onSelectCategory,
    selectedCategory,
   onSelectBrand,selectedBrand  }) => {
   return (
-    <div className="product-list w-full bg-[#F1F3F1] dark:bg-transparent flex flex-row flex-wrap lg:px-40 2xl:px-64 items-center justify-center ">
+    <div className="product-list w-full bg-FrostGray dark:bg-transparent flex flex-row flex-wrap lg:px-40 2xl:px-64 items-center justify-center ">
       <FilterBar  
         onSelectCategory={onSelectCategory} 
         selectedCategory={selectedCategory}

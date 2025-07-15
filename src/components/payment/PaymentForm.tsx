@@ -18,7 +18,7 @@ const PaymentForm = ({ totalAmount, onSubmit }: PaymentFormProps) => {
               type="radio"
               name="card"
               id="card"
-              className="accent-[#612FFF] mr-2"
+              className="accent-impactful mr-2"
             />
             <PiCreditCardThin className="size-5 text-gray-600" />
             <span className="text-gray-800 text-base font-medium">کارت</span>
@@ -29,7 +29,7 @@ const PaymentForm = ({ totalAmount, onSubmit }: PaymentFormProps) => {
             <span className="text-gray-700 text-sm font-medium">اطلاعات کارت</span>
 
             {/* Card Number Input */}
-            <div className="w-full flex items-center border border-gray-300 hover:border-gray-400 focus-within:border-[#612FFF] rounded-t-md transition-all">
+            <div className="w-full flex items-center border border-gray-300 hover:border-gray-400 focus-within:border-impactful rounded-t-md transition-all">
               <input
                 dir="rtl"
                 type="text"
@@ -58,7 +58,7 @@ const PaymentForm = ({ totalAmount, onSubmit }: PaymentFormProps) => {
 
             {/* CVV and Expiry Date Inputs */}
             <div className="flex items-center w-full gap-2">
-              <div className="w-full flex items-center border border-gray-300 hover:border-gray-400 focus-within:border-[#612FFF] rounded-bl-md transition-all">
+              <div className="w-full flex items-center border border-gray-300 hover:border-gray-400 focus-within:border-impactful rounded-bl-md transition-all">
                 <input
                   type="password"
                   placeholder="CVV2"
@@ -67,7 +67,7 @@ const PaymentForm = ({ totalAmount, onSubmit }: PaymentFormProps) => {
                 <MdAddCard className="ml-3 text-gray-500" />
               </div>
 
-              <div className="w-full border border-gray-300 hover:border-gray-400 focus-within:border-[#612FFF] rounded-br-md transition-all">
+              <div className="w-full border border-gray-300 hover:border-gray-400 focus-within:border-impactful rounded-br-md transition-all">
                 <input
                   type="text"
                   placeholder="MM / YY"
@@ -84,14 +84,14 @@ const PaymentForm = ({ totalAmount, onSubmit }: PaymentFormProps) => {
               type="text"
               name="Name"
               id="name"
-              className="w-full px-3 py-2 rounded-md border border-gray-300 hover:border-gray-400 focus:border-[#612FFF] outline-none text-sm text-gray-800 placeholder-gray-400"
+              className="w-full px-3 py-2 rounded-md border border-gray-300 hover:border-gray-400 focus:border-impactful outline-none text-sm text-gray-800 placeholder-gray-400"
             />
           </div>
 
           {/* Submit Button */}
           <div
             onClick={onSubmit}
-            className="flex items-center justify-center bg-[#612FFF] hover:bg-[#5f2fffda] transition-all duration-300 text-white py-2.5 rounded-md cursor-pointer"
+            className="flex items-center justify-center bg-impactful hover:bg-[#5f2fffda] transition-all duration-300 text-white py-2.5 rounded-md cursor-pointer"
           >
             <button type="button" className="text-sm font-medium">
               پرداخت {totalAmount.toLocaleString()}.000 تومان

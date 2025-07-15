@@ -21,7 +21,7 @@ const Facet = ({ title, options, selectedValues, onFilterChange }: FacetProps) =
         </button>
   
         {isOpen && (
-          <div className="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-[#16181E] shadow-lg overflow-y-scroll max-h-[400px] m-2 py-2 z-50">
+          <div className="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-Abyss shadow-lg overflow-y-scroll max-h-[400px] m-2 py-2 z-50">
             <div className="flex justify-between">
             <button 
               className="text-gray-800 dark:text-white text-xs hover:font-bold underline my-1 px-2"

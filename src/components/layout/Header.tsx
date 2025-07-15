@@ -44,7 +44,7 @@ const Header = () => {
             <HambergerMenu />
           </div>
 
-          <div className='right-8 bottom-4 absolute bg-[#e5e7eb] dark:bg-[#374151] rounded-full '>
+          <div className='right-8 bottom-4 absolute bg-Silk dark:bg-Noir rounded-full'>
             <ButtonMode />
           </div>
         </Menu>
@@ -66,7 +66,7 @@ const Header = () => {
             <HiOutlineShoppingBag  className='size-7'/>
             {totalQty > 0 && (
               <span className="absolute top-4 px-0  left-4 flex items-center justify-center w-5 h-5 text-xs
-              font-noraml text-[#79B3AA] bg-black rounded-full dark:bg-slate-300 dark:text-gray-950">
+              font-noraml text-Marina bg-black rounded-full dark:bg-slate-300 dark:text-gray-950">
                 {totalQty}
               </span>
             )}
