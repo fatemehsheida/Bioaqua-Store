@@ -2,68 +2,87 @@ import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
-    return (
+  const footerLinks = [
+    {
+      title: "درباره",
+      links: [
+        { text: "درباره ما", href: "/aboutme" },
+        { text: "تماس با ما", href: "/contact" },
+        { text: "عمده‌فروشی", href: "/wholesale" }
+      ]
+    },
+    {
+      title: "خدمات مشتریان",
+      links: [
+        { text: "سوالات متداول", href: "/faq" },
+        { text: "جستجو", href: "/search" },
+        { text: "گواهی‌ها (FDA, ISO)", href: "/certificates" },
+        { text: "سیاست حفظ حریم خصوصی", href: "/privacy" },
+        { text: "ارسال و تحویل", href: "/shipping" },
+        { text: "سیاست بازپرداخت و مرجوعی", href: "/refund" }
+      ]
+    },
+    {
+      title: "اصلی",
+      links: [
+        { text: "خانه", href: "/" },
+        { text: "جدید", href: "/new" },
+        { text: "پرفروش‌ترین‌ها", href: "/bestsellers" },
+        { text: "مراقبت پوست", href: "/skincare" },
+        { text: "آرایش", href: "/makeup" },
+        { text: "همه محصولات", href: "/products" }
+      ]
+    }
+  ]
 
-        <div className="md:flex flee-col justify-between md:w-full 
-    items-start pr-8 md:pr-32 text-start gap-8 space-y-12 md:space-y-0 text-gray-800/70 ">
-
-            <div>
-
-                <div className="mb-5 text-lg dark:text-slate-300/80">
-
-                    <h1 className="font-semibold">
-                        درباره
-                    </h1>
-                </div>
-                <button className="text-start text-sm font-normal  text-[#2E2A39]/40 space-y-2 dark:text-slate-300/50">
-                <Link href="/aboutme">
-                    <h3>درباره ما</h3>
-                </Link>
-                <Link href="/contact">
-                    <h3>تماس با ما </h3>
-                </Link>
-                    <h3>عمده‌فروشی</h3>
-                </button>
+  return (
+    <div className="py-12 px-4 md:px-8 lg:px-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12">
+          {footerLinks.map((section, index) => (
+            <div key={index} className="space-y-5">
+              <h3 className="text-lg font-semibold text-gray-600 dark:text-slate-300/80 border-b pb-2 border-gray-200 dark:border-gray-700">
+                {section.title}
+              </h3>
+              <ul className="space-y-3">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <Link
+                      href={link.href}
+                      className="text-sm font-normal text-gray-500 hover:text-gray-900 dark:text-slate-300/50 dark:hover:text-gray-400 transition-colors duration-200"
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-
-
-            <div className="text-start mt-0 dark:text-slate-300/80">
-                <div className="mb-5 text-lg">
-
-                    <h1 className="font-semibold">
-                        خدمات مشتریان
-                    </h1>
-                </div>
-                <button className="text-start text-sm space-y-2 font-normal text-[#2E2A39]/40 dark:text-slate-300/50">
-                    <h3>سوالات متداول</h3>
-                    <h3>جستجو </h3>
-                    <h3>گواهی‌ها (FDA, ISO)</h3>
-                    <h3>سیاست حفظ حریم خصوصی</h3>
-                    <h3>ارسال و تحویل</h3>
-                    <h3>سیاست بازپرداخت و مرجوعی</h3>
-                </button>
-            </div>
-
-
-
-            <div className='dark:text-slate-300/80'>
-                <div className="mb-5 text-lg ">
-                    <h1 className="font-semibold">اصلی </h1>
-                </div>
-                <button className="text-start text-sm font-normal dark:text-slate-300/50 text-[#2E2A39]/40 space-y-2">
-                    <h3>خانه </h3>
-                    <h3>جدید </h3>
-                    <h3>پرفروش‌ترین‌ها </h3>
-                    <h3>مراقبت پوست</h3>
-                    <h3>آرایش </h3>
-                    <h3>همه محصولات</h3>
-                </button>
-            </div>
+          ))}
         </div>
 
-
-
-    )
+        {/* اطلاعات تماس و حقوق قانونی */}
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center font-normal">
+          <p className="text-sm text-zinc-500 dark:text-slate-400">
+            © {new Date().getFullYear()} تمام حقوق محفوظ است
+          </p>
+          <div className="mt-4 flex justify-center space-x-6 space-x-reverse">
+            <Link
+              href="/privacy"
+              className="text-xs text-gray-500 hover:text-gray-700 dark:text-slate-400 dark:hover:text-slate-300"
+            >
+              حریم خصوصی
+            </Link>
+            <Link
+              href="/terms"
+              className="text-xs text-gray-500 hover:text-gray-700 dark:text-slate-400 dark:hover:text-slate-300"
+            >
+              شرایط استفاده
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Footer
