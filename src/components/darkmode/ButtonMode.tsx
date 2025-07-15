@@ -13,7 +13,7 @@ const ButtonMode = () => {
   }, [isDark]);
 
   return (
-    <div className="container w-full transition-all duration-500">
+    <div className="container w-full transition-all duration-500 ml-10">
       <input 
         type="checkbox" 
         id="theme-toggle" 

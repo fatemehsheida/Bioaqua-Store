@@ -3,8 +3,7 @@ import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/footer";
 import ReduxProvider from "@/lib/reduxProvider";
-
-
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,28 +15,37 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
-
   return (
     <ReduxProvider>
-      <html lang="fn" dir="rtl" className=" w-full items-center dark">
+      <html lang="fn" dir="rtl" className="dark">
         <head>
-          <meta charSet="utf-8" />
-          <link href="../style.css" rel="stylesheet"></link>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link href="../style.css" rel="stylesheet" />
         </head>
 
-        <body className=" bg-gradient-to-bl from-AquaHaze from-4% via-LinenBeige to-CashmereBlush 
-         transition-all duration-5 bg-fixed flex flex-col justufy-center items-center">
+        <body
+          className="bg-gradient-to-bl from-AquaHaze from-4% via-LinenBeige to-CashmereBlush 
+    transition-all duration-500 bg-fixed flex flex-col justify-center items-center sm:w-full"
+         style={{ margin: 0, padding: 0 }}
+          >
           <Header />
-          
-          {children}
-          <div className="flex flee-col text-sm md:mx-auto md:w-[65%] justify-between 
-        py-10 md:gap-10 text-gray-700 font-light ">
+
+          <main className="flex-1 w-full flex justify-center">
+            <div className="w-full">{children}</div>
+          </main>
+
+          <div className="flex flex-col text-sm md:mx-auto md:w-[65%] justify-between 
+      py-10 md:gap-10 text-gray-700 font-light">
             <Footer />
-            <div>
-              <img src="http://localhost:8000/uploads/image-1738349698115-546474799.avif" alt="Bioaqoua" className="md:w-40 md:mr-24 w-52" />
+            <Link href="/">
+            <div className="mt-6">
+              <img
+                src="http://localhost:8000/uploads/image-1738349698115-546474799.avif"
+                alt="Bioaqua"
+                className="w-40 md:w-52"
+                />
             </div>
+            </Link>
           </div>
         </body>
       </html>
