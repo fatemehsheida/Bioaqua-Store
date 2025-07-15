@@ -39,10 +39,10 @@ const BestSellers = () => {
   ]
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8">
+    <section className="py-12 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto">
         <div className="text-right mb-10">
-          <h2 className="text-3xl font-medium text-gray-900">ماسک های ورقه ای</h2>
+          <h2 className="text-3xl font-medium text-gray-900 dark:text-slate-50">ماسک های ورقه ای</h2>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8">
@@ -68,7 +68,7 @@ const BestSellers = () => {
               </div>
 
               <div className="mt-4 px-2 pb-2 flex flex-col">
-                <h3 className="text-sm font-medium text-gray-700 group-hover:underline">
+                <h3 className="text-sm font-medium  group-hover:underline">
                   ({product.id}) {product.name}
                 </h3>
                 <div className="mt-2 flex justify-end items-center gap-2">

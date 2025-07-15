@@ -31,7 +31,7 @@ export default async function Home() {
               </Link>
             </div>
           </div>
-        <div className="md:px-48 bg-LightMint/80 dark:bg-LightGray md:py-2 dark:text-slate-300" >
+        <div className="md:px-48 bg-LightMint/80 dark:bg-LightGray/30 md:py-2 dark:text-slate-300" >
           <NewRestock products={products.results} />
           <BestSellers />
           <MultimediaCollagen />

@@ -3,10 +3,10 @@ import React from 'react'
 
 const ShopWhatsPopularNow = () => {
     return (
-        <div className="New-&-Restock  py-9 flex flex-col  gap-5 ">
+        <div className="New-&-Restock py-9 flex flex-col dark:text-zinc-800 gap-2 ">
             <h1 className="font-medium text-3xl pb-8 text-right">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
             <div className="flex flex-col justify-center items-center ">
-                <div className="flex flex-row justify-center items-center mdgap-8  gap-2 flex-wrap ">
+                <div className="flex flex-row xl:justify-between  md:justify-center items-center md:gap-8  gap-2 flex-wrap mx-auto">
 
 
                     <div className="w-48 h-[280px] flex flex-col justify-between cursor-pointer group duration-300 hover:shadow-lg rounded-xl">
