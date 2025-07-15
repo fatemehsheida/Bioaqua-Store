@@ -3,8 +3,8 @@ import React from 'react'
 
 const ShopWhatsPopularNow = () => {
     return (
-        <div className="New-&-Restock py-9 flex flex-col dark:text-zinc-800 gap-2 ">
-            <h1 className="font-medium text-3xl pb-8 text-right dark:text-slate-50">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
+        <div className="New-&-Restock py-9 mt-10 flex flex-col dark:text-zinc-800 gap-2 ">
+            <h1 className="font-medium text-3xl pb-8 text-right dark:text-slate-50 mx-auto">از محصولات پرطرفدار حال حاضر خرید کنید</h1>
             <div className="flex flex-col justify-center items-center ">
                 <div className="flex flex-row xl:justify-between  md:justify-center items-center md:gap-8  gap-2 flex-wrap mx-auto">
 
@@ -127,7 +127,7 @@ const ShopWhatsPopularNow = () => {
 
 
                 </div>
-                <div className="my-8 bg-Minty group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center flex flex-col justify-center rounded-lg group-hover:w-32">
+                <div className="my-8 bg-Minty dark:bg-Minty/50 group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center hover:scale-105 flex flex-col justify-center rounded-lg group-hover:w-32">
 
                     <button >
                         <Link href="/">

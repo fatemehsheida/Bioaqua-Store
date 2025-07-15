@@ -89,7 +89,7 @@ const BestSellers = () => {
         <div className="mt-12 flex justify-center">
           <Link 
             href="/products/category/bestsellers"
-            className="px-6 py-3 bg-Minty text-white rounded-lg font-medium transition-all hover:bg-Minty/90 hover:shadow-md hover:scale-105"
+            className="px-6 py-3 bg-Minty dark:bg-Minty/50  text-white rounded-lg font-medium transition-all hover:bg-Minty/90 hover:shadow-md hover:scale-105"
           >
             دیدن همه
           </Link>

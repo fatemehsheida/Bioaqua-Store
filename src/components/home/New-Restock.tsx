@@ -44,7 +44,7 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
                 <div className="flex justify-center mt-8">
                     <Link 
                         href="/products/category/new"
-                        className="bg-Minty text-white px-6 py-3 rounded-lg hover:bg-Minty/90 transition-colors duration-300 text-center w-32"
+                        className="bg-Minty dark:bg-Minty/50 text-white px-6 py-3 rounded-lg hover:bg-Minty/90 transition-colors duration-300  hover:scale-105 text-center w-32"
                     >
                         دیدن همه
                     </Link>
