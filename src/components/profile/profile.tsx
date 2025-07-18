@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FaCakeCandles } from 'react-icons/fa6'
 import { IoChevronDown } from "react-icons/io5";
+import CreateButton from '../createButton';
 
 const ProfileUser = () => {
     const [userData, setUserData] = useState<UserInfoResponse | null>(null)
@@ -49,7 +50,7 @@ const ProfileUser = () => {
 
     console.log({ userData })
     return (
-        <div className='right flex flex-col justify-center items-start lg:w-3/5 w-full mr-6 my-10'>
+        <div className='right flex flex-col justify-center items-start lg:w-3/5 w-full my-10'>
 
 
             <div className='grid lg:grid-cols-5 grid-cols-6 justify-center items-start object-cover h-56 lg:h-64 '>
@@ -87,16 +88,24 @@ const ProfileUser = () => {
 
 
             <div className='flex flex-col mt-20 w-full gap-5 text-base font-semibold items-center'>
-                <div className='flex flex-row gap-4 justify-center w-full items-center lg:justify-start'>
-                    <button className='text-xs font-normal w-[10rem] bg-Minty text-white py-4 rounded-lg
-            hover:scale-[102%] transition duration-500 '>سفارشات</button>
+                <div className='flex flex-row gap-4 justify-center w-full items-center lg:justify-start mt-16 sm:mt-0'>
+
+                    <CreateButton
+                            text="سفارشات"
+                            href="#"
+                            className="text-xs font-normal w-[10rem] bg-Minty text-white py-4 rounded-lg hover:scale-[102%] transition duration-500 "
+                            />
 
                     <div className="p-10 w-[10rem]  bg-Minty text-white  py-0.5 rounded-lg ">
                         <div className="dropdown flex justify-center relative ">
-                            <button className="font-normal text-xs py-3  rounded gap-2 flex items-center">
-                                <span className="mr-1 text-sm">وضعیت </span>
-                                <IoChevronDown />
-                            </button>
+                            
+                            <CreateButton
+                            text="وضعیت"
+                            href="#"
+                            icon={<IoChevronDown size={16} />}
+                            className="font-normal flex-row-reverse py-3  rounded gap-2 flex items-center mr-1 text-sm"
+                            />
+
                             <ul className="dropdown-menu absolute hidden mt-12 text-center bg-gray-100 rounded-lg p-5 w-[10rem] space-y-2">
                                 {status?.map((item) => (
                                     <li key={item.id} className="">
@@ -112,24 +121,21 @@ const ProfileUser = () => {
                     </div>
                 </div>
 
-
-
                 <div className='flex gap-4 justify-start w-full mx-3'>
-                    <button className='bg-transparent  hover:ring-2  text-gray-700 w-1/2 hover:ring-Minty
-             text-xs px-12 py-3 rounded-lg transition duration-500  font-semibold dark:text-white'>ویرایش</button>
-
-
-                    <Link href={"/"} className='bg-transparent transition duration-500 hover:ring-2 hover:ring-Minty
-              text-gray-700 text-xs px-12 py-3 w-1/2
-              rounded-lg dark:text-white font-semibold flex justify-center items-center'>
-                        <button >تایید</button>
-                    </Link>
-
-
+                    <CreateButton
+                        text="ویرایش"
+                        href="#"
+                        className='bg-transparent  hover:ring-2  text-gray-700 w-1/2 hover:ring-Minty
+                            text-xs px-12 py-3 rounded-lg transition duration-500  font-semibold dark:text-white'
+                    />
+                    <CreateButton
+                        text="تایید"
+                        href="#"
+                        className='bg-transparent transition duration-500 hover:ring-2 hover:ring-Minty text-gray-700 text-xs px-12 py-3 
+                        w-1/2 rounded-lg dark:text-white font-semibold flex justify-center items-center'
+                    />
                 </div>
-
             </div>
-
         </div>
     )
 }
