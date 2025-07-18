@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
+import CreateButton from '../createButton'
 
 const BestSellers = () => {
   const products = [
@@ -86,14 +87,11 @@ const BestSellers = () => {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <Link 
-            href="/products/category/bestsellers"
-            className="px-6 py-3 bg-Minty dark:bg-Minty/50 text-white rounded-lg font-medium transition-all hover:bg-Minty/90 hover:shadow-md hover:scale-105"
-          >
-            دیدن همه
-          </Link>
-        </div>
+        <CreateButton
+          text="دیدن همه"
+          href="/"
+          className="my-8 bg-Minty mx-auto dark:bg-Minty/50 group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center hover:scale-105 flex flex-col justify-center rounded-lg group-hover:w-32"
+        />
       </div>
     </section>
   )

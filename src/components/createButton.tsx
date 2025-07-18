@@ -3,13 +3,13 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 
-interface ClientButtonProps {
+interface createButtonProps {
   text: string;
   href: string;
   className?: string;
 }
 
-export default function ClientButton({ text, href, className = "" }: ClientButtonProps) {
+export default function CreateButton({ text, href, className = "" }: createButtonProps) {
   const router = useRouter();
 
   return (

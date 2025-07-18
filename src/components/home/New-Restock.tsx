@@ -1,6 +1,7 @@
 import { Product } from '@/types/type';
 import Link from 'next/link';
 import React from 'react';
+import CreateButton from '../createButton';
 
 interface ProductListProps {
     products: Product[];
@@ -42,12 +43,12 @@ const NewRestock: React.FC<ProductListProps> = ({ products }) => {
                 </div>
 
                 <div className="flex justify-center mt-8">
-                    <Link 
-                        href="/products/category/new"
-                        className="bg-Minty dark:bg-Minty/50 text-white px-6 py-3 rounded-lg hover:bg-Minty/90 transition-colors duration-300  hover:scale-105 text-center w-32"
-                    >
-                        دیدن همه
-                    </Link>
+                  
+                     <CreateButton
+                  text="دیدن همه"
+                  href="/products/category/new"
+                    className="bg-Minty dark:bg-Minty/50 text-white px-6 py-3 rounded-lg hover:bg-Minty/90 transition-colors duration-300  hover:scale-105 text-center w-32"
+                />
                 </div>
             </div>
         </section>
