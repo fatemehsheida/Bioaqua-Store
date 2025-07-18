@@ -1,13 +1,11 @@
 'use client'
 import ProductList from "@/components/product/productList";
-import CategoryList from "@/components/product/CategoryList";
 import {
   ProductsResponse,
-  CategoriesResponse,
   Product,
-  Category,
 } from "@/types/type";
 import React, { useEffect, useState } from "react";
+import CreateButton from "@/components/createButton";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -99,47 +97,34 @@ export default function ProductsPage() {
         selectedBrand={brand}
       />
 
-      <div className="flex items-center justify-center mb-10 mt-16">
-        <button
-          onClick={handlePreviousPage}
-          disabled={page === 1}
-          className={`px-4 py-2 text-sm font-medium text-gray-700
+      <div className="flex items-center justify-center pb-8 mt-16 ">
+
+          <CreateButton
+            text="صفحه بعد"
+            onClick={handleNextPage}
+            disabled={page === totalPages}
+            href="#"
+            className={`px-4 py-2 text-sm font-medium text-gray-700 
+               bg-white border border-gray-300 rounded-lg hover:bg-gray-50 
+               ${page === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}
+          />
+          
+          
+          <span className="text-sm font-medium text-gray-700 mx-4 text-center dark:text-slate-200">
+            Page {page} of {totalPages}
+          </span>
+
+          <CreateButton
+            text="صفحه قبل"
+            onClick={handlePreviousPage}
+            disabled={page === 1}
+            href="#"
+            className={`px-4 py-2 text-sm font-medium text-gray-700
              bg-white border border-gray-300 rounded-lg hover:bg-gray-50 
              ${page === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
-        >
-          Previous
-        </button>
-
-        <span className="text-sm font-medium text-gray-700 mx-4 text-center dark:text-slate-200">
-          Page {page} of {totalPages}
-        </span>
-
-        <button
-          onClick={handleNextPage}
-          disabled={page === totalPages}
-          className={`px-4 py-2 text-sm font-medium text-gray-700 
-             bg-white border border-gray-300 rounded-lg hover:bg-gray-50 
-             ${page === totalPages ? "opacity-50 cursor-not-allowed" : ""}`}
-        >
-          Next
-        </button>
+          />
+          
       </div>
-
-      {/* <div className="p-4 flex items-center justify-center">
-        <span className="mr-2">Items per page:</span>
-        <select
-          value={pageSize}
-          onChange={(e) =>{
-            setPageSize(Number(e.target.value))
-            setPage(1)
-          }}
-          className="p-2 border rounded-md"
-        >
-          <option value={5}>5</option>
-          <option value={10}>10</option>
-          <option value={20}>20</option>
-        </select>
-      </div> */}
     </div>
   );
 }
