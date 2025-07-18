@@ -5,6 +5,7 @@ import { RootState } from '@/lib/store';
 import { useSelector } from 'react-redux';
 import Link from "next/link";
 import clsx from 'clsx';
+import CreateButton from '../createButton';
 
 
 
@@ -53,15 +54,22 @@ const OrderCheckout = () => {
             ))}
 
             <div className='w-full flex justify-between items-center gap-3'>
-                <button  type="submit"
-                 disabled={!inputValue.trim()}
-                 className={clsx(
-                    "w-36 rounded-md focus:outline-none focus:ring-2 focus:ring-Flint py-2 px-4 text-sm font-normal",
+
+                <CreateButton
+                    type="submit"
+                    disabled={!inputValue.trim()}
+                    text="اعمال شود"
+                    href="/"
+                    className={clsx(
+                     "w-36 rounded-md focus:outline-none focus:ring-2 focus:ring-Flint py-2 px-4 text-sm font-normal",
                     {
                         "bg-Amber text-Onyx": inputValue.trim(),
                         "bg-Blush text-Granite border-PeachFuzz border": !inputValue.trim(),
                     }
-                )}>اعمال شود</button>
+                )}
+                />
+
+
                 <input type="text" placeholder='کد تخفیف' className='w-full bg-transparent ring-PeachFuzz rounded-md ring-1 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-Flint' 
                 onChange={(e) => setInputValue(e.target.value)}/>
             </div>
