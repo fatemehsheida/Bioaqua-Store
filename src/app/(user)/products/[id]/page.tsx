@@ -6,6 +6,7 @@ import AccordionDetail from "@/components/product/AccordionDetail";
 import CommentsSection from "@/components/product/CommenSection";
 import { IoArrowBackOutline } from "react-icons/io5";
 import Link from "next/link";
+import CreateButton from "@/components/createButton";
 
 interface ProductDetailPageProps {
   params: {
@@ -62,10 +63,14 @@ export default async function ProductDetailPage({
 
 
                         {product.specifications.map((items, index) => <div key={index}>
-                          <button className="px-[0.70rem] py-[0.4rem]  bg-white rounded-lg text-sm font-normal
-                 border-FogAsh border shadow-md  inset-shadow-indigo-900 hover:border-DarkPurple
-                  transition-all duration-300 focus:bg-DarkPurple  focus:text-white text-StoneLilac
-                   focus:border-none">{items.title}</button>
+                          <CreateButton
+                            text={items.title}
+                            href="#"
+                            className="px-[0.70rem] py-[0.4rem]  bg-white rounded-lg text-sm font-normal border-FogAsh border shadow-md
+                             inset-shadow-indigo-900 hover:border-DarkPurple transition-all duration-300 focus:bg-DarkPurple
+                              focus:text-white text-StoneLilac focus:border-none"
+                          />
+                          
                         </div>)}
                       </div>
 

@@ -1,18 +1,15 @@
 'use client'
 import { cn } from "@/lib/cn";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import Link from "next/link";
 import { useActionState } from "react";
 import { loginAction } from "@/actions/auth/login";
+import CreateButton from "../createButton";
 
 export function LoginForm({
   className,
@@ -62,28 +59,26 @@ export function LoginForm({
                     transition: "background-color 5000s  0s",
                   }}
                 />
-                <div>
-                  <Link
+                  <CreateButton
+                    text="رمز عبور خود را فراموش کرده اید؟"
                     href="#"
-                    className="ml-auto pr-5 inline-block text-gray-600 text-xs underline-offset-4 hover:underline"
-                  >
-                    رمز عبور خود را فراموش کرده اید؟
-                  </Link>
-                </div>
+                   className="ml-auto pr-5 inline-block text-gray-600 text-xs underline-offset-4 hover:underline"
+                />
               </div>
-              <div className="w-24 mx-auto ">
-                <Button type="submit" className="w-full bg-Minty hover:bg-Teal transition-all duration-300">
-                  <p>
-                    ورود
-                  </p>
-                </Button>
-              </div>
+              <CreateButton
+                    type='submit'
+                    text="ورود"
+                    href="/"
+                   className="w-24 mx-auto py-1.5 rounded-xl text-slate-50 bg-Minty hover:bg-Teal transition-all duration-300"
+                />
+              
             </div>
-            <div className="mt-4 text-center text-sm">
-              <Link href="register" className="underline text-gray-600 underline-offset-4 mr-1">
-                ثبت نام
-              </Link>
-            </div>
+            <CreateButton
+                    type='submit'
+                    text="ثبت نام"
+                    href="register"
+                   className="underline text-gray-600 underline-offset-4 mr-1 text-center text-sm mx-auto w-full mt-4"
+                />
           </form>
         </CardContent>
       </Card>

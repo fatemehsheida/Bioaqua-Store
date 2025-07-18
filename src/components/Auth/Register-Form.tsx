@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useActionState } from "react";
 import { register } from "@/actions/auth/register";
+import CreateButton from "../createButton";
 
 export default function Component() {
   const [state, action, pending] = useActionState(register, {
@@ -91,17 +92,27 @@ export default function Component() {
 
 
             <div className="pt-6 mx-auto">
+
               <div className="w-40 mx-auto">
-                <Button type="submit"
-                  className="w-full bg-Minty hover:bg-Teal transition-all duration-300">
-                  <p>ثبت نام</p>
-                </Button>
+              <CreateButton
+                text="ثبت نام"
+                href="#"
+                type="submit"
+                className="w-full py-1.5 rounded-xl text-slate-50 bg-Minty hover:bg-Teal transition-all duration-300"
+              />
               </div>
+
+
+
               <div className="mt-4 text-center text-sm text-gray-600">
                 حساب کاربری دارید؟
-                <Link href="login" className="underline underline-offset-4">
-                  ورود
-                </Link>
+
+                <CreateButton
+                text="ورود"
+                href="login"
+                type="submit"
+                className="underline underline-offset-4"
+              />
               </div>
             </div>
           </CardContent>

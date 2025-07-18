@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import React from 'react'
+import CreateButton from '../createButton'
 
 const ShopWhatsPopularNow = () => {
     return (
@@ -127,15 +127,11 @@ const ShopWhatsPopularNow = () => {
 
 
                 </div>
-                <div className="my-8 bg-Minty dark:bg-Minty/50 group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center hover:scale-105 flex flex-col justify-center rounded-lg group-hover:w-32">
-
-                    <button >
-                        <Link href="/">
-
-                            دیدن همه
-                        </Link>
-                    </button>
-                </div>
+                <CreateButton
+                  text="دیدن همه"
+                  href="/"
+                  className="my-8 bg-Minty dark:bg-Minty/50 group-hover:scale-105 cursor-pointer text-white w-32 h-11 items-center text-center hover:scale-105 flex flex-col justify-center rounded-lg group-hover:w-32"
+                />
             </div>
         </div>
     )
