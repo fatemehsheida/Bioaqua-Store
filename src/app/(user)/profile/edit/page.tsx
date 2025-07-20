@@ -44,14 +44,24 @@ const EditProfile = () => {
 <div className="w-full max-w-7xl mx-auto bg-white dark:bg-gray-950 shadow-2xl rounded-3xl px-6 sm:px-10 py-10 sm:py-14 space-y-10 transition-all duration-500">
   {/* Header Section */}
   <div className="flex flex-col sm:flex-row items-center gap-8">
+   <div className="relative w-32 h-32 sm:w-40 sm:h-40">
     <Image
       src="/cute_profile.jpg"
       width={160}
       height={160}
       alt="profile"
-      className="rounded-full object-cover shadow-lg ring-4 ring-Minty transition duration-300 w-32 h-32 sm:w-40 sm:h-40"
+      className="rounded-full object-cover shadow-lg ring-4 ring-Minty transition duration-300 w-full h-full"
     />
 
+    <Image
+      src="/camera.png"
+      width={35}
+      height={35}
+      alt="Edit"
+      className="absolute bottom-1 right-1 w-8 h-8 sm:w-10 sm:h-10 rounded-full shadow-md bg-white p-1 sm:p-1.5 cursor-pointer hover:bg-emerald-300/50 hover:ring-1 hover:ring-black/30"
+    />
+
+      </div>
     <div className="flex flex-col sm:flex-row gap-4 w-full">
       <input
         type="text"
