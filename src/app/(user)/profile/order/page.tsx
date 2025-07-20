@@ -1,8 +1,10 @@
 "use client"
+import CreateButton from '@/components/createButton'
 import { Order, OrderItemType } from '@/types/type'
 import { getOrders } from '@/utils/apiClient'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { IoArrowBackOutline } from 'react-icons/io5'
 
 const Ordera = () => {
   const [orders, setOrders] = useState<Order[]>([])
@@ -36,9 +38,15 @@ const Ordera = () => {
 
   return (
     <div className='bg-slate-100 w-full mx-auto px-12 h-full flex flex-col justify-start items-start pt-10 pl-6 mb-5'>
+    
       <div className='w-full'>
-        <div className='flex flex-row justify-between w-full pb-2'>
+        <div className='flex flex-row justify-between w-full pb-2 pl-4'>
           <h3 className="text-lg font-bold mt-6 mb-8">تاریخچه سفارشات</h3>
+          <CreateButton
+            href="/profile"
+            icon={<IoArrowBackOutline size={30} />}
+            className="font-normal flex-row-reverse py-3  rounded gap-2 flex items-center mr-1 text-sm"
+         />
         </div>
         <div className="gap-4 flex flex-col w-full">
           {orders.map((order) => (
