@@ -6,7 +6,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { IoArrowBackOutline } from 'react-icons/io5'
 
-const Ordera = () => {
+const Orders = () => {
   const [orders, setOrders] = useState<Order[]>([])
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const Ordera = () => {
         </div>
       </div>
     </div>
-  )
+  ) 
 }
 
-export default Ordera
+export default Orders
