@@ -10,7 +10,7 @@ const Profile = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 1024px)' });
 
     return (
-        <div className='flex bg-white/85 dark:bg-AbyssBlue/50 lg:flex-row flex-col items-center w-full font-normal mx-auto w-full'>
+        <div className='flex bg-white/85 dark:bg-AbyssBlue/50 lg:flex-row flex-col items-center w-full font-normal mx-auto'>
             <ProfileUser />
             {isMobile ? (
                 <AccordionOrder />

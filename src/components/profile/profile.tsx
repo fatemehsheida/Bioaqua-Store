@@ -88,11 +88,11 @@ const ProfileUser = () => {
 
 
             <div className='flex flex-col mt-20 w-full gap-5 text-base font-semibold items-center'>
-                <div className='flex flex-row gap-4 justify-center w-full items-center lg:justify-start mt-16 sm:mt-0'>
+                <div className='flex  gap-4 justify-center w-full items-center lg:justify-start mt-16 pr-8 sm:mt-0'>
 
                     <CreateButton
                             text="سفارشات"
-                            href="#"
+                            href="/profile/order"
                             className="text-xs font-normal w-[10rem] bg-Minty text-white py-4 rounded-lg hover:scale-[102%] transition duration-500 "
                             />
 
@@ -121,10 +121,10 @@ const ProfileUser = () => {
                     </div>
                 </div>
 
-                <div className='flex gap-4 justify-start w-full mx-3'>
+                <div className='flex gap-4 justify-start w-full mx-3 px-5'>
                     <CreateButton
                         text="ویرایش"
-                        href="#"
+                        href="/profile/edit"
                         className='bg-transparent  hover:ring-2  text-gray-700 w-1/2 hover:ring-Minty
                             text-xs px-12 py-3 rounded-lg transition duration-500  font-semibold dark:text-white'
                     />
