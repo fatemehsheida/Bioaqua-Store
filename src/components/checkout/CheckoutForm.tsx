@@ -29,7 +29,7 @@ const CheckoutForm = ({ items, totalQty }: { items: IProductCart[], totalQty: nu
   });
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const dispach = useDispatch()
+  const dispatch = useDispatch()
   const router = useRouter()
   const validateField = (fieldPath: string, value: string) => {
     const newErrors = { ...errors };

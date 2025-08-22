@@ -1,7 +1,6 @@
 import { OrderRequest } from '@/types/type';
 import { createContext, useContext } from 'react';
 
-
 type FormContextType = {
   formData: OrderRequest;
   setFormData: React.Dispatch<React.SetStateAction<OrderRequest>>;
@@ -9,6 +8,12 @@ type FormContextType = {
   validateField: (fieldPath: string, value: string) => void;
 };
 
-export const FormContext = createContext<FormContextType>({} as FormContextType);
+export const FormContext = createContext<FormContextType | undefined>(undefined);
 
-export const useForm = () => useContext(FormContext);
+export const useForm = () => {
+  const context = useContext(FormContext);
+  if (context === undefined) {
+    throw new Error('useForm must be used within a FormContext.Provider');
+  }
+  return context;
+};
